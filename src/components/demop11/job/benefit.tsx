@@ -1,0 +1,48 @@
+'use client';
+
+import { useMemo } from 'react';
+import { benefitsData, jobData } from '@/contants/data';
+
+interface BenefitProps {
+    jobId?: number;
+}
+
+const ICON_STYLE = { width: '25px', textAlign: 'center' as const };
+
+const Benefit: React.FC<BenefitProps> = ({ jobId }) => {
+    // Optimize: Use useMemo to cache result, only recalculate when jobId changes
+    const jobBenefits = useMemo(() => {
+        // If no jobId, return all benefits
+        if (!jobId) {
+            return benefitsData;
+        }
+
+        // Find job by ID
+        const job = jobData.find(job => job.JOB_ID === jobId);
+        
+        // If job not found or no BENEFIT, return all benefits
+        if (!job?.BENEFIT) {
+            return benefitsData;
+        }
+        
+        const benefitIds = new Set(job.BENEFIT);
+        
+        // Filter benefits by job's BENEFIT array
+        return benefitsData.filter(benefit => 
+            benefitIds.has(benefit.BENEFIT_ID)
+        );
+    }, [jobId]);
+
+    return (
+        <ul className="list-benefits">
+            {jobBenefits.map((benefit) => (
+                <li key={benefit.BENEFIT_ID}>
+                    <i className={benefit.BENEFIT_ICON} style={ICON_STYLE}></i> 
+                    {benefit.BENEFIT_NAME}
+                </li>
+            ))}
+        </ul>
+    );
+}
+
+export default Benefit;

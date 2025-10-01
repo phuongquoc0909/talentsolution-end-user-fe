@@ -1,0 +1,39 @@
+body, input, select, textarea, .content_fck, .ui_btnCb { font-family: var(--fontmain-theme,'Arial')!important }
+body, a, a:focus, #header-pre .menu a:hover i, .JoinNow h1, .JoinNow h2, .loginJoinTalentNetwork p, .section-grid-career .job h3 a, .list-standard-wrapper .tblJob p.name_job a, .content_fck, .page-content-pre, .page-contact-pre, .page-forgot-pre, .JoinNow div.row label, #WhyJoin h3 { color: #333 }
+#header-pre .menu a, #header-pre .navbar-right a { font-size: 15px }
+#header-pre .menu a { text-transform: uppercase }
+#header-pre .menu li { padding: 0 15px }
+/* text color theme */ .col_theme, a:hover, header.container-fluid h2.section-title, .section-grid-career .job h3 a:hover, .news-five-items .box p.viewmore a, .all-jobs-pre .browser-job a:hover, .all-jobs-pre .browser-job a.active, .all-jobs-pre .browser-job span, .all-jobs-pre ul li a span, .all-jobs-pre ul li a:hover, .compact-jobs-container .item h2.job a:hover, .result-job-search .bottom-more a:hover, .detail-head-right .company-name a, .detail-head-right .actions-apply a.not-ready, .right-des .link-mail a, .item-member p.name, h2 a.text-right, .current-job .btn-save a.btn, #header-pre .menu li.focus a, .compact-jobs-container .item:hover h2.job a, .result-job-search h1 span, .containerListMy a.focus, #header-pre .menu li.focus ul.submenu li a:hover, .survey-talent .btn-result a.btn, .list-standard-wrapper .tblJob p.name_job a:hover, .news-three-items-s2 p.link-box a { color: var(--text-theme,#367e5a) } 
+/* background color theme */ #job-search, .btn-primary, .socialIcon, .current-job .btn-apply a, .search-jobs-main .chosen-container .chosen-results li.highlighted, #jb_pagination .active, .tblJob tr.header, .EditRecommendJob button, #header-menu-links .btn:hover, #pager li a.activeSlide, .btnContinute a, #container .ui_btnCb, #container .search250 .btnSmall, #container .fontCore .btnSmall, #btnLogin, .JoinNow .loginJoinTalentNetwork a, .JoinNow .joinnowBtn input, .survey-talent .btn-vote a, .scroll_thongke li .scroll_color .bg_center_scroll, #photo-area .setOutBanner .search-jobs-main button.searchvt1, .apply-job-container .jsk-card .jsk-card--bg { background-color: var(--bgcolor-theme,#367e5a) }
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:hover ,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary,
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus, .socialIcon:hover, #container input.ui_btnCb:hover, #btnLogin:hover, .JoinNow .joinnowBtn input:hover, .btnContinute a:hover, .job-detail-pre .column-right .join-talent-onclip a:hover, #container .cb-applyjob .ui_btnCb:hover, #LoginTalentNetwork .loginJoinTalentNetwork a:hover, #back-top a { background-color: var(--buttonbgcolorhover-theme,#bda03c) }
+.join-talent-onclip a {	background-color: var(--buttonbgcolor-theme,#367e5a) }
+.join-talent-onclip a:hover { background-color: var(--buttonbgcolorhover-theme,#367e5a) }
+.current-job a.btn, .survey-talent a.btn, .current-job .btn-save a.btn { border-color: var(--bgcolor-theme,#367e5a) }
+.current-job .btn-save a.btn:hover, .survey-talent .btn-result a.btn:hover { border-color: var(--buttonbgcolorhover-theme,#bda03c); color: var(--buttonbgcolorhover-theme,#bda03c) }
+.current-job .btn-apply a.btn:hover, .survey-talent .btn-vote a.btn:hover { background-color: var(--buttonbgcolorhover-theme,#bda03c); border-color: var(--buttonbgcolorhover-theme,#bda03c) }
+.ads-pre.slidebg, #slidehr, #slidehr .bgimage { height: 350px }
+.no-bootstrap #container #header-pre .logo { padding-top: 22px }
+
+.apply-job-container .form-action .btn-st1 {
+	background: var(--buttonbgcolor-theme,#367e5a);
+}
+
+.apply-job-container .form-action .btn-st1:hover {
+	background: var(--buttonbgcolorhover-theme,#367e5a)!important
+}
+
+#footer-pre { background-color: var(--footerbgcolor-theme,#367e5a) }
