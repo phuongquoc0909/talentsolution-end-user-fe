@@ -127,13 +127,13 @@ export default function Header({ menuItems = defaultMenuItems, onLogin }: Header
     <div className="section-header" id="section-header">
       <div id="my-download">
         <div className="container">
-          <div className="download_form_premium"><a href="https://image.talentnetwork.vn/content/Vinasoy-Mau-thong-tin-UV-2024.doc">Download application form</a></div>
+          <div className="download_form_premium"><a href="#">Download application form</a></div>
         </div>
       </div>
       <div id="header-pre">
         <div className="columns hidden"><div id="show-menu"><span className="fa fa-bars"></span></div></div>
         <div className="container">
-          <div className="logo"><a href="https://vinasoy.com/"><img alt="Vinasoy" src="https://image.talentnetwork.vn/vinasoy//rws//en_1603425322.jpg" /></a></div>
+          <div className="logo"><a href="/demop11/home"><img alt="Vinasoy" src="https://image.talentnetwork.vn/vinasoy//rws//en_1603425322.jpg" /></a></div>
           <div className="menu">
             <ul>
               {menuItems.map((menuItem, index) => {
@@ -183,7 +183,7 @@ export default function Header({ menuItems = defaultMenuItems, onLogin }: Header
           <div className="navbar-right">
             <ul>
               <li><a tabIndex={0} role="button" className="showDialogD" onClick={handleLogin}>Login</a></li>
-              <li><span className="vi"></span><a href="http://career.vinasoy.com/tim-viec-lam/tat-ca-viec-lam/vi">Vietnamese</a></li>
+              <li><span className="vi"></span><a href="#">Vietnamese</a></li>
             </ul>
           </div>
         </div>
