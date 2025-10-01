@@ -10,7 +10,6 @@ import PartnerSection from "@/components/demop11/home/box-partner-p11";
 import NewMidBanner, { arrMidBanner } from "@/components/demop11/banner/new-mid-banner";
 import BoxNews from "@/components/demop11/news/layout";
 import MediaSection from "@/components/common/media_section";
-import SocialSection from "@/components/demop11/box_social_section";
 
 export default function HomePage() {
   return (
@@ -29,7 +28,6 @@ export default function HomePage() {
       <NewMidBanner banners={arrMidBanner} />
       <BoxNews layout="5items" />
       <MediaSection />
-      <SocialSection />
     </>
   );
 }

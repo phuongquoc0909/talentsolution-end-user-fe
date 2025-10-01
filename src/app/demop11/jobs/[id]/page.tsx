@@ -191,7 +191,6 @@ const JobsDetailPage: React.FC = () => {
             </div>
         </div>
         <SimilarJobs />
-        <SocialSection />
         <ConfirmApply
             isOpen={isOpenConfirmApply}
             onClose={() => setIsOpenConfirmApply(false)}

@@ -1,3 +1,5 @@
+import SocialSection from "./box_social_section";
+
 // Types for menu data (shared with Header)
 interface MenuItem {
   CATE_ID?: string;
@@ -92,21 +94,24 @@ const defaultMenuItems: MenuItem[] = [
 
 export default function Footer({ menuItems = defaultMenuItems }: FooterProps) {
   return (
-    <div id="footer-pre">
-      <div className="container">
-            <div className="col-xs-12 col-sm-3 powerby"><a href="https://VieclamIT.vn/" target="_blank" style={{color: 'inherit'}}>Talent&nbsp;</a><a href="https://careerviet.vn/careermap" target="_blank" style={{color: 'inherit'}}>Solution&nbsp;</a><a href="https://VietnamSalary.vn/" target="_blank" style={{color: 'inherit'}}>by&nbsp;</a><a href="https://careerviet.vn/" title="CareerViet" target="_blank" style={{color: 'inherit'}}>CareerViet</a></div>
-            <div className="col-xs-12 col-sm-9 menu-footer">
-                <ul>
-                  {menuItems.map((menuItem, index) => (
-                    <li key={`footer-menu-${index}`}>
-                      <a href={menuItem.CATE_LINK}>
-                        {menuItem.CATE_NAME}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-            </div>
-        </div>
-    </div>
+    <>
+      <SocialSection />
+      <div id="footer-pre">
+        <div className="container">
+              <div className="col-xs-12 col-sm-3 powerby"><a href="https://VieclamIT.vn/" target="_blank" style={{color: 'inherit'}}>Talent&nbsp;</a><a href="https://careerviet.vn/careermap" target="_blank" style={{color: 'inherit'}}>Solution&nbsp;</a><a href="https://VietnamSalary.vn/" target="_blank" style={{color: 'inherit'}}>by&nbsp;</a><a href="https://careerviet.vn/" title="CareerViet" target="_blank" style={{color: 'inherit'}}>CareerViet</a></div>
+              <div className="col-xs-12 col-sm-9 menu-footer">
+                  <ul>
+                    {menuItems.map((menuItem, index) => (
+                      <li key={`footer-menu-${index}`}>
+                        <a href={menuItem.CATE_LINK}>
+                          {menuItem.CATE_NAME}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+              </div>
+          </div>
+      </div>
+    </>
   );
 }

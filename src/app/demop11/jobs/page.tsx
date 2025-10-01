@@ -31,7 +31,6 @@ export default function JobsListPage() {
           </div>
         </div>
       </div>
-      <SocialSection />
     </>
   );
 }

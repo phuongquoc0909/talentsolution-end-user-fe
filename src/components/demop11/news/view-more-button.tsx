@@ -7,7 +7,7 @@ const ViewMoreButton: React.FC = () => {
             <div className="col-sm-2 col-sm-offset-5 btn-viewmore">
                 <a 
                     className="btn btn-block btn-primary"
-                    href="/demop11/news"
+                    href="/demop11/news/vinasoy-news"
                 >
                     View More
                 </a>
