@@ -28,7 +28,7 @@ const defaultMenuItems: MenuItem[] = [
   {
     CATE_ID: 'menu_16018',
     CATE_NAME: 'Home',
-    CATE_LINK: 'https://career.vinasoy.com/en',
+    CATE_LINK: '/demop11/home',
     CATE_LINKTARGET: '_blank',
     className: 'focus'
   },
@@ -39,7 +39,7 @@ const defaultMenuItems: MenuItem[] = [
     submenu: [
       {
         CATE_NAME: 'Vinasoy People',
-        CATE_LINK: 'https://career.vinasoy.com/vinasoy-people-35A51578/en',
+        CATE_LINK: '',
         CATE_LINKTARGET: '_self'
       }
     ]
@@ -51,12 +51,12 @@ const defaultMenuItems: MenuItem[] = [
     submenu: [
       {
         CATE_NAME: 'Potential Candidates',
-        CATE_LINK: 'https://career.vinasoy.com/potential-candidates-35A5157C/en',
+        CATE_LINK: '',
         CATE_LINKTARGET: '_self' 
       },
       {
         CATE_NAME: 'Hiring Process',
-        CATE_LINK: 'https://career.vinasoy.com/hiring-process-35A5157D/en',
+        CATE_LINK: '',
         CATE_LINKTARGET: '_self'
       },
       {
@@ -66,12 +66,12 @@ const defaultMenuItems: MenuItem[] = [
       },
       {
         CATE_NAME: 'Benefits',
-        CATE_LINK: 'https://career.vinasoy.com/benefits-35A51574/en',
+        CATE_LINK: '',
         CATE_LINKTARGET: '_self'
       },
       {
         CATE_NAME: 'Why Vinasoy?',
-        CATE_LINK: 'https://career.vinasoy.com/why-vinasoy-35A51579/en',
+        CATE_LINK: '',
         CATE_LINKTARGET: '_self' 
       }
     ]
@@ -79,16 +79,16 @@ const defaultMenuItems: MenuItem[] = [
   {
     CATE_ID: 'menu_11381',
     CATE_NAME: 'News',
-    CATE_LINK: 'https://career.vinasoy.com/en/#11381',
+    CATE_LINK: '/demop11/news',
     submenu: [
       {
         CATE_NAME: 'Vinasoy News',
-        CATE_LINK: 'https://career.vinasoy.com/vinasoy-news-35A5157A/en',
+        CATE_LINK: '',
         CATE_LINKTARGET: '_self' 
       },
       {
         CATE_NAME: 'Career Advices',
-        CATE_LINK: 'https://career.vinasoy.com/career-advices-35A5157B/en',
+        CATE_LINK: '',
         CATE_LINKTARGET: '_self' 
       }
     ]
@@ -96,7 +96,7 @@ const defaultMenuItems: MenuItem[] = [
   {
     CATE_ID: 'menu_11382',
     CATE_NAME: 'Contact Us',
-    CATE_LINK: 'https://career.vinasoy.com/contact/en'
+    CATE_LINK: ''
   }
 ];
 
