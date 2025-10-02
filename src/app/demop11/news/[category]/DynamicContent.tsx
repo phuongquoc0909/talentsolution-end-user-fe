@@ -1,6 +1,6 @@
 'use client';
 
-import { useParams, notFound } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import useSanitizedHTML from '@/hooks/useSanitizedHTML';
 import { useState, useEffect, useMemo, memo, useCallback } from 'react';
 import Pagination from "@/components/common/pagination";
@@ -46,17 +46,15 @@ const DynamicContent: React.FC<DynamicContentProps> = memo(({
     
     const [type, setType] = useState<NewsType>('');
 
-    // Check if current category has content in NewsContentTypePage
+    // Check if current category has custom content (only needed for ContentType2)
     const hasCustomContent = useMemo(() => {
-        const categoryName = categorySlug 
-            ? categorySlug.split('-').map(word => 
-                word.charAt(0).toUpperCase() + word.slice(1)
-              ).join(' ')
-            : '';
+        if (!categorySlug) return false;
         
-        const hasContent = NewsContentTypePage.some(item => item.CATE_NAME === categoryName);
+        const categoryName = categorySlug.split('-').map(word => 
+            word.charAt(0).toUpperCase() + word.slice(1)
+        ).join(' ');
         
-        return hasContent;
+        return NewsContentTypePage.some(item => item.CATE_NAME === categoryName);
     }, [categorySlug]);
 
     // Memoized sessionStorage handler
@@ -79,53 +77,36 @@ const DynamicContent: React.FC<DynamicContentProps> = memo(({
         }
     }, [hasCustomContent, handleSessionStorage]);
 
-    // Get current content based on type and category
+    // Get current content based on type and category (only needed for ContentType2)
     const currentContent = useMemo(() => {
-        if (type === '2') {
-            // Convert categorySlug back to CATE_NAME format
-            const categoryName = categorySlug 
-                ? categorySlug.split('-').map(word => 
-                    word.charAt(0).toUpperCase() + word.slice(1)
-                  ).join(' ')
-                : '';
+        if (type === '2' && categorySlug) {
+            const categoryName = categorySlug.split('-').map(word => 
+                word.charAt(0).toUpperCase() + word.slice(1)
+            ).join(' ');
             
-            // Find matching content from NewsContentTypePage array
-            const foundContent = NewsContentTypePage.find(item => 
-                item.CATE_NAME === categoryName
-            );
-            
-            return foundContent || null;
+            return NewsContentTypePage.find(item => item.CATE_NAME === categoryName) || null;
         }
         return null; // For type 3, we don't need currentContent
     }, [type, categorySlug]);
 
     // Check if content contains HTML tags
     const hasHTMLTags = useMemo(() => {
-        const content = currentContent?.CATE_CONTENT || '';
-        const trimmedContent = content.trim();
-        const hasTags = /<[^>]*>/g.test(trimmedContent);
-        return hasTags;
+        const content = currentContent?.CATE_CONTENT?.trim() || '';
+        return /<[^>]*>/g.test(content);
     }, [currentContent?.CATE_CONTENT]);
 
     // Sanitize HTML content for security (only if it's HTML)
     const safeCATE_CONTENT_HTML = useSanitizedHTML(hasHTMLTags ? (currentContent?.CATE_CONTENT || '') : '');
-    
-    
+
     // Process content - handle both plain text and HTML
     const processedContent = useMemo(() => {
-        const content = currentContent?.CATE_CONTENT || '';
-        const trimmedContent = content.trim();
+        const content = currentContent?.CATE_CONTENT?.trim() || '';
         
         if (hasHTMLTags) {
-            // If it's HTML, use sanitized version if available, otherwise use original
-            const htmlContent = safeCATE_CONTENT_HTML || trimmedContent;
-            return htmlContent;
-        } else {
-            // If it's plain text, return trimmed version
-            return trimmedContent;
+            return safeCATE_CONTENT_HTML || content;
         }
+        return content;
     }, [hasHTMLTags, safeCATE_CONTENT_HTML, currentContent?.CATE_CONTENT]);
-    
 
     // Memoized components for better performance
     const ContentType2: React.FC = memo(() => {
@@ -180,12 +161,8 @@ const DynamicContent: React.FC<DynamicContentProps> = memo(({
         if (type === '2') {
             return <ContentType2 />;
         }
-        if (type === '3') {
-            return <ContentType3 />;
-        }
-        return <ContentType3 />; // Default fallback
-    }, [type, hasCustomContent, currentContent]);
-
+        return <ContentType3 />; // Default fallback for type 3 or empty
+    }, [type]);
 
     return renderedContent;
 });
