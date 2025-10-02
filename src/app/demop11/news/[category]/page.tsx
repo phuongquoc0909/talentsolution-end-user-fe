@@ -49,7 +49,7 @@ const NewsByType: React.FC<NewsByTypeProps> = ({
                 </header>
                 <DynamicContent 
                     newsItems={newsItems} 
-                    CATE_NAME={CATE_NAME} 
+                    CATE_NAME={categoryName} 
                 />
             </div>
         </>

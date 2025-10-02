@@ -1,6 +1,5 @@
 'use client';
 
-import { useParams } from 'next/navigation';
 import useSanitizedHTML from '@/hooks/useSanitizedHTML';
 import { useState, useEffect, useMemo, memo, useCallback } from 'react';
 import Pagination from "@/components/common/pagination";
@@ -41,21 +40,12 @@ const DynamicContent: React.FC<DynamicContentProps> = memo(({
     newsItems = newsData, 
     CATE_NAME = "News",
     }) => {
-    const params = useParams();
-    const categorySlug = params.category as string;
-    
     const [type, setType] = useState<NewsType>('');
 
     // Check if current category has custom content (only needed for ContentType2)
     const hasCustomContent = useMemo(() => {
-        if (!categorySlug) return false;
-        
-        const categoryName = categorySlug.split('-').map(word => 
-            word.charAt(0).toUpperCase() + word.slice(1)
-        ).join(' ');
-        
-        return NewsContentTypePage.some(item => item.CATE_NAME === categoryName);
-    }, [categorySlug]);
+        return NewsContentTypePage.some(item => item.CATE_NAME === CATE_NAME);
+    }, [CATE_NAME]);
 
     // Memoized sessionStorage handler
     const handleSessionStorage = useCallback(() => {
@@ -79,15 +69,11 @@ const DynamicContent: React.FC<DynamicContentProps> = memo(({
 
     // Get current content based on type and category (only needed for ContentType2)
     const currentContent = useMemo(() => {
-        if (type === '2' && categorySlug) {
-            const categoryName = categorySlug.split('-').map(word => 
-                word.charAt(0).toUpperCase() + word.slice(1)
-            ).join(' ');
-            
-            return NewsContentTypePage.find(item => item.CATE_NAME === categoryName) || null;
+        if (type === '2') {
+            return NewsContentTypePage.find(item => item.CATE_NAME === CATE_NAME) || null;
         }
         return null; // For type 3, we don't need currentContent
-    }, [type, categorySlug]);
+    }, [type, CATE_NAME]);
 
     // Check if content contains HTML tags
     const hasHTMLTags = useMemo(() => {
