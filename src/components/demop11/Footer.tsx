@@ -1,6 +1,3 @@
-import SocialSection from "./box_social_section";
-
-// Types for menu data (shared with Header)
 interface MenuItem {
   CATE_ID?: string;
   CATE_NAME: string;
@@ -15,7 +12,6 @@ interface FooterProps {
   menuItems?: MenuItem[];
 }
 
-// Default menu data (fallback when no data from backend)
 const defaultMenuItems: MenuItem[] = [
   {
     CATE_ID: 'menu_16018',
@@ -95,7 +91,6 @@ const defaultMenuItems: MenuItem[] = [
 export default function Footer({ menuItems = defaultMenuItems }: FooterProps) {
   return (
     <>
-      <SocialSection />
       <div id="footer-pre">
         <div className="container">
               <div className="col-xs-12 col-sm-3 powerby"><a href="https://VieclamIT.vn/" target="_blank" style={{color: 'inherit'}}>Talent&nbsp;</a><a href="https://careerviet.vn/careermap" target="_blank" style={{color: 'inherit'}}>Solution&nbsp;</a><a href="https://VietnamSalary.vn/" target="_blank" style={{color: 'inherit'}}>by&nbsp;</a><a href="https://careerviet.vn/" title="CareerViet" target="_blank" style={{color: 'inherit'}}>CareerViet</a></div>

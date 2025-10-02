@@ -5,6 +5,7 @@ import Header from '@/components/demop11/Header';
 import Footer from '@/components/demop11/Footer';
 import ScrollTopButton from '@/components/common/scrollToTop';
 import LoginDialog from '@/components/UI/dialog/LoginDialog';
+import SocialSection from '@/components/demop11/box_social_section';
 
 import '@/styles/demop11/bootstrap.css';
 import '@/styles/demop11/iefix.css';
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body>
         <Header onLogin={handleLogin} />
         <div id="wrapper">{children}</div>
+        <SocialSection />
         <Footer />
         <ScrollTopButton />
         <LoginDialog isOpen={isOpenLogin} onClose={() => setIsOpenLogin(false)} />

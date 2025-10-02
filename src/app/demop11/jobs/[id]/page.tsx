@@ -7,7 +7,6 @@ import { useState, useEffect } from 'react';
 import useSanitizedHTML from '@/hooks/useSanitizedHTML';
 
 import { jobData } from '@/contants/data';
-import SocialSection from "@/components/demop11/box_social_section";
 import Benefit from '@/components/demop11/job/benefit';
 import ListJobViewed from '@/components/demop11/job/box_job_view5';
 import BoxJoin from '@/components/common/box_join';

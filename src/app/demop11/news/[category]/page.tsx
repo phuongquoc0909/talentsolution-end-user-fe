@@ -1,11 +1,8 @@
 'use client';
 
 import { useParams } from 'next/navigation';
-import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import SearchJobSection from "@/components/common/_searchjob_section";
-import SocialSection from "@/components/demop11/box_social_section";
-import Pagination from "@/components/common/pagination";
 import { newsData, BoxNewsProps } from "@/contants/news";
 import Breadcrumb from "@/components/demop11/news/breadcrumb";
 
@@ -13,14 +10,8 @@ import Breadcrumb from "@/components/demop11/news/breadcrumb";
 const DynamicContent = dynamic(() => import('./DynamicContent'), {
     ssr: false,
     loading: () => (
-        <div className="news-five-items">
-            <div className="container">
-                <div className="row">
-                    <div className="col-xs-12">
-                        <div className="text-center">Loading...</div>
-                    </div>
-                </div>
-            </div>
+        <div className="text-center py-8">
+            <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
         </div>
     )
 });
@@ -59,7 +50,6 @@ const NewsByType: React.FC<NewsByTypeProps> = ({
                 <DynamicContent 
                     newsItems={newsItems} 
                     CATE_NAME={CATE_NAME} 
-                    layout={'5items'}
                 />
             </div>
         </>
