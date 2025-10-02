@@ -23,7 +23,7 @@ function useSanitizedHTML(dirtyHTML: string, options: Config = {}) {
       ],
       ALLOWED_ATTR: ['href', 'src', 'alt', 'title', 'class', 'style', 'target', 'rel'],
       FORBID_TAGS: ['script', 'style', 'iframe', 'object', 'embed'],
-      FORBID_ATTR: ['onerror', 'onload', 'onclick', 'onmouseover', 'style'], // style có thể gây rủi ro, tùy chỉnh nếu cần
+      FORBID_ATTR: ['onerror', 'onload', 'onclick', 'onmouseover'], // Removed 'style' to allow styling
       ...options,
     };
 
