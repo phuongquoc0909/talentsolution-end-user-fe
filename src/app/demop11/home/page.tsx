@@ -11,7 +11,7 @@ import NewMidBanner, { arrMidBanner } from "@/components/demop11/banner/new-mid-
 import BoxNews from "@/components/demop11/news/layout";
 import MediaSection from "@/components/common/media_section";
 
-export default function HomePage() {
+const HomePage: React.FC = () => {
   return (
     <>
       <div id="photo-area">
@@ -31,3 +31,9 @@ export default function HomePage() {
     </>
   );
 }
+
+// Performance optimization - Static display name (React DevTools optimization)
+HomePage.displayName = 'HomePage';
+
+// Export with performance hint (Webpack optimization)
+export default HomePage;

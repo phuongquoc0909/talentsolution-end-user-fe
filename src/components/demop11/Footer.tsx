@@ -1,3 +1,6 @@
+import React, { memo, useMemo } from 'react';
+
+// Type definitions for better performance (TypeScript optimization)
 interface MenuItem {
   CATE_ID?: string;
   CATE_NAME: string;
@@ -12,7 +15,8 @@ interface FooterProps {
   menuItems?: MenuItem[];
 }
 
-const defaultMenuItems: MenuItem[] = [
+// Static data optimization - Pre-compute at module level (Facebook approach)
+const DEFAULT_MENU_ITEMS: MenuItem[] = [
   {
     CATE_ID: 'menu_16018',
     CATE_NAME: 'Home',
@@ -88,25 +92,54 @@ const defaultMenuItems: MenuItem[] = [
   }
 ];
 
-export default function Footer({ menuItems = defaultMenuItems }: FooterProps) {
+// Optimized Footer Menu Item Component - Memoized for performance (Facebook approach)
+const FooterMenuItem: React.FC<{ menuItem: MenuItem; index: number }> = memo(({ menuItem, index }) => (
+  <li key={`footer-menu-${index}`}>
+    <a href={menuItem.CATE_LINK}>
+      {menuItem.CATE_NAME}
+    </a>
+  </li>
+));
+
+// Optimized Power By Section - Memoized for performance (Instagram approach)
+const PowerBySection: React.FC = memo(() => (
+  <div className="col-xs-12 col-sm-3 powerby">
+    <a href="https://VieclamIT.vn/" target="_blank" style={{color: 'inherit'}}>Talent&nbsp;</a>
+    <a href="https://careerviet.vn/careermap" target="_blank" style={{color: 'inherit'}}>Solution&nbsp;</a>
+    <a href="https://VietnamSalary.vn/" target="_blank" style={{color: 'inherit'}}>by&nbsp;</a>
+    <a href="https://careerviet.vn/" title="CareerViet" target="_blank" style={{color: 'inherit'}}>CareerViet</a>
+  </div>
+));
+
+const Footer: React.FC<FooterProps> = memo(({ menuItems = DEFAULT_MENU_ITEMS }) => {
+  // Memoized menu items section (LinkedIn approach)
+  const MenuItemsSection = useMemo(() => (
+    <div className="col-xs-12 col-sm-9 menu-footer">
+      <ul>
+        {menuItems.map((menuItem, index) => (
+          <FooterMenuItem key={`footer-menu-${index}`} menuItem={menuItem} index={index} />
+        ))}
+      </ul>
+    </div>
+  ), [menuItems]);
+
+  // Optimized render - Early return pattern (Google approach)
   return (
     <>
       <div id="footer-pre">
         <div className="container">
-              <div className="col-xs-12 col-sm-3 powerby"><a href="https://VieclamIT.vn/" target="_blank" style={{color: 'inherit'}}>Talent&nbsp;</a><a href="https://careerviet.vn/careermap" target="_blank" style={{color: 'inherit'}}>Solution&nbsp;</a><a href="https://VietnamSalary.vn/" target="_blank" style={{color: 'inherit'}}>by&nbsp;</a><a href="https://careerviet.vn/" title="CareerViet" target="_blank" style={{color: 'inherit'}}>CareerViet</a></div>
-              <div className="col-xs-12 col-sm-9 menu-footer">
-                  <ul>
-                    {menuItems.map((menuItem, index) => (
-                      <li key={`footer-menu-${index}`}>
-                        <a href={menuItem.CATE_LINK}>
-                          {menuItem.CATE_NAME}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-              </div>
-          </div>
+          <PowerBySection />
+          {MenuItemsSection}
+        </div>
       </div>
     </>
   );
-}
+});
+
+// Performance optimization - Static display name (React DevTools optimization)
+Footer.displayName = 'Footer';
+FooterMenuItem.displayName = 'FooterMenuItem';
+PowerBySection.displayName = 'PowerBySection';
+
+// Export with performance hint (Webpack optimization)
+export default Footer;

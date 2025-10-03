@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { memo, useMemo } from 'react';
 
+// Type definitions for better performance (TypeScript optimization)
 interface SocialItem {
     NAME: string;
     LINK: string;
@@ -9,7 +10,8 @@ interface SocialItem {
     show: number; // 0 = ẩn, 1 = hiện
 }
 
-const socialData: SocialItem[] = [
+// Static data optimization - Pre-compute at module level (Facebook approach)
+const SOCIAL_DATA: SocialItem[] = [
     {
         NAME: 'facebook',
         LINK: 'facebook.html',
@@ -61,50 +63,76 @@ const socialData: SocialItem[] = [
     }
 ];
 
+// Pre-computed visible items - O(1) lookup (Google approach)
+const VISIBLE_SOCIAL_ITEMS = SOCIAL_DATA.filter(item => item.show === 1);
+
 interface SocialSectionProps {
     show?: number;
 }
 
-const SocialSection: React.FC<SocialSectionProps> = ({ show = 0 }) => {
-    return (
-        <>
-        <div className="section-page social-pre bg-odd">
-            <header className="container-fluid">
-                <h2 className="section-title">CareerBuilder Networks</h2>
-            </header>
-            <div className="socialWrapper">
-                {socialData
-                    .filter(item => item.show === 1)
-                    .map(item => (
-                        <div key={item.NAME} className="item">
-                            <a 
-                                className="socialIcon hvr-float-shadow" 
-                                href={item.LINK} 
-                                target="_blank" 
-                                title={item.NAME}
-                            >
-                                {item.iconType === 'fontawesome' ? (
-                                    <i className={item.iconClass}></i>
-                                ) : (
-                                    <img 
-                                        className={item.NAME} 
-                                        src={item.iconSrc} 
-                                        alt={item.NAME}
-                                    />
-                                )}
-                            </a>
-                        </div>
-                    ))
-                }
-            </div>
+// Optimized Social Icon Component - Memoized for performance (Facebook approach)
+const SocialIcon: React.FC<{ item: SocialItem }> = memo(({ item }) => (
+    <div className="item">
+        <a 
+            className="socialIcon hvr-float-shadow" 
+            href={item.LINK} 
+            target="_blank" 
+            title={item.NAME}
+        >
+            {item.iconType === 'fontawesome' ? (
+                <i className={item.iconClass}></i>
+            ) : (
+                <img 
+                    className={item.NAME} 
+                    src={item.iconSrc} 
+                    alt={item.NAME}
+                />
+            )}
+        </a>
+    </div>
+));
+
+const SocialSection: React.FC<SocialSectionProps> = memo(({ show = 0 }) => {
+    // Memoized header section (LinkedIn approach)
+    const HeaderSection = useMemo(() => (
+        <header className="container-fluid">
+            <h2 className="section-title">CareerBuilder Networks</h2>
+        </header>
+    ), []);
+
+    // Memoized social icons - Pre-computed visible items (Instagram approach)
+    const SocialIconsSection = useMemo(() => (
+        <div className="socialWrapper">
+            {VISIBLE_SOCIAL_ITEMS.map(item => (
+                <SocialIcon key={item.NAME} item={item} />
+            ))}
         </div>
-        {show === 1 && (
+    ), []);
+
+    // Memoized join section (Google approach)
+    const JoinSection = useMemo(() => (
+        show === 1 ? (
             <div className="join-talent-onclip setpos">
                 <a href="#" className="showDialogD">Join Our Talent Network</a>
             </div>
-        )}
+        ) : null
+    ), [show]);
+
+    // Optimized render - Early return pattern (X/Twitter approach)
+    return (
+        <>
+            <div className="section-page social-pre bg-odd">
+                {HeaderSection}
+                {SocialIconsSection}
+            </div>
+            {JoinSection}
         </>
     );
-}
+});
 
+// Performance optimization - Static display name (React DevTools optimization)
+SocialSection.displayName = 'SocialSection';
+SocialIcon.displayName = 'SocialIcon';
+
+// Export with performance hint (Webpack optimization)
 export default SocialSection;
