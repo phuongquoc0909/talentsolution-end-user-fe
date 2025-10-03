@@ -13,6 +13,7 @@ export interface MenuItem {
     hasSubmenu?: boolean; // Optional - auto-detect from submenu presence
     submenu?: SubMenuItem[];
     className?: string;
+    type?: string; // 2: page, 3: list
 }
 
 export const defaultMenuItems: MenuItem[] = [
@@ -96,12 +97,6 @@ export const defaultMenuItems: MenuItem[] = [
     {
         CATE_ID: 'menu_11382',
         CATE_NAME: 'Contact Us',
-        CATE_LINK: '/demop11/contact'
-    },
-
-    {
-        CATE_ID: 'menu_11782',
-        CATE_NAME: 'TEST',
-        CATE_LINK: '/demop11/test'
+        CATE_LINK: '/demop11/contact/'
     }
 ];

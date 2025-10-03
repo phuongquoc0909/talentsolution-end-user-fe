@@ -22,6 +22,7 @@ export default function Header({ menuItems = defaultMenuItems, onLogin }: Header
     return () => handleMouseEnter(index);
   }, [handleMouseEnter]);
 
+  // Handle login
   const handleLogin = useCallback(() => {
     if (onLogin) {
       onLogin();
@@ -32,7 +33,19 @@ export default function Header({ menuItems = defaultMenuItems, onLogin }: Header
     const hasSubmenu = menuItem.hasSubmenu ?? (menuItem.submenu && menuItem.submenu.length > 0);
     
     if (!hasSubmenu) {
-      sessionStorage.setItem('currentCategoryName', menuItem.CATE_NAME);
+      if (menuItem.CATE_LINK === '/demop11/news/' && menuItem.type && (menuItem.type === '2' || menuItem.type === '3')) {
+        e.preventDefault();
+        const categorySlug = menuItem.CATE_NAME
+          .toLowerCase()
+          .replace(/\s+/g, '-')
+          .replace(/[^a-z0-9-]/g, '');
+        
+        sessionStorage.setItem('newsType', menuItem.type);
+        
+        window.location.href = `/demop11/news/${categorySlug}`;
+      } else {
+        sessionStorage.setItem('currentCategoryName', menuItem.CATE_NAME);
+      }
     }
   }, []);
 

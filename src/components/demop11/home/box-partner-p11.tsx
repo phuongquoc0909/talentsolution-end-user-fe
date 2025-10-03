@@ -40,7 +40,6 @@ const partnerData: PartnerItem[] = [
 ];
 
 const PartnerSection: React.FC = () => {
-    // Chia partnerData thành các nhóm 3 phần tử
     const chunkArray = (array: PartnerItem[], size: number) => {
         const chunks = [];
         for (let i = 0; i < array.length; i += size) {

@@ -5,9 +5,7 @@ import { jobData } from '@/contants/data';
 const CurrentJob: React.FC = () => {
     const params = useParams();
     const jobId = parseInt(params.id as string);
-    // Find job by ID
     const currentJob = jobData.find(job => job.JOB_ID === jobId);
-    // If job not found, return 404
     if (!currentJob) {
         notFound();
     }

@@ -4,7 +4,7 @@ import { useParams } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { memo, useMemo, useCallback } from 'react';
 import SearchJobSection from "@/components/common/_searchjob_section";
-import { newsData, BoxNewsProps } from "@/contants/news";
+import { newsData, NewsItem } from "@/contants/news";
 import Breadcrumb from "@/components/demop11/news/breadcrumb";
 
 const REGEX_POOL = {
@@ -21,12 +21,10 @@ const DynamicContent = dynamic(() => import('./DynamicContent'), {
     )
 });
 
-interface NewsByTypeProps extends BoxNewsProps {
-    newsItems?: typeof newsData;
+interface NewsByTypeProps {
+    newsItems?: NewsItem[];
     CATE_NAME?: string;
 }
-
-type NewsType = '2' | '3' | '';
 
 const transformCategorySlug = (slug: string): string => {
     return slug.replace(REGEX_POOL.HYPHEN_SPLIT, ' ')

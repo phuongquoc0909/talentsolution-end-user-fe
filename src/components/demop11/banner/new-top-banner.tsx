@@ -7,7 +7,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperType } from 'swiper';
 import SearchJobSection from '@/components/common/_searchjob_section';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
@@ -50,12 +49,12 @@ export default function NewTopBanner({ banners = arrTopBanner }: NewTopBannerSwi
           src={getBannerImageSrc(item)}
           alt={`Banner ${index + 1}`}
           loading={index === 0 ? 'eager' : 'lazy'}
-          priority={index === 0} // Add priority for first image
+          priority={index === 0} 
           width={0}
           height={0}
           sizes="100vw"
           style={{ width: '100%', height: 'auto' }}
-          unoptimized={true} // Tạm thời disable optimization để tránh lỗi
+          unoptimized={true} 
         />
       </div>
     );
@@ -79,18 +78,15 @@ export default function NewTopBanner({ banners = arrTopBanner }: NewTopBannerSwi
   };
 
   function handleBannerCounterClick(item: Banner) {
-    // TODO handle banner counter click
     console.log('Banner clicked:', item.PHOTO_ID);
   }
 
   const handleSwiperInit = (wrapperId: string) => (swiper: SwiperType) => {
-    // Thêm id vào swiper-wrapper khi Swiper được khởi tạo
     if (swiper.wrapperEl && !swiper.wrapperEl.id) {
       swiper.wrapperEl.id = wrapperId;
     }
   };
 
-  // Don't render if no banners
   if (!banners || banners.length === 0) {
     console.log('NewTopBanner - No banners to display');
     return null;

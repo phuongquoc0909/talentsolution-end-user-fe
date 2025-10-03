@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 interface ScrollTopButtonProps {
-  showAfter?: number; // số px cuộn xuống mới hiện nút, mặc định 120
+  showAfter?: number;
 }
 
 const ScrollTopButton: React.FC<ScrollTopButtonProps> = ({ showAfter = 120 }) => {
@@ -19,7 +19,6 @@ const ScrollTopButton: React.FC<ScrollTopButtonProps> = ({ showAfter = 120 }) =>
 
     window.addEventListener('scroll', handleScroll);
 
-    // Kiểm tra ngay khi mount
     handleScroll();
 
     return () => {

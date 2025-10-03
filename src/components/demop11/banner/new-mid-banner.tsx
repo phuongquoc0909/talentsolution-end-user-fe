@@ -6,7 +6,6 @@ import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperType } from 'swiper';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
@@ -54,11 +53,11 @@ export default function NewMidBanner({ banners = arrMidBanner }: NewMidBannerSwi
           src={getBannerImageSrc(item)}
           alt={`Banner ${index + 1}`}
           loading={index === 0 ? 'eager' : 'lazy'}
-          priority={index === 0} // Add priority for first image
+          priority={index === 0} 
           width={0}
           height={0}
           sizes="100vw"
-          unoptimized={true} // Tạm thời disable optimization để tránh lỗi
+          unoptimized={true} 
           style={{ width: '100%', height: 'auto' }}
         />
       </div>
@@ -83,18 +82,15 @@ export default function NewMidBanner({ banners = arrMidBanner }: NewMidBannerSwi
   };
 
   function handleBannerCounterClick(item: Banner) {
-    // TODO handle banner counter click
     console.log('Banner clicked:', item.PHOTO_ID);
   }
 
   const handleSwiperInit = (swiper: SwiperType) => {
-    // Thêm id vào swiper-wrapper khi Swiper được khởi tạo
     if (swiper.wrapperEl && !swiper.wrapperEl.id) {
       swiper.wrapperEl.id = 'divMiddleBannerSlide';
     }
   };
 
-  // Don't render if no banners
   if (!banners || banners.length === 0) {
     console.log('NewMidBanner - No banners to display');
     return null;

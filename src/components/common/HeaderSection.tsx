@@ -19,7 +19,7 @@ const HeaderSection: React.FC<HeaderSectionProps> = memo(({
             }
         }
         
-        return ''; // no fallback
+        return '';
     };
 
     const HeaderSection = useMemo(() => (

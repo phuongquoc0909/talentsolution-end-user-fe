@@ -3,9 +3,8 @@
 import useSanitizedHTML from '@/hooks/useSanitizedHTML';
 import { useState, useEffect, useMemo, memo, useCallback, useRef } from 'react';
 import Pagination from "@/components/common/pagination";
-import { newsData, NEWS_CONTENT_TYPE_PAGE, ItemTypePage } from "@/contants/news";
-
-
+import { newsData } from "@/contants/news";
+import { NEWS_CONTENT_TYPE_PAGE, ItemTypePage } from "@/contants/detail-type-page";
 
 const NORMALIZED_CONTENT_MAP = new Map<string, ItemTypePage>();
 NEWS_CONTENT_TYPE_PAGE.forEach(item => {
@@ -30,7 +29,7 @@ const DynamicContent: React.FC<DynamicContentProps> = memo(({
     CATE_NAME = "News",
     }) => {
     const [type, setType] = useState<NewsType>('');
-    const sessionStorageRef = useRef<boolean>(false); // Prevent multiple sessionStorage reads
+    const sessionStorageRef = useRef<boolean>(false); 
 
     const normalizedCateName = useMemo(() => 
         CATE_NAME.toLowerCase().replace(REGEX_POOL.NON_ALPHANUMERIC, ''), 
@@ -43,7 +42,7 @@ const DynamicContent: React.FC<DynamicContentProps> = memo(({
     );
 
     const handleSessionStorage = useCallback(() => {
-        if (sessionStorageRef.current) return; // Prevent duplicate reads
+        if (sessionStorageRef.current) return; 
         
         const storedType = sessionStorage.getItem('newsType') as NewsType;
         if (storedType && (storedType === '2' || storedType === '3')) {
@@ -65,7 +64,7 @@ const DynamicContent: React.FC<DynamicContentProps> = memo(({
         if (type === '2') {
             return NORMALIZED_CONTENT_MAP.get(normalizedCateName) || null;
         }
-        return null; // For type 3, we don't need currentContent
+        return null; 
     }, [type, normalizedCateName]);
 
     const sanitizedContent = useSanitizedHTML(currentContent?.CATE_CONTENT || '');

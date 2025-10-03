@@ -1,10 +1,25 @@
 "use client"
 
 import React, { memo, useMemo } from 'react';
-import { newsData, BoxNewsProps } from "@/contants/news";
+import { newsData } from "@/contants/news";   
 import ViewMoreButton from './view-more-button';
 
+interface NewsItem {
+    NEWS_ID: string;
+    NEWS_TITLE: string;
+    NEWS_PICTURE: string;
+    LINK: string;
+    NEWS_SUBCONTENT?: string;
+    NEWS_CONTENT: string;
+}
+
 type LayoutType = '2items' | '3items' | '4items' | '5items' | '6itemsUpto';
+
+interface BoxNewsProps {
+    newsItems?: NewsItem[];
+    CATE_NAME?: string;
+    layout: LayoutType;
+}
 
 const NewsItem: React.FC<{
     item: any;
