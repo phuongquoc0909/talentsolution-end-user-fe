@@ -16,8 +16,8 @@ const HomePage: React.FC = memo(() => {
   const sectionsConfig = useMemo(() => [
     { id: 'banner-video', priority: 1, component: BannerVideo, props: {} },
     { id: 'search-section', priority: 2, component: SearchJobSection, props: {} },
-    { id: 'banner-slide', priority: 3, component: BannerSlide, props: { banners: arrBannerSlide } },
-    { id: 'top-banner', priority: 4, component: NewTopBanner, props: { banners: arrTopBanner } },
+    // { id: 'banner-slide', priority: 3, component: BannerSlide, props: { banners: arrBannerSlide } },
+    // { id: 'top-banner', priority: 4, component: NewTopBanner, props: { banners: arrTopBanner } },
     { id: 'about-section', priority: 5, component: AboutSection, props: {} },
     { id: 'career-section', priority: 6, component: CareerSection, props: {} },
     { id: 'partner-section', priority: 7, component: PartnerSection, props: {} },
