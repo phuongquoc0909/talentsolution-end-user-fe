@@ -1,7 +1,11 @@
 'use client';
 import { useState, useCallback } from 'react';
 
-// Types for menu data
+interface HeaderProps {
+  menuItems?: MenuItem[];
+  onLogin?: () => void;
+}
+
 interface SubMenuItem {
   CATE_NAME: string;
   CATE_LINK: string;
@@ -19,12 +23,6 @@ interface MenuItem {
   className?: string;
 }
 
-interface HeaderProps {
-  menuItems?: MenuItem[];
-  onLogin?: () => void;
-}
-
-// Default menu data (fallback when no data from backend)
 const defaultMenuItems: MenuItem[] = [
   {
     CATE_ID: 'menu_16018',
