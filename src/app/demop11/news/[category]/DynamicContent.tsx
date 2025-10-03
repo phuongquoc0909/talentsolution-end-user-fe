@@ -7,14 +7,12 @@ import { newsData, NEWS_CONTENT_TYPE_PAGE, ItemTypePage } from "@/contants/news"
 
 
 
-// Global lookup map - Pre-computed at module level (Big Tech approach)
 const NORMALIZED_CONTENT_MAP = new Map<string, ItemTypePage>();
 NEWS_CONTENT_TYPE_PAGE.forEach(item => {
     const normalizedKey = item.CATE_NAME.toLowerCase().replace(/[^a-z0-9]/g, '');
     NORMALIZED_CONTENT_MAP.set(normalizedKey, item);
 });
 
-// Memory pool for regex - Reuse regex objects (X/Twitter approach)
 const REGEX_POOL = {
     HTML_TAGS: /<[^>]*>/g,
     NON_ALPHANUMERIC: /[^a-z0-9]/g
@@ -34,19 +32,16 @@ const DynamicContent: React.FC<DynamicContentProps> = memo(({
     const [type, setType] = useState<NewsType>('');
     const sessionStorageRef = useRef<boolean>(false); // Prevent multiple sessionStorage reads
 
-    // Optimized category normalization - Single computation (Google approach)
     const normalizedCateName = useMemo(() => 
         CATE_NAME.toLowerCase().replace(REGEX_POOL.NON_ALPHANUMERIC, ''), 
         [CATE_NAME]
     );
 
-    // Check if current category has custom content - O(1) lookup (Facebook approach)
     const hasCustomContent = useMemo(() => 
         NORMALIZED_CONTENT_MAP.has(normalizedCateName), 
         [normalizedCateName]
     );
 
-    // Optimized sessionStorage handler - Prevent multiple reads (Instagram approach)
     const handleSessionStorage = useCallback(() => {
         if (sessionStorageRef.current) return; // Prevent duplicate reads
         
@@ -59,16 +54,13 @@ const DynamicContent: React.FC<DynamicContentProps> = memo(({
     }, []);
 
     useEffect(() => {
-        // Priority 1: Check if category has custom content
         if (hasCustomContent) {
             setType('2');
         } else {
-            // Priority 2: Get type from sessionStorage
             handleSessionStorage();
         }
     }, [hasCustomContent, handleSessionStorage]);
 
-    // Get current content - O(1) lookup with pre-computed key (X/Twitter approach)
     const currentContent = useMemo(() => {
         if (type === '2') {
             return NORMALIZED_CONTENT_MAP.get(normalizedCateName) || null;
@@ -76,10 +68,8 @@ const DynamicContent: React.FC<DynamicContentProps> = memo(({
         return null; // For type 3, we don't need currentContent
     }, [type, normalizedCateName]);
 
-    // Universal content sanitization - Handles both HTML and plain text safely (Enterprise approach)
     const sanitizedContent = useSanitizedHTML(currentContent?.CATE_CONTENT || '');
 
-    // Optimized ContentType2 - Universal content rendering (Enterprise approach)
     const ContentType2: React.FC = memo(() => (
         <div className='pageType'>
             <div className="container">
@@ -93,7 +83,6 @@ const DynamicContent: React.FC<DynamicContentProps> = memo(({
         </div>
     ));
 
-    // Optimized ContentType3 - Virtualization ready (Instagram approach)
     const ContentType3: React.FC = memo(() => {
         const newsItemsLength = newsItems.length;
         
@@ -129,15 +118,12 @@ const DynamicContent: React.FC<DynamicContentProps> = memo(({
         );
     });
 
-    // Optimized content rendering - Early return pattern (Google approach)
     if (type === '2') {
         return <ContentType2 />;
     }
     return <ContentType3 />;
 });
 
-// Performance optimization - Static display name (React DevTools optimization)
 DynamicContent.displayName = 'DynamicContent';
 
-// Export with performance hint (Webpack optimization)
 export default DynamicContent;

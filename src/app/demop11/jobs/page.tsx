@@ -6,13 +6,11 @@ import BoxJobType from "@/components/demop11/job/list_job_index4";
 import ListJobType from "@/components/demop11/job/list_job_index3";
 import Pagination from "@/components/common/pagination";
 
-// Type definitions for better performance (TypeScript optimization)
 type GridJobType = 'box' | 'list';
 
 const JobsListPage: React.FC = memo(() => {
   const [gridJobType, setGridJobType] = useState<GridJobType>('box');
   
-  // Memoized event handlers - Prevent recreation on every render (Instagram approach)
   const handleBoxView = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     setGridJobType('box');
@@ -23,7 +21,6 @@ const JobsListPage: React.FC = memo(() => {
     setGridJobType('list');
   }, []);
 
-  // Memoized components for optimal performance (LinkedIn approach)
   const SearchSection = useMemo(() => (
     <div id="job-search">
       <SearchJobSection />
@@ -61,7 +58,6 @@ const JobsListPage: React.FC = memo(() => {
     </div>
   ), []);
 
-  // Optimized render - Early return pattern (Google approach)
   return (
     <>
       {SearchSection}
@@ -77,8 +73,6 @@ const JobsListPage: React.FC = memo(() => {
   );
 });
 
-// Performance optimization - Static display name (React DevTools optimization)
 JobsListPage.displayName = 'JobsListPage';
 
-// Export with performance hint (Webpack optimization)
 export default JobsListPage;

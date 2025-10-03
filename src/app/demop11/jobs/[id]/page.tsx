@@ -14,7 +14,6 @@ import BoxSurveyP11 from '@/components/common/box_survey_p11';
 import SimilarJobs from '@/components/common/section_similar_jobs';
 import ConfirmApply from '@/components/UI/dialog/ConfirmApply';
 
-// Type definitions for better performance (TypeScript optimization)
 interface JobDetailState {
     activeShareId: number | null;
     isOpenConfirmApply: boolean;
@@ -24,7 +23,6 @@ const JobsDetailPage: React.FC = memo(() => {
     const params = useParams();
     const jobId = parseInt(params.id as string);
     
-    // Optimized job lookup - Memoized computation (Facebook approach)
     const currentJob = useMemo(() => {
         const job = jobData.find(job => job.JOB_ID === jobId);
         if (!job) {
@@ -33,17 +31,14 @@ const JobsDetailPage: React.FC = memo(() => {
         return job;
     }, [jobId]);
 
-    // Universal content sanitization - Handles both HTML and plain text safely (Enterprise approach)
     const safeJOB_CONTENT_HTML = useSanitizedHTML(currentJob.JOB_CONTENT);
     const safeJOB_REQUIRESKILL_HTML = useSanitizedHTML(currentJob.JOB_REQUIRESKILL);
 
-    // Optimized state management - Combined state (Instagram approach)
     const [state, setState] = useState<JobDetailState>({
         activeShareId: null,
         isOpenConfirmApply: false
     });
 
-    // Memoized event handlers - Prevent recreation on every render (X/Twitter approach)
     const handleShareClick = useCallback((jobId: number, e: React.MouseEvent<HTMLSpanElement>): void => {
         e.stopPropagation();
         setState(prev => ({
@@ -69,7 +64,6 @@ const JobsDetailPage: React.FC = memo(() => {
         setState(prev => ({ ...prev, isOpenConfirmApply: false }));
     }, []);
 
-    // Optimized event listener management (Google approach)
     useEffect(() => {
         if (state.activeShareId !== null) {
             document.addEventListener('mousedown', handleOutsideClick);
@@ -77,7 +71,6 @@ const JobsDetailPage: React.FC = memo(() => {
         }
     }, [state.activeShareId, handleOutsideClick]);
 
-    // Memoized components for optimal performance (LinkedIn approach)
     const CompanyLogoSection = useMemo(() => (
         <div className="col-xs-12 col-md-2 company-logo">
             <table width="100%" cellSpacing="0" cellPadding="0" style={{tableLayout: 'fixed'}}>
@@ -196,7 +189,6 @@ const JobsDetailPage: React.FC = memo(() => {
         </div>
     ), []);
 
-    // Optimized render - Early return pattern (Google approach)
     return (
         <>
             <div className="section-page job-detail-pre">
@@ -238,8 +230,6 @@ const JobsDetailPage: React.FC = memo(() => {
     );
 });
 
-// Performance optimization - Static display name (React DevTools optimization)
 JobsDetailPage.displayName = 'JobsDetailPage';
 
-// Export with performance hint (Webpack optimization)
 export default JobsDetailPage;

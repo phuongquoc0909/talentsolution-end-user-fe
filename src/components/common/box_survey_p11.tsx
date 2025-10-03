@@ -6,7 +6,6 @@ import { surveyData } from '@/contants/survey';
 const BoxSurveyP11: React.FC = () => {
     const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
 
-    // Check render conditions: show === 1 and QUESTION_CONTENT exists
     if (surveyData.show !== 1 || !surveyData.QUESTION_CONTENT) {
         return null;
     }

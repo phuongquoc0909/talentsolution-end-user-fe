@@ -4,10 +4,8 @@ import React, { memo, useMemo } from 'react';
 import { newsData, BoxNewsProps } from "@/contants/news";
 import ViewMoreButton from './view-more-button';
 
-// Type definitions for better performance (TypeScript optimization)
 type LayoutType = '2items' | '3items' | '4items' | '5items' | '6itemsUpto';
 
-// Optimized News Item Component - Memoized for performance (Facebook approach)
 const NewsItem: React.FC<{
     item: any;
     className: string;
@@ -30,7 +28,6 @@ const NewsItem: React.FC<{
     </div>
 ));
 
-// Optimized News Item Component for 3items layout (Instagram approach)
 const NewsItem3Items: React.FC<{
     item: any;
 }> = memo(({ item }) => (
@@ -48,19 +45,16 @@ const BoxNews: React.FC<BoxNewsProps> = memo(({
     CATE_NAME = "News",
     layout
     }) => {
-        // Memoized header section (LinkedIn approach)
         const HeaderSection = useMemo(() => (
             <header className="container-fluid">
                 <h2 className="section-title">{CATE_NAME}</h2>
             </header>
         ), [CATE_NAME]);
 
-        // Memoized ViewMoreButton (Google approach)
         const ViewMoreSection = useMemo(() => (
             <ViewMoreButton />
         ), []);
 
-        // Optimized content rendering based on layout (X/Twitter approach)
         const renderContent = useMemo(() => {
             switch (layout as LayoutType) {
                 case '2items':
@@ -168,7 +162,6 @@ const BoxNews: React.FC<BoxNewsProps> = memo(({
             }
         }, [layout, newsItems, HeaderSection, ViewMoreSection]);
 
-        // Optimized render - Early return pattern (Google approach)
         return (
             <div id="11381" className="section-page">
                 {renderContent}
@@ -176,8 +169,6 @@ const BoxNews: React.FC<BoxNewsProps> = memo(({
         );
 });
 
-// Performance optimization - Static display name (React DevTools optimization)
 BoxNews.displayName = 'BoxNews';
 
-// Export with performance hint (Webpack optimization)
 export default BoxNews;

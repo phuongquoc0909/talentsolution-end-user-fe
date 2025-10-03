@@ -32,8 +32,6 @@ const HomePage: React.FC = () => {
   );
 }
 
-// Performance optimization - Static display name (React DevTools optimization)
 HomePage.displayName = 'HomePage';
 
-// Export with performance hint (Webpack optimization)
 export default HomePage;

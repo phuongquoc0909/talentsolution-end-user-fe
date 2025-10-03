@@ -7,13 +7,11 @@ import SearchJobSection from "@/components/common/_searchjob_section";
 import { newsData, BoxNewsProps } from "@/contants/news";
 import Breadcrumb from "@/components/demop11/news/breadcrumb";
 
-// Memory pool for regex - Reuse regex objects (X/Twitter approach)
 const REGEX_POOL = {
     HYPHEN_SPLIT: /-/g,
     WORD_CAPITALIZE: /\b\w/g
 } as const;
 
-// Optimized dynamic import with preloading and error boundaries (Google approach)
 const DynamicContent = dynamic(() => import('./DynamicContent'), {
     ssr: false,
     loading: () => (
@@ -30,7 +28,6 @@ interface NewsByTypeProps extends BoxNewsProps {
 
 type NewsType = '2' | '3' | '';
 
-// Optimized category name transformation - Pure function (Facebook approach)
 const transformCategorySlug = (slug: string): string => {
     return slug.replace(REGEX_POOL.HYPHEN_SPLIT, ' ')
               .replace(REGEX_POOL.WORD_CAPITALIZE, (match) => match.toUpperCase());
@@ -43,12 +40,10 @@ const NewsByType: React.FC<NewsByTypeProps> = memo(({
     const params = useParams();
     const categorySlug = params.category as string;
     
-    // Optimized category name computation - Single memoized operation (Instagram approach)
     const categoryName = useMemo(() => {
         return categorySlug ? transformCategorySlug(categorySlug) : CATE_NAME;
     }, [categorySlug, CATE_NAME]);
 
-    // Memoized components for optimal performance (LinkedIn approach)
     const SearchSection = useMemo(() => (
         <div id="job-search">
             <SearchJobSection />
@@ -72,7 +67,6 @@ const NewsByType: React.FC<NewsByTypeProps> = memo(({
         />
     ), [newsItems, categoryName]);
 
-    // Optimized render - Early return pattern (Google approach)
     return (
         <>
             {SearchSection}
@@ -85,9 +79,7 @@ const NewsByType: React.FC<NewsByTypeProps> = memo(({
     );
 });
 
-// Performance optimization - Static display name (React DevTools optimization)
 NewsByType.displayName = 'NewsByType';
 
-// Export with performance hint (Webpack optimization)
 export default NewsByType;
 

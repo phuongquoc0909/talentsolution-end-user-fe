@@ -1,6 +1,5 @@
 import React, { memo, useMemo } from 'react';
 
-// Type definitions for better performance (TypeScript optimization)
 interface SocialItem {
     NAME: string;
     LINK: string;
@@ -10,7 +9,6 @@ interface SocialItem {
     show: number; // 0 = ẩn, 1 = hiện
 }
 
-// Static data optimization - Pre-compute at module level (Facebook approach)
 const SOCIAL_DATA: SocialItem[] = [
     {
         NAME: 'facebook',
@@ -63,14 +61,12 @@ const SOCIAL_DATA: SocialItem[] = [
     }
 ];
 
-// Pre-computed visible items - O(1) lookup (Google approach)
 const VISIBLE_SOCIAL_ITEMS = SOCIAL_DATA.filter(item => item.show === 1);
 
 interface SocialSectionProps {
     show?: number;
 }
 
-// Optimized Social Icon Component - Memoized for performance (Facebook approach)
 const SocialIcon: React.FC<{ item: SocialItem }> = memo(({ item }) => (
     <div className="item">
         <a 
@@ -93,14 +89,12 @@ const SocialIcon: React.FC<{ item: SocialItem }> = memo(({ item }) => (
 ));
 
 const SocialSection: React.FC<SocialSectionProps> = memo(({ show = 0 }) => {
-    // Memoized header section (LinkedIn approach)
     const HeaderSection = useMemo(() => (
         <header className="container-fluid">
             <h2 className="section-title">CareerBuilder Networks</h2>
         </header>
     ), []);
 
-    // Memoized social icons - Pre-computed visible items (Instagram approach)
     const SocialIconsSection = useMemo(() => (
         <div className="socialWrapper">
             {VISIBLE_SOCIAL_ITEMS.map(item => (
@@ -109,7 +103,6 @@ const SocialSection: React.FC<SocialSectionProps> = memo(({ show = 0 }) => {
         </div>
     ), []);
 
-    // Memoized join section (Google approach)
     const JoinSection = useMemo(() => (
         show === 1 ? (
             <div className="join-talent-onclip setpos">
@@ -118,7 +111,6 @@ const SocialSection: React.FC<SocialSectionProps> = memo(({ show = 0 }) => {
         ) : null
     ), [show]);
 
-    // Optimized render - Early return pattern (X/Twitter approach)
     return (
         <>
             <div className="section-page social-pre bg-odd">
@@ -130,9 +122,7 @@ const SocialSection: React.FC<SocialSectionProps> = memo(({ show = 0 }) => {
     );
 });
 
-// Performance optimization - Static display name (React DevTools optimization)
 SocialSection.displayName = 'SocialSection';
 SocialIcon.displayName = 'SocialIcon';
 
-// Export with performance hint (Webpack optimization)
 export default SocialSection;
