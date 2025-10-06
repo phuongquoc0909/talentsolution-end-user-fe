@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 
-const ViewMoreButton: React.FC = () => {
+const ViewMoreButton: React.FC = (): React.ReactElement => {
     return (
         <div className="row">
             <div className="col-sm-2 col-sm-offset-5 btn-viewmore">

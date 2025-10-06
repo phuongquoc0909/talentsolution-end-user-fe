@@ -9,7 +9,7 @@ interface BoxJobTypeProps {
     showTitleSimilarJobs?: boolean;
 }
 
-const BoxJobType: React.FC<BoxJobTypeProps> = ({ showTitleSimilarJobs = false }) => {
+const BoxJobType: React.FC<BoxJobTypeProps> = ({ showTitleSimilarJobs = false }): React.ReactElement => {
     const [activeShareId, setActiveShareId] = useState<number | null>(null);
 
     const handleShareClick = (jobId: number, e: React.MouseEvent<HTMLSpanElement>): void => {

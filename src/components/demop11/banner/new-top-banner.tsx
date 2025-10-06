@@ -37,12 +37,12 @@ export const arrTopBanner: Banner[] = [
     },
 ];
 
-export default function NewTopBanner({ banners = arrTopBanner }: NewTopBannerSwiperProps) {
+export default function NewTopBanner({ banners = arrTopBanner }: NewTopBannerSwiperProps): React.ReactElement | null {
   function getBannerImageSrc(item: Banner) {
     return item.PHOTO_BACKGROUND;
   }
 
-  const renderBannerImage = (item: Banner, index: number) => {
+  const renderBannerImage = (item: Banner, index: number): React.ReactElement => {
     return (
       <div className="image">
         <Image
@@ -60,7 +60,7 @@ export default function NewTopBanner({ banners = arrTopBanner }: NewTopBannerSwi
     );
   };
 
-  const renderBannerSlide = (item: Banner, index: number) => {
+  const renderBannerSlide = (item: Banner, index: number): React.ReactElement => {
     const imageElement = renderBannerImage(item, index);
 
     return item.PHOTO_LINK ? (
@@ -77,11 +77,11 @@ export default function NewTopBanner({ banners = arrTopBanner }: NewTopBannerSwi
     );
   };
 
-  function handleBannerCounterClick(item: Banner) {
+  function handleBannerCounterClick(item: Banner): void {
     console.log('Banner clicked:', item.PHOTO_ID);
   }
 
-  const handleSwiperInit = (wrapperId: string) => (swiper: SwiperType) => {
+  const handleSwiperInit = (wrapperId: string) => (swiper: SwiperType): void => {
     if (swiper.wrapperEl && !swiper.wrapperEl.id) {
       swiper.wrapperEl.id = wrapperId;
     }

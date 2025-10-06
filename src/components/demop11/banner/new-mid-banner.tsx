@@ -41,12 +41,12 @@ export const arrMidBanner: Banner[] = [
     },
 ];
 
-export default function NewMidBanner({ banners = arrMidBanner }: NewMidBannerSwiperProps) {
+export default function NewMidBanner({ banners = arrMidBanner }: NewMidBannerSwiperProps): React.ReactElement | null {
   function getBannerImageSrc(item: Banner) {
     return item.PHOTO_BACKGROUND;
   }
 
-  const renderBannerImage = (item: Banner, index: number) => {
+  const renderBannerImage = (item: Banner, index: number): React.ReactElement => {
     return (
       <div className="image">
         <Image
@@ -64,7 +64,7 @@ export default function NewMidBanner({ banners = arrMidBanner }: NewMidBannerSwi
     );
   };
 
-  const renderBannerSlide = (item: Banner, index: number) => {
+  const renderBannerSlide = (item: Banner, index: number): React.ReactElement => {
     const imageElement = renderBannerImage(item, index);
 
     return item.PHOTO_LINK ? (
@@ -81,11 +81,11 @@ export default function NewMidBanner({ banners = arrMidBanner }: NewMidBannerSwi
     );
   };
 
-  function handleBannerCounterClick(item: Banner) {
+  function handleBannerCounterClick(item: Banner): void {
     console.log('Banner clicked:', item.PHOTO_ID);
   }
 
-  const handleSwiperInit = (swiper: SwiperType) => {
+  const handleSwiperInit = (swiper: SwiperType): void => {
     if (swiper.wrapperEl && !swiper.wrapperEl.id) {
       swiper.wrapperEl.id = 'divMiddleBannerSlide';
     }

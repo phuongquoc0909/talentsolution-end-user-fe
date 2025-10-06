@@ -90,7 +90,7 @@ const DEFAULT_MENU_ITEMS: MenuItem[] = [
   }
 ];
 
-const FooterMenuItem: React.FC<{ menuItem: MenuItem; index: number }> = memo(({ menuItem, index }) => (
+const FooterMenuItem: React.FC<{ menuItem: MenuItem; index: number }> = memo(({ menuItem, index }): React.ReactElement => (
   <li key={`footer-menu-${index}`}>
     <a href={menuItem.CATE_LINK}>
       {menuItem.CATE_NAME}
@@ -98,7 +98,7 @@ const FooterMenuItem: React.FC<{ menuItem: MenuItem; index: number }> = memo(({ 
   </li>
 ));
 
-const PowerBySection: React.FC = memo(() => (
+const PowerBySection: React.FC = memo((): React.ReactElement => (
   <div className="col-xs-12 col-sm-3 powerby">
     <a href="https://VieclamIT.vn/" target="_blank" style={{color: 'inherit'}}>Talent&nbsp;</a>
     <a href="https://careerviet.vn/careermap" target="_blank" style={{color: 'inherit'}}>Solution&nbsp;</a>
@@ -107,8 +107,8 @@ const PowerBySection: React.FC = memo(() => (
   </div>
 ));
 
-const Footer: React.FC<FooterProps> = memo(({ menuItems = DEFAULT_MENU_ITEMS }) => {
-  const MenuItemsSection = useMemo(() => (
+const Footer: React.FC<FooterProps> = memo(({ menuItems = DEFAULT_MENU_ITEMS }): React.ReactElement => {
+  const MenuItemsSection: React.ReactElement = useMemo(() => (
     <div className="col-xs-12 col-sm-9 menu-footer">
       <ul>
         {menuItems.map((menuItem, index) => (

@@ -19,7 +19,7 @@ interface JobDetailState {
     isOpenConfirmApply: boolean;
 }
 
-const JobsDetailPage: React.FC = memo(() => {
+const JobsDetailPage: React.FC = memo((): React.ReactElement => {
     const params = useParams();
     const jobId = parseInt(params.id as string);
     
@@ -56,11 +56,11 @@ const JobsDetailPage: React.FC = memo(() => {
         }
     }, []);
 
-    const handleConfirmApply = useCallback(() => {
+    const handleConfirmApply = useCallback((): void => {
         setState(prev => ({ ...prev, isOpenConfirmApply: true }));
     }, []);
 
-    const handleCloseConfirmApply = useCallback(() => {
+    const handleCloseConfirmApply = useCallback((): void => {
         setState(prev => ({ ...prev, isOpenConfirmApply: false }));
     }, []);
 
@@ -71,7 +71,7 @@ const JobsDetailPage: React.FC = memo(() => {
         }
     }, [state.activeShareId, handleOutsideClick]);
 
-    const CompanyLogoSection = useMemo(() => (
+    const CompanyLogoSection: React.ReactElement = useMemo(() => (
         <div className="col-xs-12 col-md-2 company-logo">
             <table width="100%" cellSpacing="0" cellPadding="0" style={{tableLayout: 'fixed'}}>
                 <tbody>
@@ -93,7 +93,7 @@ const JobsDetailPage: React.FC = memo(() => {
         </div>
     ), [currentJob.JOB_LOGO, currentJob.COMPANY_NAME]);
 
-    const JobInfoSection = useMemo(() => (
+    const JobInfoSection: React.ReactElement = useMemo(() => (
         <div className="col-xs-12 record-main">
             <div className="row">
                 <span className="col-xs-12 col-sm-4 label-cate">Work Location</span>
@@ -138,14 +138,14 @@ const JobsDetailPage: React.FC = memo(() => {
         </div>
     ), [currentJob]);
 
-    const ActionsSection = useMemo(() => (
+    const ActionsSection: React.ReactElement = useMemo(() => (
         <div className="col-xs-12 actions-apply">
             <a className="btn btn-primary" onClick={handleConfirmApply}>Apply</a>
             <a className="showDialogD not-ready" href="#">Not ready to apply?</a>
         </div>
     ), [handleConfirmApply]);
 
-    const ShareSection = useMemo(() => (
+    const ShareSection: React.ReactElement = useMemo(() => (
         <div className="col-xs-12 actions-invite">
             <div className="sharejob">
                 <span 
@@ -166,7 +166,7 @@ const JobsDetailPage: React.FC = memo(() => {
         </div>
     ), [currentJob, state.activeShareId, handleShareClick]);
 
-    const JobTagsSection = useMemo(() => (
+    const JobTagsSection: React.ReactElement = useMemo(() => (
         <div className="tagskilldetail">
             <span>Job Tag:</span>&nbsp;
             {currentJob.JOB_TAGS.map((tag, index) => (
@@ -177,7 +177,7 @@ const JobsDetailPage: React.FC = memo(() => {
         </div>
     ), [currentJob.JOB_TAGS]);
 
-    const RightSidebarSection = useMemo(() => (
+    const RightSidebarSection: React.ReactElement = useMemo(() => (
         <div className="col-xs-12 col-md-4 column-right">
             <ListJobViewed />
             <BoxJoin />

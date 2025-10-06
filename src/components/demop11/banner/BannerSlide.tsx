@@ -6,6 +6,7 @@ import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperType } from 'swiper';
 
+// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
@@ -38,12 +39,12 @@ export const arrBannerSlide: Banner[] = [
     },
 ];
 
-export default function BannerSlide({ banners = arrBannerSlide }: BannerSlideSwiperProps) {
+export default function BannerSlide({ banners = arrBannerSlide }: BannerSlideSwiperProps): React.ReactElement | null {
   function getBannerImageSrc(item: Banner) {
     return item.PHOTO_BACKGROUND;
   }
 
-  const renderBannerImage = (item: Banner, index: number) => {
+  const renderBannerImage = (item: Banner, index: number): React.ReactElement => {
     return (
       <div 
         className="image" 
@@ -64,7 +65,7 @@ export default function BannerSlide({ banners = arrBannerSlide }: BannerSlideSwi
     );
   };
 
-  const renderBannerSlide = (item: Banner, index: number) => {
+  const renderBannerSlide = (item: Banner, index: number): React.ReactElement => {
     const imageElement = renderBannerImage(item, index);
 
     return item.PHOTO_LINK ? (
@@ -81,11 +82,11 @@ export default function BannerSlide({ banners = arrBannerSlide }: BannerSlideSwi
     );
   };
 
-  function handleBannerCounterClick(item: Banner) {
+  function handleBannerCounterClick(item: Banner): void {
     console.log('Banner clicked:', item.PHOTO_ID);
   }
 
-  const handleSwiperInit = (wrapperId: string) => (swiper: SwiperType) => {
+  const handleSwiperInit = (wrapperId: string) => (swiper: SwiperType): void => {
     if (swiper.wrapperEl && !swiper.wrapperEl.id) {
       swiper.wrapperEl.id = wrapperId;
     }

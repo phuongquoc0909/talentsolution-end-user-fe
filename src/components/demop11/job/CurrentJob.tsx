@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { useParams, notFound } from 'next/navigation';
 import { jobData } from '@/contants/data';
 
-const CurrentJob: React.FC = () => {
+const CurrentJob: React.FC = (): React.ReactElement => {
     const params = useParams();
     const jobId = parseInt(params.id as string);
     const currentJob = jobData.find(job => job.JOB_ID === jobId);

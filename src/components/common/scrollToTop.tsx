@@ -2,10 +2,10 @@
 import React, { useState, useEffect } from 'react';
 
 interface ScrollTopButtonProps {
-  showAfter?: number;
+  showAfter?: number; // số px cuộn xuống mới hiện nút, mặc định 120
 }
 
-const ScrollTopButton: React.FC<ScrollTopButtonProps> = ({ showAfter = 120 }) => {
+const ScrollTopButton: React.FC<ScrollTopButtonProps> = ({ showAfter = 120 }): React.ReactElement => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -26,11 +26,11 @@ const ScrollTopButton: React.FC<ScrollTopButtonProps> = ({ showAfter = 120 }) =>
     };
   }, [showAfter]);
 
-  const scrollToTop = () => {
+  const scrollToTop = (): void => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  if (!isVisible) return null;
+  if (!isVisible) return <></>;
 
   return (
     <div id="back-top" onClick={scrollToTop}

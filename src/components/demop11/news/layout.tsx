@@ -22,10 +22,10 @@ interface BoxNewsProps {
 }
 
 const NewsItem: React.FC<{
-    item: any;
+    item: NewsItem;
     className: string;
     showSubContent?: boolean;
-}> = memo(({ item, className, showSubContent = true }) => (
+}> = memo(({ item, className, showSubContent = true }): React.ReactElement => (
     <div className={className}>
         <div 
             className="box bg-size-cover lazyload" 
@@ -44,8 +44,8 @@ const NewsItem: React.FC<{
 ));
 
 const NewsItem3Items: React.FC<{
-    item: any;
-}> = memo(({ item }) => (
+    item: NewsItem;
+}> = memo(({ item }): React.ReactElement => (
     <div className="col-xs-12 col-sm-4 article">
         <div className="name-item"><span>{item.NEWS_TITLE}</span></div>
         <div className="mask-img lazyload" style={{backgroundImage: `url(${item.NEWS_PICTURE})`}}></div>
@@ -60,17 +60,17 @@ const BoxNews: React.FC<BoxNewsProps> = memo(({
     CATE_NAME = "News",
     layout
     }) => {
-        const HeaderSection = useMemo(() => (
+        const HeaderSection: React.ReactElement = useMemo(() => (
             <header className="container-fluid">
                 <h2 className="section-title">{CATE_NAME}</h2>
             </header>
         ), [CATE_NAME]);
 
-        const ViewMoreSection = useMemo(() => (
+        const ViewMoreSection: React.ReactElement = useMemo(() => (
             <ViewMoreButton />
         ), []);
 
-        const renderContent = useMemo(() => {
+        const renderContent: React.ReactElement | null = useMemo(() => {
             switch (layout as LayoutType) {
                 case '2items':
                     return (

@@ -4,7 +4,7 @@ interface BreadcrumbProps {
     categoryName?: string;
 }
 
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ categoryName = "News" }) => {
+const Breadcrumb: React.FC<BreadcrumbProps> = ({ categoryName = "News" }): React.ReactElement => {
     return (
         <div id="breadcrumb">
             <div className="container">

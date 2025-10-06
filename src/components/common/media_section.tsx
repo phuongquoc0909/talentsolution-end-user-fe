@@ -7,7 +7,7 @@ interface MediaItem {
     MEDIA_PICTURE: string;
 }
 
-const MediaSection: React.FC = () => {
+const MediaSection: React.FC = (): React.ReactElement => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
     const handleMouseEnter = (index: number): void => {

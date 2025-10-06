@@ -551,7 +551,7 @@ h2 a.text-right { float: right; font-size: 13px; font-weight: normal }
 .page-contact-pre .LeftContact .mapcontact iframe { width: 100%!important }
 .frmContact .row { width: 100%; margin-bottom: 20px }
 .frmChangePass p.text, .frmContact p.text { line-height: 22px; padding-bottom: 20px }
-.frmContact input[type='text'] { height: 22px; line-height: 22px }
+.frmContact input[type='text'] { height: 32px; line-height: normal }
 .frmContact input.ui_btnCb, .frmChangePass input.ui_btnCb, .JoinNow .joinnowBtn input, .cb-applyjob .ui_btnCb { padding: 8px 20px; height: auto; font-size: 16px; font-weight: normal }
 #container input.ui_btnCb:hover, #btnLogin:hover, .JoinNow .joinnowBtn input:hover, .btnContinute a:hover, .job-detail-pre .column-right .join-talent-onclip a:hover, #container .cb-applyjob .ui_btnCb:hover { background-color: #000; color: #fff }
 .frmContact .btnTextLink { margin: 12px 0 0 20px }

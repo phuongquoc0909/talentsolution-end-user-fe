@@ -21,19 +21,19 @@ const JobsListPage: React.FC = memo(() => {
     setGridJobType('list');
   }, []);
 
-  const SearchSection = useMemo(() => (
+  const SearchSection: React.ReactElement = useMemo(() => (
     <div id="job-search">
       <SearchJobSection />
     </div>
   ), []);
 
-  const HeaderSection = useMemo(() => (
+  const HeaderSection: React.ReactElement = useMemo(() => (
     <div className="col-xs-12 col-sm-9 col-md-9 title">
       <h1>We found <span>arrJobs</span> job key_search</h1>
     </div>
   ), []);
 
-  const ViewToggleSection = useMemo(() => (
+  const ViewToggleSection: React.ReactElement = useMemo(() => (
     <div className="col-xs-12 col-sm-3 col-md-3 view-table">
       View by 
       <a href="#" onClick={handleBoxView}>
@@ -45,14 +45,14 @@ const JobsListPage: React.FC = memo(() => {
     </div>
   ), [handleBoxView, handleListView]);
 
-  const JobContentSection = useMemo(() => (
+  const JobContentSection: React.ReactElement = useMemo(() => (
     <div id="area_list_jobs">
       {gridJobType === 'box' && <BoxJobType />}
       {gridJobType === 'list' && <ListJobType />}
     </div>
   ), [gridJobType]);
 
-  const PaginationSection = useMemo(() => (
+  const PaginationSection: React.ReactElement = useMemo(() => (
     <div className="fl_right mar_top10">
       <Pagination />
     </div>

@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useMemo, memo } from 'react';
 
-const AboutSection: React.FC = () => {
-  return (
-    <div id="11378" className="section-page page-content-pre">
+const AboutSection: React.FC = memo((): React.ReactElement => {
+    const HeaderSection: React.ReactElement = useMemo(() => (
         <header className="container-fluid">
             <h2 className="section-title">About Us</h2>
         </header>
+    ), []);
+
+    const ContentSection: React.ReactElement = useMemo(() => (
         <div className="container">
             <div className="col-xs-12">
                 <div className="content_fck text-intro">
@@ -16,8 +18,14 @@ const AboutSection: React.FC = () => {
                 </div>
             </div>
         </div>
-      </div>
+    ), []);
+
+    return (
+        <div id="11378" className="section-page page-content-pre">
+            {HeaderSection}
+            {ContentSection}
+        </div>
   );
-};
+});
 
 export default AboutSection;

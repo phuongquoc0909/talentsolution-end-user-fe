@@ -67,7 +67,7 @@ interface SocialSectionProps {
     show?: number;
 }
 
-const SocialIcon: React.FC<{ item: SocialItem }> = memo(({ item }) => (
+const SocialIcon: React.FC<{ item: SocialItem }> = memo(({ item }): React.ReactElement => (
     <div className="item">
         <a 
             className="socialIcon hvr-float-shadow" 
@@ -89,13 +89,13 @@ const SocialIcon: React.FC<{ item: SocialItem }> = memo(({ item }) => (
 ));
 
 const SocialSection: React.FC<SocialSectionProps> = memo(({ show = 0 }) => {
-    const HeaderSection = useMemo(() => (
+    const HeaderSection: React.ReactElement = useMemo(() => (
         <header className="container-fluid">
             <h2 className="section-title">CareerBuilder Networks</h2>
         </header>
     ), []);
 
-    const SocialIconsSection = useMemo(() => (
+    const SocialIconsSection: React.ReactElement = useMemo(() => (
         <div className="socialWrapper">
             {VISIBLE_SOCIAL_ITEMS.map(item => (
                 <SocialIcon key={item.NAME} item={item} />
@@ -103,7 +103,7 @@ const SocialSection: React.FC<SocialSectionProps> = memo(({ show = 0 }) => {
         </div>
     ), []);
 
-    const JoinSection = useMemo(() => (
+    const JoinSection: React.ReactElement | null = useMemo(() => (
         show === 1 ? (
             <div className="join-talent-onclip setpos">
                 <a href="#" className="showDialogD">Join Our Talent Network</a>

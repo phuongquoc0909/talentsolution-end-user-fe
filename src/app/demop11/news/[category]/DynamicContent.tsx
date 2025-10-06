@@ -31,17 +31,17 @@ const DynamicContent: React.FC<DynamicContentProps> = memo(({
     const [type, setType] = useState<NewsType>('');
     const sessionStorageRef = useRef<boolean>(false); 
 
-    const normalizedCateName = useMemo(() => 
+    const normalizedCateName: string = useMemo(() => 
         CATE_NAME.toLowerCase().replace(REGEX_POOL.NON_ALPHANUMERIC, ''), 
         [CATE_NAME]
     );
 
-    const hasCustomContent = useMemo(() => 
+    const hasCustomContent: boolean = useMemo(() => 
         NORMALIZED_CONTENT_MAP.has(normalizedCateName), 
         [normalizedCateName]
     );
 
-    const handleSessionStorage = useCallback(() => {
+    const handleSessionStorage = useCallback((): void => {
         if (sessionStorageRef.current) return; 
         
         const storedType = sessionStorage.getItem('newsType') as NewsType;
@@ -60,16 +60,16 @@ const DynamicContent: React.FC<DynamicContentProps> = memo(({
         }
     }, [hasCustomContent, handleSessionStorage]);
 
-    const currentContent = useMemo(() => {
+    const currentContent: ItemTypePage | null = useMemo(() => {
         if (type === '2') {
             return NORMALIZED_CONTENT_MAP.get(normalizedCateName) || null;
         }
         return null; 
     }, [type, normalizedCateName]);
 
-    const sanitizedContent = useSanitizedHTML(currentContent?.CATE_CONTENT || '');
+    const sanitizedContent: string = useSanitizedHTML(currentContent?.CATE_CONTENT || '');
 
-    const ContentType2: React.FC = memo(() => (
+    const ContentType2: React.FC = memo((): React.ReactElement => (
         <div className='pageType'>
             <div className="container">
                 <div className="col-xs-12">
@@ -82,7 +82,7 @@ const DynamicContent: React.FC<DynamicContentProps> = memo(({
         </div>
     ));
 
-    const ContentType3: React.FC = memo(() => {
+    const ContentType3: React.FC = memo((): React.ReactElement => {
         const newsItemsLength = newsItems.length;
         
         return (

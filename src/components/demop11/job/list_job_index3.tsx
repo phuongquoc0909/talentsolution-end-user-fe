@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { jobData } from '@/contants/data';
 
-const ListJobType: React.FC = () => {
+const ListJobType: React.FC = (): React.ReactElement => {
     const [activeShareId, setActiveShareId] = useState<number | null>(null);
     const [hoveredRowId, setHoveredRowId] = useState<number | null>(null);
 

@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { jobViewedData } from '@/contants/list-job-viewed';
 
-const ListJobViewed: React.FC = () => {
+const ListJobViewed: React.FC = (): React.ReactElement => {
 
     return (
         <div className="col-xs-12 section-box also-viewed">

@@ -3,11 +3,11 @@
 import React, { useState } from 'react';
 import { surveyData } from '@/contants/survey';
 
-const BoxSurveyP11: React.FC = () => {
+const BoxSurveyP11: React.FC = (): React.ReactElement => {
     const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
 
     if (surveyData.show !== 1 || !surveyData.QUESTION_CONTENT) {
-        return null;
+        return <></>;
     }
 
     const handleAnswerChange = (answerId: number) => {
@@ -18,7 +18,6 @@ const BoxSurveyP11: React.FC = () => {
         e.preventDefault();
         if (selectedAnswer) {
             console.log('Voted for answer ID:', selectedAnswer);
-            // Handle vote logic here
         } else {
             alert('Please select an answer');
         }
@@ -26,7 +25,6 @@ const BoxSurveyP11: React.FC = () => {
 
     const handleShowResult = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
-        // Handle show result logic here
         console.log('Show result clicked');
     };
 

@@ -4,6 +4,7 @@ import { useParams } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { memo, useMemo, useCallback } from 'react';
 import SearchJobSection from "@/components/common/_searchjob_section";
+import HeaderSection from "@/components/common/HeaderSection";
 import { newsData, NewsItem } from "@/contants/news";
 import Breadcrumb from "@/components/demop11/news/breadcrumb";
 
@@ -12,13 +13,50 @@ const REGEX_POOL = {
     WORD_CAPITALIZE: /\b\w/g
 } as const;
 
+const LOADING_STYLES = {
+    container: {
+        textAlign: 'center' as const,
+        display: 'flex',
+        flexDirection: 'column' as const,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    spinner: {
+        border: '3px solid #f3f4f6', // Very light gray background
+        borderTop: '3px solid rgb(91, 95, 100)', // Dark gray (professional)
+        borderRadius: '50%',
+        width: '32px',
+        height: '32px',
+        animation: 'spin 1s ease-in-out infinite',
+        margin: '0 auto',
+        willChange: 'transform',
+    }
+} as const;
+
+const LoadingSpinner = memo((): React.ReactElement => (
+    <div style={LOADING_STYLES.container}>
+        <div style={LOADING_STYLES.spinner} />
+        <style jsx>{`
+            @keyframes spin {
+                0% { 
+                    transform: rotate(0deg);
+                    opacity: 1;
+                }
+                50% { 
+                    opacity: 0.8;
+                }
+                100% { 
+                    transform: rotate(360deg);
+                    opacity: 1;
+                }
+            }
+        `}</style>
+    </div>
+));
+
 const DynamicContent = dynamic(() => import('./DynamicContent'), {
     ssr: false,
-    loading: () => (
-        <div className="text-center py-8">
-            <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-        </div>
-    )
+    loading: () => <LoadingSpinner />
 });
 
 interface NewsByTypeProps {
@@ -38,27 +76,25 @@ const NewsByType: React.FC<NewsByTypeProps> = memo(({
     const params = useParams();
     const categorySlug = params.category as string;
     
-    const categoryName = useMemo(() => {
+    const categoryName: string = useMemo(() => {
         return categorySlug ? transformCategorySlug(categorySlug) : CATE_NAME;
     }, [categorySlug, CATE_NAME]);
 
-    const SearchSection = useMemo(() => (
+    const SearchSection: React.ReactElement = useMemo(() => (
         <div id="job-search">
             <SearchJobSection />
         </div>
     ), []);
 
-    const BreadcrumbSection = useMemo(() => (
+    const BreadcrumbSection: React.ReactElement = useMemo(() => (
         <Breadcrumb categoryName={categoryName} />
     ), [categoryName]);
 
-    const HeaderSection = useMemo(() => (
-        <header className="container-fluid">
-            <h2 className="section-title">{categoryName}</h2>
-        </header>
+    const HeaderSectionComponent: React.ReactElement = useMemo(() => (
+        <HeaderSection title={categoryName} />
     ), [categoryName]);
 
-    const ContentSection = useMemo(() => (
+    const ContentSection: React.ReactElement = useMemo(() => (
         <DynamicContent 
             newsItems={newsItems} 
             CATE_NAME={categoryName} 
@@ -70,7 +106,7 @@ const NewsByType: React.FC<NewsByTypeProps> = memo(({
             {SearchSection}
             {BreadcrumbSection}
             <div className="section-page page-content-pre">
-                {HeaderSection}
+                {HeaderSectionComponent}
                 {ContentSection}
             </div>
         </>

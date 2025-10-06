@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Pagination: React.FC = () => {
+const Pagination: React.FC = (): React.ReactElement => {
     return (
         <ul id="jb_pagination">
             <li className="previous"><a href="#">&nbsp;</a></li>

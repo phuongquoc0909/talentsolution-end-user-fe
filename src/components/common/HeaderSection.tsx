@@ -3,14 +3,16 @@
 import React, { memo, useMemo } from 'react';
 
 interface HeaderSectionProps {
-    CATE_NAME?: string;
+    title?: string;
+    className?: string;
 }
 
 const HeaderSection: React.FC<HeaderSectionProps> = memo(({     
-    CATE_NAME 
-}) => {
-    const getCategoryName = (): string => {
-        if (CATE_NAME) return CATE_NAME;
+    title = "News",
+    className = "container-fluid"
+}): React.ReactElement => {
+    const getTitle = (): string => {
+        if (title) return title;
         
         if (typeof window !== 'undefined') {
             const storedName = sessionStorage.getItem('currentCategoryName');
@@ -19,18 +21,18 @@ const HeaderSection: React.FC<HeaderSectionProps> = memo(({
             }
         }
         
-        return '';
+        return 'News'; 
     };
 
-    const HeaderSection = useMemo(() => (
-        <header className="container-fluid">
-            <h2 className="section-title">{getCategoryName()}</h2>
+    const headerContent: React.ReactElement = useMemo(() => (
+        <header className={className}>
+            <h2 className="section-title">{getTitle()}</h2>
         </header>
-    ), [CATE_NAME]);
+    ), [title, className]);
 
     return (
         <>
-            {HeaderSection}
+            {headerContent}
         </>
     );
 });

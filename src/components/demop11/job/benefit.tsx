@@ -9,7 +9,7 @@ interface BenefitProps {
 
 const ICON_STYLE = { width: '25px', textAlign: 'center' as const };
 
-const Benefit: React.FC<BenefitProps> = ({ jobId }) => {
+const Benefit: React.FC<BenefitProps> = ({ jobId }): React.ReactElement => {
     const jobBenefits = useMemo(() => {
         if (!jobId) {
             return benefitsData;

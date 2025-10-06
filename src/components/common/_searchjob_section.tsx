@@ -36,7 +36,7 @@ const optionsLocation = [
   },
 ];
 
-export default function SearchJobSection() {
+export default function SearchJobSection(): React.ReactElement {
   const [selectedIndustry, setSelectedIndustry] = useState<string>('');
   const [selectedLocation, setSelectedLocation] = useState<string>('');
 
