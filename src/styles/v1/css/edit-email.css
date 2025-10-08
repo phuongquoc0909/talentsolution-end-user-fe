@@ -1,0 +1,26 @@
+.edit-email {
+	max-width: 850px;
+	margin: 0 auto 25px;
+}
+.edit-email .form-group > label {
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+.edit-email .form-group > label * {
+  color: #F76666;
+}
+.edit-email .form-action li:not(:last-child) {
+	margin-right: 8px;
+}
+.edit-email .smartfield-label {
+	margin-top: 25px;
+	margin-bottom: 5px
+}
+@media only screen and (max-width: 575px) {
+	.edit-email .smartfield-label {
+		margin-top: 0
+	}
+}
+.edit-email .box-ckb .container-ckb {
+  padding-left: 30px;
+}

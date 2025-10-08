@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperType } from 'swiper';
 import SearchJobSection from '@/components/common/_searchjob_section';
 
+// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
@@ -49,12 +50,12 @@ export default function NewTopBanner({ banners = arrTopBanner }: NewTopBannerSwi
           src={getBannerImageSrc(item)}
           alt={`Banner ${index + 1}`}
           loading={index === 0 ? 'eager' : 'lazy'}
-          priority={index === 0} 
+          priority={index === 0} // Add priority for first image
           width={0}
           height={0}
           sizes="100vw"
           style={{ width: '100%', height: 'auto' }}
-          unoptimized={true} 
+          unoptimized={true} // Tạm thời disable optimization để tránh lỗi
         />
       </div>
     );
@@ -129,7 +130,7 @@ export default function NewTopBanner({ banners = arrTopBanner }: NewTopBannerSwi
                 </SwiperSlide>
                 ))}
                 <div className="main-page">
-                <div className="swiper-pagination"></div>
+                  <div className="swiper-pagination"></div>
                 </div>
             </Swiper>
         </div>

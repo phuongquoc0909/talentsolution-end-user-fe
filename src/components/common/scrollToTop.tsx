@@ -1,11 +1,16 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, memo } from 'react';
 
 interface ScrollTopButtonProps {
   showAfter?: number; // số px cuộn xuống mới hiện nút, mặc định 120
 }
 
-const ScrollTopButton: React.FC<ScrollTopButtonProps> = ({ showAfter = 120 }): React.ReactElement => {
+const BUTTON_STYLES = {
+  transition: 'opacity 0.3s ease',
+  cursor: 'pointer',
+} as const;
+
+const ScrollTopButton = memo(({ showAfter = 120 }: ScrollTopButtonProps): React.ReactElement | null => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -26,23 +31,35 @@ const ScrollTopButton: React.FC<ScrollTopButtonProps> = ({ showAfter = 120 }): R
     };
   }, [showAfter]);
 
-  const scrollToTop = (): void => {
+  const scrollToTop = useCallback((): void => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  }, []);
 
-  if (!isVisible) return <></>;
+  if (!isVisible) return null;
 
   return (
-    <div id="back-top" onClick={scrollToTop}
+    <div 
+      id="back-top" 
+      onClick={scrollToTop}
       style={{
-        transition: 'opacity 0.3s ease',
+        ...BUTTON_STYLES,
         opacity: isVisible ? 1 : 0,
-        cursor: 'pointer',
+      }}
+      role="button"
+      tabIndex={0}
+      aria-label="Scroll to top"
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          scrollToTop();
+        }
       }}
     >
-        <a className="bgcolor_theme" id="topToPage">_Top_</a>
+      <a className="bgcolor_theme" id="topToPage">_Top_</a>
     </div>
   );
-};
+});
+
+ScrollTopButton.displayName = 'ScrollTopButton';
 
 export default ScrollTopButton;

@@ -1,0 +1,96 @@
+.import-excel .top-panel {
+	position: absolute;
+	right: 30px;
+	top: 30px
+}
+.import-excel h2 {
+	color: #3E4B5E;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: normal;
+	margin-bottom: 20px;
+}
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.inputfile + label {
+    font-size: 1.25em;
+    color: white;
+    width: 100%;
+    height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px dashed rgba(62, 75, 94, 0.20);
+    background: #FBFAFF;
+}
+
+.inputfile + label em {
+	width: 26px;
+	height: 26px;
+	background: var(--pink-cl);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	font-size: 20px;
+}
+
+.inputfile + label span {
+	color: var(--main-cl);
+	margin-left: 10px
+}
+.info-file {
+	border-radius: 5px;
+	border: 1px solid #E4E4EF;
+	background-color: #FFF;
+	height: 80px;
+}
+.limit-file {
+	color: #7C8FAC;
+	font-size: 12px;
+	line-height: normal;
+	text-align: center;
+	margin-bottom: 20px
+}
+.top-panel .btn-action {
+	height: 30px;
+	border: 1px solid #3E4B5E;
+	color: #3E4B5E;
+	background: #fff;
+	border-radius: 8px;
+	padding: 0 10px;
+	display: flex;
+	align-items: center;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all .4s;
+}
+.top-panel .btn-action.active {
+	border-color: var(--pink-cl);
+	color: var(--pink-cl);
+}
+.top-panel .btn-action:hover,
+.top-panel .btn-action:active {
+	color: var(--pink-cl);
+	border-color: var(--pink-cl);
+	background: #FFE0E7;
+}
+
+.top-panel .btn-action:hover svg.has-stroke path,
+.top-panel .btn-action.active svg.has-stroke path {
+	stroke: var(--pink-cl);
+	fill: none;
+}

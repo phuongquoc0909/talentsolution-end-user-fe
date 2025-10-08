@@ -1,0 +1,192 @@
+.email-config .inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.email-config .inner  > h2 {
+  border-bottom: 1px solid #E4E4EF;
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.email-config .inner .form-action {
+  margin-top: 10px;
+}
+
+.list-config .item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.list-config .item .box-left {
+  flex: 0 0 400px;
+  max-width: 400px;
+}
+
+.list-config .item .box-right {
+  flex: 0 0 calc(100% - 400px);
+  max-width: calc(100% - 400px);
+}
+
+.list-config .item .box-right > * {
+  margin-bottom: 7px;
+}
+
+.list-config .item .box-left strong {
+  font-size: 12px;
+  position: relative;
+  top: -3px;
+}
+
+.list-config .item-sp .box-left strong {
+  top: 0;
+  margin-top: 13px;
+}
+
+.list-config .item .box-right .text-desc {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list-config .item .box-right .text-desc span.box-icon {
+  flex: 0 0 17px;
+  max-width: 17px;
+  margin-top: 2px;
+}
+
+.list-config .item .box-right .text-desc span.box-icon svg {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+
+.list-config .item .box-right .text-desc span.box-text,
+.list-config .item .box-right .text-desc ul {
+  flex: 0 0 calc(100% - 17px);
+  max-width: calc(100% - 17px);
+  padding-left: 5px;
+} 
+
+.list-config .item .box-right .text-desc ul {
+  list-style: disc;
+  padding-left: 22px;
+}
+
+.switch-box {
+  position: relative;
+}
+
+.switch-box label {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.switch-box .slider {
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    width: 36px;
+    height: 16px;
+    border-radius: 20px;
+    background: #ccc;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.switch-box input {
+  display: none;
+}
+
+.switch-box .slider::before {
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    width: 15px;
+    height: 15px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: white;
+    content: "";
+    transition: 0.4s;
+}
+
+.switch-box input:checked {
+  transition: 400ms;
+}
+
+.switch-box input:checked ~ .slider {
+    background: var(--pink-cl);
+    transition: 0.4s;
+}
+
+.switch-box input:checked ~ .slider::before {
+    transform: translate(18px, -50%);
+}
+.switch-box .text:after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 45px;
+  content: "Off";
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+  color: var(--main-cl);
+  font-weight: normal;
+}
+
+.switch-box .text:before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 45px;
+  content: "On";
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+  color: var(--main-cl);
+  font-weight: normal;
+}
+
+.switch-box input + .slider + .text:after {
+  opacity: 1;
+}
+
+.switch-box input + .slider + .text:before {
+  opacity: 0;
+}
+
+.switch-box input:checked + .slider + .text:after {
+  opacity: 0;
+}
+
+.switch-box input:checked + .slider + .text:before {
+  opacity: 1;
+}
+
+@media (max-width: 992px) {
+  .list-config .item .box-left,
+  .list-config .item .box-right {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .list-config .item .box-left strong {
+    top: 0;
+    margin: 0 0 7px 0;
+  }
+}

@@ -1,0 +1,234 @@
+.fw-regular {
+ 	font-weight: 400!important;
+}
+
+.main-content {
+	padding-top: 60px
+}
+
+h2.block-title {
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 20px;
+	line-height: normal
+}
+
+.form-group {
+	margin-bottom: 20px
+}
+
+.form-group > label {
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.form-group label > span {
+	color: #FF3333;
+}
+
+.form-group .list-radio {
+	height: 40px
+}
+
+.my-profile {
+	max-width: 1240px;
+	margin: 0 auto;
+	line-height: 1.5
+}
+
+.my-profile .form-action {
+	margin-top: 20px
+}
+
+.my-profile .form-action li:not(:last-child) {
+  margin-right: 15px;
+}
+
+.jsk-card {
+	padding: 0;
+}
+
+.jsk-card .jsk-card--bg {
+	background-color: #1C2964;
+	height: 85px;
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius-topleft: 8px;
+	-moz-border-radius-topright: 8px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	position: relative;
+	z-index: 0
+}
+
+.jsk-card--pic {
+	margin-top: -60px;
+	padding-bottom: 20px;
+	position: relative;
+	display: grid;
+	-ms-flex-align: center;
+ 	align-items: center;
+	-ms-flex-pack: center;
+    justify-content: center;
+}
+
+.mask-pic {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+ 	align-items: center;
+	-ms-flex-pack: center;
+    justify-content: center;
+	width: 120px;
+	height: 120px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	border-radius: 100%
+}
+
+.mask-pic img {
+	max-width: 100%	
+}
+
+.jsk-card--pic .box-action {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.jsk-card--pic .box-action > a {
+	width: 38px;
+	height: 38px;
+	border-radius: 100%;
+	background: #fff;
+	box-shadow: 4px 1px 10px 0px rgba(0,0,0,0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.jsk-card--pic .box-action .action-menu {
+	position: absolute;
+	top: 38px;
+	right: -93px;
+	width: max-content;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border: 1px solid #E4E4EF;
+	background: #FFF;
+	box-shadow: 0px 0px 15px 0px rgba(28, 41, 100, 0.20);
+	padding: 12px 16px;
+	display: none;
+	z-index: 1;
+}
+
+.jsk-card--pic .box-action .action-menu .box-icon {
+	width: 28px;
+	height: 28px;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	background: rgba(228, 228, 239, 0.40);
+}
+
+.jsk-card--pic .box-action .action-menu .box-text {
+	padding-left: 8px;
+	transition: all .3s;
+}
+
+.jsk-card--pic .box-action .action-menu ul li:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.jsk-card--pic .box-action .action-menu .box-text:hover {
+	color: var(--pink-cl);
+}
+
+.card-name {
+	font-size: 20px;
+	font-weight: 700
+}
+
+.my-cvs .inputfile {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+}
+
+.my-cvs .inputfile + label {
+    color: white;
+    width: 100%;
+    height: 130px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px dashed rgba(62, 75, 94, 0.20);
+    background: #FBFAFF;
+}
+
+.my-cvs .inputfile + label em {
+	width: 26px;
+	height: 26px;
+	background: var(--pink-cl);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	font-size: 20px;
+}
+
+.my-cvs .inputfile + label span {
+	color: var(--main-cl);
+	margin-left: 10px
+}
+
+.info-file {
+	border-radius: 5px;
+	border: 1px solid #E4E4EF;
+	background-color: #FFF;
+	min-height: 80px;
+	margin-bottom: 20px
+}
+
+.info-file > div {
+	padding-top: 10px!important;
+	padding-bottom: 10px!important;
+}
+
+.info-file > div .file-item:not(:last-child) {
+	margin-bottom: 5px;
+}
+
+.info-file > div .file-item p:first-child {
+  -o-text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+.limit-file {
+	color: #7C8FAC;
+	font-size: 12px;
+	line-height: normal;
+	text-align: center;
+	margin-bottom: 20px
+}
+

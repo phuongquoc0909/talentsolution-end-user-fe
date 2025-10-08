@@ -21,7 +21,7 @@ const HeaderSection: React.FC<HeaderSectionProps> = memo(({
             }
         }
         
-        return 'News'; 
+        return 'News'; // fallback
     };
 
     const headerContent: React.ReactElement = useMemo(() => (

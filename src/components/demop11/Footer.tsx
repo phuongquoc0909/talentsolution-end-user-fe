@@ -131,7 +131,5 @@ const Footer: React.FC<FooterProps> = memo(({ menuItems = DEFAULT_MENU_ITEMS }):
 });
 
 Footer.displayName = 'Footer';
-FooterMenuItem.displayName = 'FooterMenuItem';
-PowerBySection.displayName = 'PowerBySection';
 
 export default Footer;

@@ -1,0 +1,332 @@
+.inner-login {
+	clear: both;
+	-ms-flex: 0 0 100%;
+	-webkit-box-flex: 0;
+	flex: 0 0 100%;
+	max-width: 100%;
+	min-height: 750px;
+	background: #fff;
+	font-size: 14px;
+}
+
+.inner-login .box-img {
+    background: var(--LinkImageLogin, url('../images/img-login.png')) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    min-height: 750px;
+    border-radius: 0px 25px 25px 0px;
+}
+
+.inner-login > * {
+	flex: 0 0 50%;
+	max-width: 50%;
+}
+
+.crv-hgRRfv .crv-gRtvSG {
+	font-size: 26px;
+	font-weight: 500;
+	color: #000;
+	margin-bottom: 30px;
+}
+
+.crv-hgRRfv .crv-dUYLmH {
+	display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+	margin-bottom: 20px
+}
+
+.crv-dUYLmH .vsUcT {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-pack: center;
+    justify-content: center;
+	background-color: #E7F3FF;
+	border-radius: 10px;
+	font-size: 14px;
+	height: 36px;
+	color: #272E5C;
+	cursor: pointer;
+}
+
+.crv-dUYLmH .vsUcT span {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.crv-dUYLmH .vsUcT:hover {
+	text-decoration: none
+}
+
+.crv-dUYLmH .vsUcT svg {
+	margin-right: 7px;
+	width: auto
+}
+
+.crv-hgRRfv hr {
+	border: 0;
+	height: 1px;
+	background-color: #D9D9D9;
+}
+
+.crv-hgRRfv .bcmeti {
+	color: #000;
+	text-align: center;
+	margin: 20px 0;
+}
+
+.form-area {
+	max-width: 510px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.form-login .form-group {
+	margin-bottom: 25px;
+}
+
+.form-login .form-group .label > label {
+	font-weight: 600;
+	margin-bottom: 5px;
+	font-size: 16px;
+	color: #3E4B5E;
+}
+
+.form-login .form-group .label > label span {
+	color: var(--red-cl);
+}
+
+.form-login .form-group .forgot-password {
+	color: var(--text-theme,#FF2458);
+	font-weight: 600;
+	font-size: 14px
+}
+
+.form-login .form-group .input-area {
+	position: relative;
+}
+
+.form-login .form-group .form-control {
+	height: 60px;
+	font-size: 16px;
+}
+
+.form-login .box-password {
+	position: relative;
+}
+
+.form-login > button {
+	width: 100%;
+}
+
+.form-login .text-guide {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.form-login .text-guide > h3 {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.form-login .text-guide > p {
+	font-size: 16px;
+}
+
+.form-action .ui_btnCb {
+    width: 100%;
+	height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+    border-radius: 8px!important;
+    transition: all .4s;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+@media (max-width: 1199px) {
+	.inner-login .box-text {
+		padding: 0 50px;
+	}
+}
+
+@media (max-width: 992px) {
+	.inner-login {
+		padding: 60px 0;
+		min-height: unset;
+	}
+
+	.inner-login .box-img {
+		display: none;
+	}
+
+	.inner-login .box-text {
+		flex: 0 0 100%;
+		max-width: 100%;
+		text-align: center;
+	}
+
+	.inner-login .box-text .logo {
+		position: static;
+		transform: none;
+		margin-bottom: 20px;
+	}
+
+	.form-login {
+		text-align: left;
+	}
+
+	.form-login .text-guide {
+		margin-bottom: 20px;
+	}
+}
+
+.text-invite {
+	text-align: center;
+	padding: 20px 0 15px;
+	color: #000
+}
+
+.btn-joints {
+	border-color: var(--pink-cl);
+	color: var(--pink-cl);
+	height: 45px
+}
+.eyess {
+	position: absolute;
+	top: 20px;
+	right: 15px;
+	width: 20px;
+	height: 20px;
+	background-image: url("../images/eye-close.svg");
+	background-repeat: no-repeat;
+	background-position: left center;
+	cursor: pointer
+}
+.eyess.show {
+   background-image: url("../images/eye-open.svg");
+}
+.img-captcha {
+	padding-right: 0!important
+}
+.img-captcha img {
+	width: 100%;
+	height: auto;
+	max-height: 60px
+}
+
+.indexclass_login .wrapper {
+	width: 100%;
+	max-width: 510px;
+	margin: 50px auto
+}
+
+#footer {
+	margin: 0
+}
+
+#LoginTalentNetwork {
+	width: 1366px
+}
+#fancybox-wrap {
+	box-sizing: border-box;
+	padding: 0!important;
+}
+#fancybox-content {
+	box-sizing: border-box;
+	width: 100%!important;
+	border: 0!important;
+	border-radius: 25px
+}
+#fancybox-close, .fancybox-slide--html .fancybox-close-small {
+	width: 38px;
+	height: 38px;
+	background-image: url('../images/exit.svg');
+}
+@media (max-width:1400px) {
+	#fancybox-wrap {
+		box-sizing: border-box;	
+		width: 100%!important;
+		left: 0!important;
+	}
+	#fancybox-content {
+		width: 100%!important;	
+		margin: 0 auto;
+		max-width: 1366px;
+	}
+	#LoginTalentNetwork {
+		width: 100%
+	}
+}
+.fancybox-slide .fancybox-content {
+	border-radius: 25px;
+	overflow: hidden!important
+}
+.fancybox-slide--html .fancybox-close-small {
+	right: 50px;
+	top: 10px
+}
+.fancybox-button svg {
+	display: none
+}
+
+/* Password show/hide button styles */
+.showhide-password {
+	position: absolute;
+	right: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 24px;
+	height: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	border-radius: 4px;
+	background: transparent;
+	border: none;
+	outline: none;
+	z-index: 10;
+}
+
+.showhide-password:hover {
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+.showhide-password:focus {
+	background-color: rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+.showhide-password svg {
+	color: #6b7280;
+	transition: color 0.2s ease;
+}
+
+.showhide-password:hover svg {
+	color: #374151;
+}
+
+.showhide-password.active svg {
+	color: #3b82f6;
+}
+
+/* Ensure input area has relative positioning for absolute positioned button */
+.input-area {
+	position: relative;
+}
+
+.box-password {
+	position: relative;
+}
+
+

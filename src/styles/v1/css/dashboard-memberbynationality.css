@@ -1,0 +1,109 @@
+.ml-1,
+.mx-1 {
+    margin-left: 0.25rem !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.h-100 {
+    height: 100% !important;
+}
+
+.bgBox {
+    background-color: var(--dark-blue-cl);
+    border-radius: 8px;
+    padding: 30px;
+    height: 100%
+}
+
+.boxMainTop {
+    margin-bottom: 25px
+}
+
+.boxMainTop h2 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    color: #fff;
+    margin-bottom: 20px
+}
+
+.boxMainTop .number {
+    font-size: 36px;
+    font-weight: 600
+}
+
+.boxMainTop p {
+    font-size: 15px;
+    margin-top: 10px
+}
+
+.text-intro {
+    width: 80%
+}
+
+@media only screen and (max-width: 1023px) {
+    .text-intro {
+        margin-bottom: 20px;
+        padding-right: 10px
+    }
+}
+
+.top-panel {
+    margin-bottom: 15px
+}
+
+.top-panel .left-action .list-item .item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.top-panel .btn-action {
+    height: 30px;
+    border: 1px solid #3E4B5E;
+    color: #3E4B5E;
+    background: #fff;
+    border-radius: 8px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .4s;
+    font-size: 12px
+}
+
+.top-panel .btn-action.active {
+    border-color: var(--pink-cl);
+    color: var(--pink-cl);
+}
+
+.top-panel .btn-action:hover,
+.top-panel .btn-action:active {
+    color: var(--pink-cl);
+    border-color: var(--pink-cl);
+    background: #FFE0E7;
+}
+
+.top-panel .btn-action:hover svg.has-stroke path,
+.top-panel .btn-action.active svg.has-stroke path {
+    stroke: var(--pink-cl);
+    fill: none;
+}
+
+.block-title {
+    margin-bottom: 20px
+}
+
+.block-title h2 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+@media only screen and (max-width: 992px) {
+    .block-title h2 {
+        margin-bottom: 10px
+    }
+}

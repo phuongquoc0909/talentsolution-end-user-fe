@@ -6,6 +6,7 @@ import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperType } from 'swiper';
 
+// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
@@ -53,11 +54,11 @@ export default function NewMidBanner({ banners = arrMidBanner }: NewMidBannerSwi
           src={getBannerImageSrc(item)}
           alt={`Banner ${index + 1}`}
           loading={index === 0 ? 'eager' : 'lazy'}
-          priority={index === 0} 
+          priority={index === 0} // Add priority for first image
           width={0}
           height={0}
           sizes="100vw"
-          unoptimized={true} 
+          unoptimized={true} // Tạm thời disable optimization để tránh lỗi
           style={{ width: '100%', height: 'auto' }}
         />
       </div>

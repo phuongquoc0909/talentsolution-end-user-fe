@@ -29,7 +29,7 @@ const DynamicContent: React.FC<DynamicContentProps> = memo(({
     CATE_NAME = "News",
     }) => {
     const [type, setType] = useState<NewsType>('');
-    const sessionStorageRef = useRef<boolean>(false); 
+    const sessionStorageRef = useRef<boolean>(false); // Prevent multiple sessionStorage reads
 
     const normalizedCateName: string = useMemo(() => 
         CATE_NAME.toLowerCase().replace(REGEX_POOL.NON_ALPHANUMERIC, ''), 
@@ -42,7 +42,7 @@ const DynamicContent: React.FC<DynamicContentProps> = memo(({
     );
 
     const handleSessionStorage = useCallback((): void => {
-        if (sessionStorageRef.current) return; 
+        if (sessionStorageRef.current) return; // Prevent duplicate reads
         
         const storedType = sessionStorage.getItem('newsType') as NewsType;
         if (storedType && (storedType === '2' || storedType === '3')) {
@@ -64,7 +64,7 @@ const DynamicContent: React.FC<DynamicContentProps> = memo(({
         if (type === '2') {
             return NORMALIZED_CONTENT_MAP.get(normalizedCateName) || null;
         }
-        return null; 
+        return null; // For type 3, we don't need currentContent
     }, [type, normalizedCateName]);
 
     const sanitizedContent: string = useSanitizedHTML(currentContent?.CATE_CONTENT || '');

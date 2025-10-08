@@ -1,0 +1,138 @@
+.pr-0,
+.px-0 {
+  padding-right: 0 !important;
+}
+.ml-1,
+.mx-1 {
+  margin-left: 0.25rem !important;
+}
+.add-survey {
+	max-width: 1100px;
+	margin: 0 auto 25px;
+}
+.add-survey .form-group > label {
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+.add-survey .form-group > label * {
+	color: #F76666;
+}
+.add-survey .input-area {
+	position: relative;
+}
+.add-survey .form-action li:not(:last-child) {
+	margin-right: 8px;
+}
+.decreaseW {
+	-ms-flex: 0 0 calc(100% - 150px);
+	flex: 0 0 calc(100% - 150px);
+	max-width: calc(100% - 150px);
+}
+.ipt-priority {
+	width: 50px;
+	margin: 0 15px;
+}
+.addSubject {
+	padding-left: 15px;
+	font-weight: 600
+}
+.addAnswer a {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+  	align-items: center;
+    justify-content: end;
+	font-weight: 600
+}
+.box-ckb .container-ckb {
+	padding-left: 30px
+}
+@media only screen and (max-width: 667px) {
+	.col-sm-6 {
+		-ms-flex: 0 0 100%;
+		-webkit-box-flex: 0;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.addAnswer a {
+		justify-content: start
+	}
+}
+
+.add-topic-modal {
+  width: 550px;
+}
+.add-topic-modal .form-group {
+  margin-bottom: 20px;
+}
+
+.add-topic-modal .form-group > label {
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.add-topic-modal .form-group > label span {
+  color: var(--red-cl);
+}
+
+.add-topic-modal .list-radio .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.list-radio .item:not(:last-child) {
+	margin-right: 30px;
+}
+
+.article.langvi .item-en .form-control.decreaseW,
+.article.langvi .item-en > label,
+.article.langen .item-vi .form-control.decreaseW,
+.article.langen .item-vi .form-control.ipt-priority,
+.article.langen .item-vi > label,
+.article.langen .item-vi .input-area > span {
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+.row-action {
+	border-top: 1px solid #E4E4EF;
+	max-width: calc(100% - 150px);
+	padding-top: 20px;
+}
+
+@media (max-width: 576px) {
+   .add-survey .list-radio {
+   	margin-top: 10px;
+   }
+  .add-topic-modal .list-radio .item,
+  .add-survey .list-radio .item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .add-topic-modal .list-radio .item:not(:last-child),
+  .add-survey .list-radio .item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .decreaseW {
+  	flex: 0 0 100%;
+  	max-width: 100%;
+  }
+
+  .addSubject {
+  	padding-left: 0;
+  	margin-top: 10px;
+  }
+
+  .add-survey .form-group .input-area > span,
+  .ipt-priority,
+  .add-survey .form-group .input-area > a {
+  	margin-left: 0!important;
+  	margin-top: 10px;
+  }
+
+  .row-action  {
+  	flex: 0 0 100%;
+  	max-width: 100%;
+  }
+}

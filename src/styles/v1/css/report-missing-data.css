@@ -1,0 +1,31 @@
+.report-missing-data {
+  max-width: 770px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group > label {
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.report-missing-data .block-title p {
+  border-radius: 8px;
+  background: #FBFAFF;
+  padding: 25px 20px 25px 40px;
+  position: relative;
+}
+
+.report-missing-data .block-title p:after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 40px;
+  background: var(--pink-cl);
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,126 @@
+.report-page-run .top-panel .btn-action {
+  height: 30px;
+  border: 1px solid #3E4B5E;
+  color: #3E4B5E;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .4s;
+}
+
+.report-page-run .top-panel .btn-action:hover {
+  color: var(--pink-cl);
+  border-color: var(--pink-cl);
+  background: #FFE0E7;
+}
+
+.report-page-run .top-panel .btn-action svg * {
+  transition: all .4s;
+}
+
+.report-page-run .top-panel .btn-action:hover svg path {
+  fill: var(--pink-cl);
+}
+
+.top-panel .btn-action:hover svg.has-stroke path, 
+.top-panel .btn-action.active svg.has-stroke path {
+    stroke: var(--pink-cl);
+    fill: none;
+}
+
+.report-page-run .top-panel > * {
+  line-height: 1;
+}
+
+.table-responsive table tr td {
+  vertical-align: top;
+}
+
+.table-responsive tr td:nth-child(3) {
+  width: 115px;
+}
+
+.table-responsive .box-data-3 {
+  width: 85px;
+}
+
+.table-responsive tr td:nth-child(4) {
+  width: 215px;
+}
+
+.table-responsive .box-data-4 {
+  width: 185px;
+}
+
+.table-responsive tr td:nth-child(5) {
+  width: 150px;
+}
+
+.table-responsive .box-data-5 {
+  width: 130px;
+}
+
+.table-responsive tr td:nth-child(6) {
+  width: 130px;
+}
+
+.table-responsive .box-data-6 {
+  width: 100px;
+}
+
+.table-responsive tr td:nth-child(7) {
+  width: 150px;
+}
+
+.table-responsive .box-data-7 {
+  width: 120px;
+}
+
+@media (max-width: 1600px) {
+  .table-responsive tr td:nth-child(1) {
+    width: 415px;
+  }
+
+  .table-responsive .box-data-1 {
+    width: 385px;
+  }
+
+  .table-responsive tr td:nth-child(2) {
+    width: 415px;
+  }
+
+  .table-responsive .box-data-2 {
+    width: 385px;
+  }
+}
+
+.outer-table {
+  position: relative;
+}
+
+.outer-table .scroll-button {
+  position: sticky;
+  z-index: 1111;
+  top: 50%;
+  display: none;
+  justify-content: space-between;
+  margin: 0 -20px 0 -25px;
+  height: 0;
+}
+
+@media (max-width: 1600px) {
+  .outer-table .scroll-button  {
+    display: flex;
+  }
+}
+
+@media (max-width: 1200px) {
+  .outer-table .scroll-button {
+    justify-content: space-between;
+    margin: 0;
+  }
+}

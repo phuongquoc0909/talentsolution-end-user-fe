@@ -1,0 +1,93 @@
+.auto-posting {
+	padding-bottom: 40px;
+}
+
+.list-posting .inner {
+	max-width: 1060px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.list-posting .inner .row {
+	margin-left: -30px;
+	margin-right: -30px
+}
+
+.list-posting .inner .row [class*="col-"] {
+	padding: 0 30px;
+}
+
+.list-posting .item {
+	border-radius: 8px;
+	border-top: 4px solid #7C8FAC;
+	background: #FFF;
+	box-shadow: 0px 0px 15px 0px rgba(28, 41, 100, 0.03);
+	padding: 40px 30px;
+	height: 100%;
+}
+
+.list-posting .item .box-icon {
+	flex: 0 0 50px;
+	max-width: 50px;
+}
+
+.list-posting .item .box-text {
+	flex: 0 0 calc(100% - 50px);
+	max-width: calc(100% - 50px);
+	padding-left: 40px;
+	position: relative;
+	padding-bottom: 40px;
+}
+
+.list-posting .item .box-text button, .list-posting .item .box-text a {
+	position: absolute;
+	bottom: 0;
+	left: 40px;
+}
+
+.list-posting .item .box-text h3 {
+	align-items: center;
+}
+
+.list-posting .item .box-text h3 strong {
+	font-size: 20px;
+}
+
+.list-posting .item .box-text h3 span {
+	padding-left: 5px;
+}
+
+.list-posting .item .box-text p {
+	margin-bottom: 15px;
+}
+
+@media (max-width: 1200px) {
+	.list-posting .inner .row {
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+
+	.list-posting .inner .row [class*="col-"] {
+		padding: 0 15px;
+	}
+}
+
+@media (max-width: 767px) {
+	.list-posting .item {
+		padding: 20px;
+	}
+
+	.list-posting .inner .row [class*="col-"] {
+		padding: 0 15px;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.list-posting .item .box-text {
+		padding-left: 20px;
+	}
+
+	.list-posting .item .box-text button {
+		left: 25px;
+	}
+}

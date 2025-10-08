@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { memo } from 'react';
 import BoxJobType from "@/components/demop11/job/list_job_index4"; 
 
-const SimilarJobs: React.FC = (): React.ReactElement => {
+const SimilarJobs = memo((): React.ReactElement => {
     return (
-        <div className="section-page result-job-search similar-jobs">
+        <section 
+            className="section-page result-job-search similar-jobs"
+            role="region"
+            aria-labelledby="similar-jobs-title"
+        >
             <div className="container">
+                <h2 id="similar-jobs-title" className="sr-only">Similar Jobs</h2>
                 <BoxJobType showTitleSimilarJobs={true} />
             </div>
-        </div>
+        </section>
     );
-}
+});
+
+SimilarJobs.displayName = 'SimilarJobs';
 
 export default SimilarJobs;

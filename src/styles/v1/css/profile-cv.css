@@ -1,0 +1,311 @@
+.fw-regular {
+ 	font-weight: 400!important;
+}
+
+.main-content {
+	padding-top: 45px
+}
+
+h2.block-title {
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 20px;
+	line-height: normal
+}
+
+h2.block-title.spcace-right {
+	-ms-flex: 0 0 calc(100% - 170px);
+	flex: 0 0 calc(100% - 170px);
+	max-width: calc(100% - 170px);
+}
+
+@media only screen and (max-width: 430px) {
+	h2.block-title.spcace-right {
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+		margin-bottom: 10px;
+	}
+}
+
+.form-group {
+	margin-bottom: 20px
+}
+
+.form-group > label {
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.form-group label > span {
+	color: #FF3333;
+}
+
+.form-group .list-radio {
+	height: 40px
+}
+
+.my-profile {
+	max-width: 1240px;
+	margin: 0 auto
+}
+
+.jsk-card {
+	padding: 0;
+}
+
+.jsk-card .jsk-card--bg {
+	background-color: #1C2964;
+	height: 85px;
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius-topleft: 8px;
+	-moz-border-radius-topright: 8px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	position: relative;
+	z-index: 0
+}
+
+.jsk-card--pic {
+	margin-top: -60px;
+	padding-bottom: 20px;
+	position: relative;
+	display: grid;
+	-ms-flex-align: center;
+ 	align-items: center;
+	-ms-flex-pack: center;
+    justify-content: center;
+}
+
+.mask-pic {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+ 	align-items: center;
+	-ms-flex-pack: center;
+    justify-content: center;
+	width: 120px;
+	height: 120px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	border-radius: 100%
+}
+
+.mask-pic img {
+	max-width: 100%	
+}
+
+.jsk-card--pic .box-action {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.jsk-card--pic .box-action > a {
+	width: 38px;
+	height: 38px;
+	border-radius: 100%;
+	background: #fff;
+	box-shadow: 4px 1px 10px 0px rgba(0,0,0,0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.jsk-card--pic .box-action .action-menu {
+	position: absolute;
+	top: 38px;
+	right: -93px;
+	width: max-content;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border: 1px solid #E4E4EF;
+	background: #FFF;
+	box-shadow: 0px 0px 15px 0px rgba(28, 41, 100, 0.20);
+	padding: 12px 16px;
+	display: none;
+	z-index: 1;
+}
+
+.jsk-card--pic .box-action .action-menu .box-icon {
+	width: 28px;
+	height: 28px;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	background: rgba(228, 228, 239, 0.40);
+}
+
+.jsk-card--pic .box-action .action-menu .box-text {
+	padding-left: 8px;
+	transition: all .3s;
+}
+
+.jsk-card--pic .box-action .action-menu ul li:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.jsk-card--pic .box-action .action-menu .box-text:hover {
+	color: var(--pink-cl);
+}
+
+.card-name {
+	font-size: 20px;
+	font-weight: 700
+}
+
+.btn-viewCvDetail {
+	position: absolute;
+	right: 15px;
+	top: 0;
+	padding: 5px 15px;
+	color: #fff;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	background: var(--pink-cl);
+}
+
+.btn-EditCv {
+	position: absolute;
+	right: 85px;
+	top: 0;
+	padding: 5px 15px;
+	color: var(--pink-cl);
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	/* background: var(--pink-cl); */
+	border: 1px solid red;
+}
+
+@media only screen and (max-width: 430px) {
+	.btn-viewCvDetail {
+		position: static;
+		margin-bottom: 20px;
+	}
+}
+
+.my-cvs .CV-title {
+	color: #09589E;
+	font-size: 20px;
+	margin-left: 20px
+}
+
+@media only screen and (max-width: 560px) {
+	.my-cvs .CV-title {
+		display: block;
+		margin: 0;
+	}
+}
+
+.my-cvs .inputfile {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+}
+
+.my-cvs .inputfile + label {
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+	cursor: pointer
+}
+
+.my-cvs .inputfile + label em {
+	border: 1px solid var(--pink-cl);
+	color: var(--pink-cl);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	font-size: 14px;
+	padding: 5px 15px
+}
+
+.my-cvs .inputfile + label span {
+	color: var(--main-cl);
+	margin-left: 10px
+}
+
+.info-file {
+	border-radius: 5px;
+	border: 1px solid #E4E4EF;
+	background-color: #FFF;
+	min-height: 80px;
+	margin-bottom: 20px
+}
+
+.limit-file {
+	color: #7C8FAC;
+	font-size: 12px;
+	line-height: normal;
+	text-align: center;
+	margin-bottom: 20px
+}
+
+.my-cvs .dashboards-row .widget-container {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+    justify-content: center;
+	text-align: center;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	padding: 10px 15px
+}
+
+.widget-container .card-body-header {
+	font-weight: 700;
+	margin-bottom: 10px
+}
+
+.widget-container .widget-details {
+	font-size: 18px
+}
+
+.date-modify {
+	background-color: #FFFAE7;
+}
+
+.date-modify .card-body-header {
+	color: #FFC700;
+}
+
+.applied {
+	background-color: #F1FAFF
+}
+
+.applied .card-body-header {
+	color: #09589E;
+}
+
+.matched-job {
+	background-color: #FFF5F8
+}
+
+.matched-job .card-body-header {
+	color: var(--pink-cl);
+}
+
+.show-CVpdf img {
+	max-width: 100%
+}

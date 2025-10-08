@@ -1,0 +1,12 @@
+#thang-ld-test{
+    border:1px red solid;
+}
+
+#thang-ld-test .btn-extend .menu-extend .optgroup {
+    font-size: 12px;
+    height: 40px;
+    background: rgba(240, 237, 255, 0.50);
+    font-weight: 600;
+    color: var(--main-cl);
+    padding: 0 10px 0 15px;
+}

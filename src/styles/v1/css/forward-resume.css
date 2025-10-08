@@ -1,0 +1,55 @@
+.forward-resume {
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group > label {
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.form-group .input-area > strong {
+  margin-top: 5px;
+}
+
+.forward-resume .inner {
+  max-width: 830px;
+  margin: 0 auto;
+}
+
+.select-letter .box-form-group {
+  flex: 0 0 450px;
+  max-width: 450px;
+}
+
+.select-letter .create-new {
+  flex: 0 0 calc(100% - 450px);
+  max-width: calc(100% - 450px);
+  padding-left: 30px;
+}
+
+.block-ct > h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 767px) {
+  .select-letter .box-form-group,
+  .select-letter .create-new {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .select-letter .box-form-group .form-group {
+    margin-bottom: 10px;
+  }
+
+  .select-letter {
+    margin-bottom: 25px;
+  }
+}

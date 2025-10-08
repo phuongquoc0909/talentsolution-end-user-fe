@@ -1,9 +1,9 @@
 'use client';
-import { useState, useCallback } from 'react';
+import { useState, useCallback, memo, useMemo } from 'react';
 import SelectSingle from '@/components/UI/select/SelectSingle';
 import '@/components/UI/chosen/chosen.css';
 
-const optionsIndustry = [
+const OPTIONS_INDUSTRY = [
   { value: '0', label: 'IT - Software' },
   { value: '1', label: 'Banking - Finance' },
   { value: '2', label: 'Manufacturing' },
@@ -22,7 +22,7 @@ const optionsIndustry = [
   { value: '15', label: 'Media & Entertainment' },
 ];
 
-const optionsLocation = [
+const OPTIONS_LOCATION = [
   {
     label: 'Vietnam',
     options: [
@@ -36,7 +36,15 @@ const optionsLocation = [
   },
 ];
 
-export default function SearchJobSection(): React.ReactElement {
+const FORM_CONFIG = {
+  SEARCH_URL: 'https://career.vinasoy.com/job-search/en',
+  SEARCH_INPUT_NAME: 'q',
+  SEARCH_PLACEHOLDER: 'Search jobs',
+  INDUSTRY_PLACEHOLDER: 'Select industry...',
+  LOCATION_PLACEHOLDER: 'Select location...',
+} as const;
+
+const SearchJobSection = memo((): React.ReactElement => {
   const [selectedIndustry, setSelectedIndustry] = useState<string>('');
   const [selectedLocation, setSelectedLocation] = useState<string>('');
 
@@ -49,35 +57,72 @@ export default function SearchJobSection(): React.ReactElement {
     console.log('Location changed:', value);
     setSelectedLocation(value);
   }, []);
+
+  const SearchInput: React.ReactElement = useMemo(() => (
+    <input 
+      name={FORM_CONFIG.SEARCH_INPUT_NAME} 
+      type="text" 
+      className="brOrgane h15 width_545" 
+      placeholder={FORM_CONFIG.SEARCH_PLACEHOLDER}
+      aria-label="Search for jobs"
+    />
+  ), []);
+
+  const IndustrySelect: React.ReactElement = useMemo(() => (
+    <div className="chosen-container">
+      <SelectSingle
+        name="industry"
+        placeholder={FORM_CONFIG.INDUSTRY_PLACEHOLDER}
+        options={OPTIONS_INDUSTRY}
+        value={selectedIndustry}
+        onChange={handleIndustryChange}
+      />
+    </div>
+  ), [selectedIndustry, handleIndustryChange]);
+
+  const LocationSelect: React.ReactElement = useMemo(() => (
+    <div className="chosen-container">
+      <SelectSingle
+        name="location"
+        placeholder={FORM_CONFIG.LOCATION_PLACEHOLDER}
+        options={OPTIONS_LOCATION}
+        value={selectedLocation}
+        onChange={handleLocationChange}
+        isGrouped={true}
+      />
+    </div>
+  ), [selectedLocation, handleLocationChange]);
+
+  const SearchButton: React.ReactElement = useMemo(() => (
+    <button 
+      className="searchvt1" 
+      type="submit"
+      aria-label="Search for jobs"
+    >
+      <i className="fa fa-search" aria-hidden="true"></i> 
+      <span>Search</span>
+    </button>
+  ), []);
   
-    return (
-        <div className="search-jobs-main">
-            <form method="get" action="https://career.vinasoy.com/job-search/en" id="frmSearchJob">
-                <input name="q" type="text" className="brOrgane h15 width_545" placeholder="Search jobs" />
-                <div className="chosen-container">
-                  <SelectSingle
-                    name="industry"
-                    placeholder="Select industry..."
-                    options={optionsIndustry}
-                    value={selectedIndustry}
-                    onChange={handleIndustryChange}
-                  />
-                </div>
-                <div className="chosen-container">
-                  <SelectSingle
-                    name="location"
-                    placeholder="Select location..."
-                    options={optionsLocation}
-                    value={selectedLocation}
-                    onChange={handleLocationChange}
-                    isGrouped={true}
-                  />
-                </div>
-                <button className="searchvt1">
-                    <i className="fa fa-search"></i> <span>Search</span>
-                </button>
-            </form>
-        </div>
-    );
-}
+  return (
+    <div className="search-jobs-main">
+      <form 
+        method="get" 
+        action={FORM_CONFIG.SEARCH_URL} 
+        id="frmSearchJob"
+        role="search"
+        aria-label="Job search form"
+      >
+        {SearchInput}
+        {IndustrySelect}
+        {LocationSelect}
+        {SearchButton}
+      </form>
+    </div>
+  );
+});
+
+SearchJobSection.displayName = 'SearchJobSection';
+
+export default SearchJobSection;
   

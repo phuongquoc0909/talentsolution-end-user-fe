@@ -1,0 +1,72 @@
+.fw-regular {
+ 	font-weight: 400!important;
+}
+
+h2.block-title {
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 20px;
+	line-height: normal
+}
+
+.form-group {
+	margin-bottom: 20px
+}
+
+.form-group > label {
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.form-group label > span {
+	color: #FF3333;
+}
+
+.edit-job-recommended .form-action {
+	margin-bottom: 25px
+}
+
+.block-ct.edit-job-recommended {
+	max-width: 860px;
+	margin: 0 auto
+}
+
+.edit-job-recommended hr {
+	margin-bottom: 15px;
+}
+
+.edit-job-recommended h2 {
+	color: #3E4B5E;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: normal;
+	margin-bottom: 20px;
+}
+
+.edit-job-recommended .description {
+	margin-bottom: 25px
+}
+
+.edit-job-recommended .description .highlight {
+	 display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+ 	flex-wrap: wrap;
+	-ms-flex-align: center;
+ 	align-items: center;
+	padding-left: 15px;
+	border-left: 6px solid var(--pink-cl);
+	min-height: 40px
+}
+
+.edit-job-recommended .description .highlight p {
+	-ms-flex: 0 0 100%;
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+
+.edit-job-recommended .description ul {
+	list-style-type: disc;
+	padding-left: 35px
+}
+

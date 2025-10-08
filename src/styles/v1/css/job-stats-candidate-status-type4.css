@@ -1,0 +1,355 @@
+.ml-1,
+.mx-1 {
+  margin-left: 0.25rem !important;
+}
+.d-block {
+  display: block !important;
+}
+.h-100 {
+  height: 100% !important;
+}
+.bgBox {
+	background-color: var(--dark-blue-cl);
+	border-radius: 8px;
+	padding: 30px;
+	height: 100%
+}
+.boxMainTop {
+	margin-bottom: 25px
+}
+.boxMainTop h2 {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: normal; 
+	color: #fff;
+	margin-bottom: 20px
+}
+.boxMainTop .number {
+	font-size: 36px;
+	font-weight: 600
+}
+.boxMainTop p {
+	font-size: 15px;
+	margin-top: 10px
+}
+.text-intro {
+	width: 80%
+}
+@media only screen and (max-width: 1023px) {
+	.text-intro {
+		margin-bottom: 20px;
+		padding-right: 10px
+	}
+}
+
+.block-title {
+	margin-bottom: 20px
+}
+.block-title h2 {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: normal; 
+}
+@media only screen and (max-width: 992px) {
+	.block-title h2 {
+		margin-bottom: 10px
+	}
+}
+.tableFixHead { overflow-y: auto; height: 485px; }
+.tableFixHead thead th { position: sticky; top: 0 }
+.tableFixHead.table-responsive table tr:first-child th:first-child,
+.tableFixHead.table-responsive table tr:first-child th:last-child{
+	border-radius: 0
+}
+.chartDegree .container-ckb {
+	padding-left: 30px
+}
+.canvasDegree {
+	max-width: 950px;
+	margin: 0 auto
+}
+.chart-notes ul li {
+	-ms-flex: 0 0 50%;
+	flex: 0 0 50%;
+	max-width: 50%;
+}
+.chart-notes ul li span {
+	position: relative;
+	padding-left: 24px;
+}
+.chart-notes ul li span:after {
+	content: '';
+	width: 16px;
+	height: 16px;
+	border-radius: 100%;
+	position: absolute;
+	left: 0;
+	top: 5px;
+}
+.chart-notes em {
+	display: block;
+	padding-left: 24px;
+	color: var(--gray-cl);
+}
+.chart-notes ul li:not(:last-child) {
+	margin-bottom: 8px;
+}
+.chart-notes ul li span.label-1:after {
+	background-color: #09589E;
+}
+.chart-notes ul li span.label-2:after {
+	background-color: #FF2458;
+}
+.chart-notes ul li span.label-3:after {
+	background-color: #1C2964;
+}
+.chart-notes ul li span.label-4:after {
+	background-color: #DBE4EA;
+}
+.chart-notes ul li span.label-5:after {
+	background-color: #8999AF;
+}
+.chart-notes ul li span.label-6:after {
+	background-color: #4B5480;
+}
+.chart-notes ul li span.label-7:after {
+	background-color: #FFE0E7;
+}
+.chart-notes ul li span.label-8:after {
+	background-color: #109be6;
+}
+@media only screen and (max-width: 992px) {
+	.chart-notes {
+		margin-top: 30px
+	}
+}
+
+#search-collapse, .search-extend {
+	display: none;
+}
+
+.top-search .btn-action {
+	height: 30px;
+	border: 1px solid #3E4B5E;
+	color: #3E4B5E;
+	background: #fff;
+	border-radius: 8px;
+	padding: 0 10px;
+	display: flex;
+	align-items: center;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all .4s;
+	margin-bottom: 10px;
+}
+.top-search .btn-action.active {
+	border-color: var(--pink-cl);
+	color: var(--pink-cl);
+}
+.top-search .btn-action:hover,
+.top-search .btn-action:active {
+	color: var(--pink-cl);
+	border-color: var(--pink-cl);
+	background: #FFE0E7;
+}
+
+.top-search .btn-action.active svg * {
+	transition: all .4s;
+}
+
+.top-search .btn-action:hover svg.has-stroke path,
+.top-search .btn-action.active svg.has-stroke path {
+	fill: var(--pink-cl)
+}
+
+.top-search .btn-action svg {
+	margin-left: 10px;
+}
+
+.form-group > label {
+	font-weight: 600;
+	margin-bottom: 7px;
+}
+
+.ui-multiselect > span:last-child {
+	color: var(--main-cl);
+}
+
+.top-panel > h2,
+.block-chart > h2 {
+	font-size: 20px;	
+	font-weight: bold;
+}
+
+.block-chart > h2 {
+	margin-bottom: 10px;
+}
+
+.top-panel .list-item .item {
+	margin-right: 20px;
+}
+
+.top-panel .list-item .box-ckb > label {
+	padding-left: 30px;
+}
+
+.top-panel .btn-action {
+	height: 30px;
+	border: 1px solid #3E4B5E;
+	color: #3E4B5E;
+	background: #fff;
+	border-radius: 8px;
+	padding: 0 10px;
+	display: flex;
+	align-items: center;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all .4s;
+}
+
+.top-panel .btn-action.active {
+	border-color: var(--pink-cl);
+	color: var(--pink-cl);
+}
+
+.top-panel .btn-action:hover,
+.top-panel .btn-action:active {
+	color: var(--pink-cl);
+	border-color: var(--pink-cl);
+	background: #FFE0E7;
+}
+
+.top-panel .btn-action svg * {
+	transition: all .4s;
+}
+
+.top-panel .btn-action:hover svg.has-stroke path,
+.top-panel .btn-action.active svg.has-stroke path {
+	stroke: var(--pink-cl);
+	fill: none;
+}
+
+.table-responsive tr.row-time {
+	background: #FFF4F7;
+}
+
+.table-responsive tr td {
+	vertical-align: middle;
+}
+
+.table-responsive tr td:nth-child(1) {
+	width: 110px;
+}
+
+.table-responsive .box-data-1 {
+	width: 80px;
+}
+
+.table-responsive tr td:nth-child(2) {
+	width: 210px;
+}
+
+.table-responsive .box-data-2 {
+	width: 180px;
+}
+
+.table-responsive tr td:nth-child(3) {
+	width: 160px;
+}
+
+.table-responsive .box-data-3 {
+	width: 130px;
+}
+
+.table-responsive tr td:nth-child(4) {
+	width: 290px;
+}
+
+.table-responsive .box-data-4 {
+	width: 260px;
+}
+
+.table-responsive tr td:nth-child(5) {
+	width: 150px;
+}
+
+.table-responsive .box-data-5 {
+	width: 120px;
+}
+
+.table-responsive tr td:nth-child(6) {
+	width: 150px;
+}
+
+.table-responsive .box-data-6 {
+	width: 120px;
+}
+
+.table-responsive tr td:nth-child(7) {
+	width: 270px;
+}
+
+.table-responsive .box-data-7 {
+	width: 240px;
+}
+
+.table-responsive tr td:nth-child(8) {
+	width: 200px;
+}
+
+.table-responsive .box-data-8 {
+	width: 170px;
+}
+
+.table-responsive tr td:nth-child(9) {
+	width: 200px;
+}
+
+.table-responsive .box-data-9 {
+	width: 170px;
+}
+
+.table-responsive tr td:nth-child(10) {
+	width: 200px;
+}
+
+.table-responsive .box-data-10 {
+	width: 170px;
+}
+
+.table-responsive tr td:nth-child(11) {
+	width: 130px;
+}
+
+.table-responsive .box-data-11 {
+	width: 100px;
+}
+
+.table-responsive tr td:nth-child(12) {
+	width: 130px;
+}
+
+.table-responsive .box-data-12 {
+	width: 100px;
+}
+	
+.outer-table {
+	position: relative;
+}
+
+.outer-table .scroll-button {
+	position: sticky;
+	z-index: 1111;
+	top: 50%;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 -20px 0 -25px;
+	height: 0;
+}
+
+@media (max-width: 1200px) {
+	.outer-table .scroll-button {
+		justify-content: space-between;
+		margin: 0;
+	}
+}

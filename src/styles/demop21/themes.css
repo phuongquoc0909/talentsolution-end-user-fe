@@ -1,0 +1,64 @@
+body, .quote .quote-body, .quote .quote-source .quote-author, .quote .quote-source .quote-author-position, .join-talent-box .title, .head-spec .btn-row .download_form, .job-individual .job-post .job-post-description, .sidebar-content .useful-links a, #WhyJoin h4, #WhyJoin .content_why_join { font-size: 15px }
+body, input, select, textarea, .content_fck, .ui_btnCb { font-family: var(--fontmain-theme,'Montserrat')!important }
+body, a:focus, .all-jobs-pre .browser-job a.active, .social_col a:hover i, .quote .quote-source { color: #464646 }
+.header .header-container, .user-nav .sign-in-wrapper, .user-nav .language21 { height: 90px }
+.the-muse-logo img { max-width: 197px; max-height: none; margin-top: 15px }
+.main-nav { margin-left: 60px; margin-top: 28px }
+.main-nav li { padding: 0 15px }
+.main-nav a, .user-nav .sign-in-wrapper a, .user-nav .language21 a { color: #fff }
+.main-nav a { border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: var(--bgcolor-theme,#1e4ca0); border-radius: 0; padding: 0 }
+.main-nav a:hover, .main-nav a.focus { border-color: var(--bgcolormenu-theme,#f9a619) }
+.main-nav a:hover, .insight .join-talent-box, .header .header-container, #footer, .apply-job-container .jsk-card .jsk-card--bg { background-color: var(--bgcolor-theme,#1e4ca0) }
+.main-nav a.focus { background-color: inherit }
+.user-nav .sign-in-wrapper a, .user-nav .language21 a { line-height: 90px }
+#back-top a, .CoreGeneral .header, #jb_pagination .active, .scroll_thongke li .scroll_color .bg_center_scroll, .tm-brighter-blue-round-button:hover:not([disabled]) { background-color: var(--bgcolor-theme,#1e4ca0) }
+.btn-primary, .tm-bright-blue-round-button, .tm-brighter-blue-round-button, .blue-solid-button-xs, .blue-solid-button-sm, .blue-solid-button-md, .blue-solid-button-lg, .JoinNow .joinnowBtn input, .frmContact input.ui_btnCb, .frmChangePass input.ui_btnCb, .JoinNow .joinnowBtn input, .ApplyBtn input, .EditRecommendJob button, .fontCoreJobseeker .RightPanel .ShowData input.ui_btnCb, .JoinNow .Frm_Login .loginBtn input.ui_btnCb, #btnLogin, .JoinNow .loginJoinTalentNetwork a, .btnContinute a { background-color: var(--bgcolormenu-theme,#f9a619); border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px }
+#jb_pagination a:hover, #jb_pagination .previous a:hover, #jb_pagination .next a:hover, #jb_pagination .active { border-color: var(--bgcolor-theme,#1e4ca0) }
+.blue-solid-button-xs, .blue-solid-button-sm, .blue-solid-button-md, .blue-solid-button-lg { border-color: var(--buttonbgcolor-theme,#f9a619) }
+.blue-solid-button-xs:hover, .blue-solid-button-xs:active, .blue-solid-button-xs:focus, .blue-solid-button-sm:hover, .blue-solid-button-sm:active, .blue-solid-button-sm:focus .blue-solid-button-md:hover, .blue-solid-button-md:active, .blue-solid-button-md:focus .blue-solid-button-lg:hover, .blue-solid-button-lg:active, .blue-solid-button-lg:focus, .tm-bright-blue-round-button:hover, .tm-brighter-blue-round-button:hover, .social_col a:hover { background-color: var(--bgcolor-theme,#1e4ca0); border-color: var(--bgcolor-theme,#1e4ca0) }
+.JoinNow .joinnowBtn input:hover, .btnContinute a:hover, .JoinNow .Frm_Login .loginBtn input.ui_btnCb:hover, #btnLogin:hover, .JoinNow .loginJoinTalentNetwork a:hover, .frmContact input.ui_btnCb:hover, .frmChangePass input.ui_btnCb:hover, .ApplyBtn input:hover, .MySaveJobs input.ui_btnCb:hover, .MyResume input.ui_btnCb:hover, .cb-myprofile input.ui_btnCb:hover, .cb-createresume input.ui_btnCb:hover, .EditRecommendJob button:hover { background: var(--bgcolor-theme,#1e4ca0)!important }
+a:hover, .main-nav ul.submenu li a:hover, .sidebar-content .useful-links a:hover, .ResultSurvey .title_danhgia_core, .all-jobs-pre ul li span, .news-five-items .box p.viewmore a { color: var(--text-theme,#1e4ca0) }
+.insight .career-box, .insight .survey-box { background-color: #f9f9f9; border: 1px solid #eee; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px }
+.insight .join-talent-box, .insight .insight-body, .search-jobs-main input.width_545, .search-jobs-main .chosen-container-single .chosen-single, .search-jobs-main button.searchvt1 { border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px }
+.insight .insight-body .insight-text { font-size: 15px!important }
+.company-profile-styling .insight .join-talent-box img { width: auto }
+.search-jobs-main button.searchvt1 { background-color: var(--buttonbgcolor-theme,#f9a619); border-color: var(--buttonbgcolor-theme,#f9a619) }
+.docked-nav.job { padding: 15px }
+.social_col a { background-color: inherit; border: 1px solid #fff!important; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px }
+.social_col a:hover { background-color: #fff }
+.social_col i, #footer .column h6 { color: #fff }
+#footer .column h6 { font-weight: bold }
+@media (max-width:1024px) {
+	.header .header-container { height: auto!important }
+	.main-container { padding-top: 0!important }
+}
+.btn-greyscale { border: 1px solid #a1a1a2; border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px }
+#share .btn-greyscale { background: none }
+.grey-buttons .icon-wrapper a { color: #a1a1a2 }
+.grey-buttons .favorite-container .favorite, .grey-buttons .favorite-container .unfavorite { border-color: var(--bgcolormenu-theme,#f9a619); border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px }
+.grey-buttons .icon-wrapper a.favorite, .grey-buttons .icon-wrapper a.unfavorite, .sidebar-content .favorite-box-container a:hover { color: var(--bgcolormenu-theme,#f9a619) }
+.grey-buttons .icon-wrapper a.favorite:hover, .grey-buttons .icon-wrapper a.unfavorite:hover { color: var(--bgcolormenu-theme,#f9a619) }
+.quote .quote-yellow-top, .quote .quote-yellow-side, .sidebar-content .favorite-box-container i, .fixed-apply-now .favorite-box-container i, .docked-nav.job .docked-ctas .favorite-container a { border-color: var(--bgcolormenu-theme,#f9a619) }
+.quote.quote-yellow, .sidebar-content .favorite-box-container a, .fixed-apply-now .favorite-box-container a, .docked-nav.job .docked-ctas .favorite-container a { color: var(--bgcolormenu-theme,#f9a619) }
+.quote .quote-green-top, .quote .quote-green-side { border-color: var(--bgcolor-theme,#1e4ca0) }
+.quote.quote-green { color: var(--text-theme,#1e4ca0) }
+.sidebar-content .favorite-box-container a:hover i, .docked-nav.job .docked-ctas .favorite-container a:hover:not([disabled]) { background-color: var(--bgcolormenu-theme,#f9a619) }
+.fa.fa-angle-right { font-size: 17px; margin-left: 2px }
+.job-side-section #share .btn-greyscale {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-pack: center;
+    justify-content: center;
+}
+
+.apply-job-container .form-action .btn-st1 {
+	background: var(--buttonbgcolor-theme,#f9a619);
+}
+
+.apply-job-container .form-action .btn-st1:hover {
+	background: var(--buttonbgcolorhover-theme,#f9a619)!important
+}
+
+

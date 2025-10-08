@@ -1,0 +1,30 @@
+.crawler-config .table-block-row.table-responsive table tbody tr.space {
+ 	background-color: inherit;
+}
+.crawler-config .show-edit {
+  display: none;
+}
+.crawler-config tr.edit .show-edit {
+  display: flex;
+  width: 100%;
+}
+.crawler-config .edit .btn-edit,
+.crawler-config .edit .fieldtest .text-link {
+  display: none;
+}
+.crawler-config .box-data-1 {
+  width: 40px;
+}
+.crawler-config .box-data-2 {
+  width: 250px;
+}
+.crawler-config .box-data-3 {
+  width: 350px;
+}
+.crawler-config .box-data-4 {
+  width: 350px;
+}
+.crawler-config .box-data-5 {
+  width: 100px;
+}
+

@@ -1,0 +1,153 @@
+.ml-1,
+.mx-1 {
+  margin-left: 0.25rem !important;
+}
+.d-block {
+  display: block !important;
+}
+.h-100 {
+  height: 100% !important;
+}
+.bgBox {
+	background-color: var(--dark-blue-cl);
+	border-radius: 8px;
+	padding: 30px;
+	height: 100%
+}
+.boxMainTop {
+	margin-bottom: 25px
+}
+.boxMainTop h2 {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: normal; 
+	color: #fff;
+	margin-bottom: 20px
+}
+.boxMainTop .number {
+	font-size: 36px;
+	font-weight: 600
+}
+.boxMainTop p {
+	font-size: 15px;
+	margin-top: 10px
+}
+.text-intro {
+	width: 80%
+}
+@media only screen and (max-width: 1023px) {
+	.text-intro {
+		margin-bottom: 20px;
+		padding-right: 10px
+	}
+}
+.top-panel {
+	margin-bottom: 15px
+}
+
+.top-panel .left-action .list-item .item:not(:last-child) {
+	margin-right: 20px;
+}
+.top-panel .btn-action {
+	height: 30px;
+	border: 1px solid #3E4B5E;
+	color: #3E4B5E;
+	background: #fff;
+	border-radius: 8px;
+	padding: 0 10px;
+	display: flex;
+	align-items: center;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all .4s;
+	font-size: 12px
+}
+.top-panel .btn-action:hover {
+	color: var(--pink-cl);
+	border-color: var(--pink-cl);
+	background: #FFE0E7;
+}
+.top-panel .btn-action:hover svg path {
+  fill: var(--pink-cl);
+}
+.top-panel .btn-action:hover svg.has-stroke path {
+	stroke: var(--pink-cl);
+	fill: none;
+}
+
+.block-title {
+	margin-bottom: 20px
+}
+.block-title h2 {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: normal; 
+}
+@media only screen and (max-width: 992px) {
+	.block-title h2 {
+		margin-bottom: 10px
+	}
+}
+.tableFixHead { overflow-y: auto; height: 485px; }
+.tableFixHead thead th { position: sticky; top: 0 }
+.tableFixHead.table-responsive table tr:first-child th:first-child,
+.tableFixHead.table-responsive table tr:first-child th:last-child{
+	border-radius: 0
+}
+
+.table-responsive tr td:nth-child(2) {
+	width: 150px;
+}
+
+.table-responsive .box-data-2 {
+	width: 120px;
+}
+
+.top-panel .form-group > label {
+	font-weight: 600;
+	margin-bottom: 7px;
+}
+
+.top-panel .filter {
+	margin: 0 -7.5px;
+}
+
+.top-panel .filter .filter-item {
+	width: 225px;
+	padding: 0 7.5px;
+}
+
+.top-panel .filter .filter-item.submit {
+	width: auto;
+}
+
+.top-panel .page-number {
+	margin-top: 25px;
+}
+
+.report-uniquevisitors >  h2 {
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.block-chart .left-action .item svg * {
+	transition: all .4s;
+}
+
+@media (max-width: 992px) {
+	.top-panel > * {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 767px) {
+	.top-panel .filter .filter-item {
+		width: 100%;
+	}
+
+	.top-panel .filter .filter-item:first-child {
+		margin-bottom: 25px;
+	}
+}

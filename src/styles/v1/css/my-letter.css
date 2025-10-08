@@ -1,0 +1,191 @@
+.text-center {
+	text-align: center !important;
+  }
+  .ml-1,
+  .mx-1 {
+	margin-left: 0.25rem !important;
+  }
+  .list-style-disc {
+	  list-style: disc!important
+  }
+  .top-panel * {
+	  font-size: 14px;
+  }
+  .top-panel .left-action select {
+	  color: #3E4B5E;
+	  font-weight: 600;
+  }
+  .top-panel .left-action .list-item .item:not(:last-child) {
+	  margin-right: 8px;
+  }
+  .top-panel .box-right .page-number span,
+  .top-panel .box-right .page-number {
+	  font-size: 14px;
+  }
+  .top-panel .btn-action {
+	  height: 30px;
+	  border: 1px solid #3E4B5E;
+	  color: #3E4B5E;
+	  background: #fff;
+	  border-radius: 8px;
+	  padding: 0 10px;
+	  display: flex;
+	  align-items: center;
+	  font-weight: 600;
+	  cursor: pointer;
+	  transition: all .4s;
+  }
+  .top-panel .btn-action.active {
+	  border-color: var(--pink-cl);
+	  color: var(--pink-cl);
+  }
+  .top-panel .btn-action:hover,
+  .top-panel .btn-action:active {
+	  color: var(--pink-cl);
+	  border-color: var(--pink-cl);
+	  background: #FFE0E7;
+  }
+  .top-panel .btn-action:hover svg.has-stroke path,
+  .top-panel .btn-action.active svg.has-stroke path {
+	  stroke: var(--pink-cl);
+	  fill: none;
+  }
+  #search-expand button:hover svg path,
+  #search-collapse button:hover svg path {
+	  stroke: none;
+	  fill: var(--pink-cl);
+  }
+  
+  .top-panel .btn-action svg * {
+	  transition: all .4s;
+  }
+  #search-collapse, .search-extend {
+	  display: none;
+  }
+  .search-extend .form-control {
+	  border-radius: 8px;
+	  border: 1px solid #F0EDFF;
+	  background: #FBFAFF;
+	  height: 40px;
+	  display: flex;
+	  align-items: center;
+	  padding: 0 15px;
+	  outline: none;
+	  width: 100%;
+  }
+  
+  .search-extend .form-group > label, .JobsAttached-modal .form-group > label {
+	  font-weight: 600;
+	  margin-bottom: 5px;
+  }
+  
+  .search-extend .box-keyword {
+	  margin-bottom: 15px;
+  }
+  
+  .search-extend .box-keyword .input-area {
+	  position: relative;
+  }
+  
+  .search-extend .box-keyword .input-area .clear {
+	  position: absolute;
+	  right: 15px;
+	  top: 10px;
+	  display: none;
+  }
+  
+  .search-extend .box-keyword .input-area .clear.active {
+	  display: inline-block;
+  }
+  
+  .search-extend .box-keyword .form-control:focus {
+	  background: #fff;
+	  box-shadow: 0px 0px 0px 2px #1C2964;
+  }
+  
+  .search-extend .panel-action {
+	  margin-bottom: 25px;
+  }
+  
+  .search-extend .box-detail:after {
+	  content: '';
+	  width: 27px;
+	  height: 15px;
+	  background: url(../images/arrow-top.png) no-repeat;
+	  position: absolute;
+	  top: -15px;
+	  right: 60px;
+  }
+  .search-extend .box-date {
+	  position: relative;
+  }
+  .search-extend .box-date img {
+	  position: absolute;
+	  top: 12px;
+	  right: 15px;
+  }
+  .my-letter .top-panel {
+	  margin-bottom: 15px
+  }
+  .my-letter .box-data-1 {
+	  width: 400px;
+  }
+  .my-letter .box-data-2 {
+	  width: 100px;
+  }
+  .my-letter .box-data-3 {
+	  width: 150px;
+  }
+  .my-letter .box-data-4 {
+	  width: 120px;
+  }
+  .my-letter .box-data-5 {
+	  width: 150px;
+  }
+  .my-letter .box-data-6 {
+	  width: 150px;
+  }
+  .my-letter .box-data-7 {
+	  width: 80px;
+  }
+  .my-letter .form-action li:not(:last-child), .JobsAttached-modal .form-action li:not(:last-child)  {
+	  margin-right: 8px;
+  }
+  .my-letter .form-action button {
+	  height: 40px;
+	  display: flex;
+	  align-items: center;
+	  padding: 0 30px;
+	  border-radius: 8px;
+	  background: var(--pink-cl);
+	  font-size: 16px
+  }
+  .my-letter .form-group > label {
+	  font-weight: 600;
+	  margin-bottom: 5px;
+  }
+  .my-letter .btn-extend .menu-extend {
+	  width: 150px;
+  }
+  .my-letter .table-block-row table tr td.nodata {
+	  border-radius: 8px!important
+  }
+  .my-letter .table-block-row.table-responsive table tbody tr.space {
+	  background-color: inherit
+  }
+  .JobsAttached-modal {
+	  width: 600px;
+  }
+  .JobsAttached-modal .form-group {
+	  margin-bottom: 25px
+  }
+  .JobsAttached-modal .box-data-1 {
+	  width: 50px;
+  }
+  .JobsAttached-modal .box-data-2 {
+	  width: 300px;
+  }
+  .JobsAttached-modal .box-data-3 {
+	  width: auto;
+  }
+	  

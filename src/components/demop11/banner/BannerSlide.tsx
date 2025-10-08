@@ -56,10 +56,10 @@ export default function BannerSlide({ banners = arrBannerSlide }: BannerSlideSwi
           src={getBannerImageSrc(item)}
           alt={`Banner ${index + 1}`}
           loading={index === 0 ? 'eager' : 'lazy'}
-          priority={index === 0} 
+          priority={index === 0} // Add priority for first image
           fill
           sizes="100vw"
-          unoptimized={true} 
+          unoptimized={true} // Tạm thời disable optimization để tránh lỗi
         />
       </div>
     );

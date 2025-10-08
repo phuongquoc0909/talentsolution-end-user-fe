@@ -1,0 +1,156 @@
+.table-responsive .box-title-2,
+.table-responsive .box-title-3,
+.table-responsive .box-title-4,
+.table-responsive .box-data-2,
+.table-responsive .box-data-3,
+.table-responsive .box-data-4 {
+	width: 150px;
+	text-align: center;
+}
+
+.table-responsive tr th:nth-child(2),
+.table-responsive tr th:nth-child(3),
+.table-responsive tr th:nth-child(4),
+.table-responsive tr td:nth-child(2),
+.table-responsive tr td:nth-child(3),
+.table-responsive tr td:nth-child(4) {
+	width: 180px;
+	text-align: center;
+}
+
+.container-ckb .checkmark {
+	left: 50%;
+	margin-left: -10px;
+	margin-top: -10px;
+}
+
+.table-block-row table tr td {
+	vertical-align: middle;
+}
+
+.table-block-row table thead tr th:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.table-block-row table thead tr th:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+.table-block-row table thead tr.row-title th {
+	background: #09589E;
+}
+
+.table-block-row table thead tr th {
+	border: none!important;
+}
+
+.table-block-row table thead tr:first-child th h3 {
+	color: #fff;
+}
+
+@media (max-width: 1439px) {
+	.table-responsive .box-title-2,
+	.table-responsive .box-title-3,
+	.table-responsive .box-title-4,
+	.table-responsive .box-data-2,
+	.table-responsive .box-data-3,
+	.table-responsive .box-data-4 {
+		width: 90px;
+		text-align: center;
+	}
+
+	.table-responsive tr th:nth-child(2),
+	.table-responsive tr th:nth-child(3),
+	.table-responsive tr th:nth-child(4),
+	.table-responsive tr td:nth-child(2),
+	.table-responsive tr td:nth-child(3),
+	.table-responsive tr td:nth-child(4) {
+		width: 120px;
+		text-align: center;
+	}
+}
+
+@media (max-width: 767px) {
+	.table-responsive .box-title-2,
+	.table-responsive .box-title-3,
+	.table-responsive .box-title-4,
+	.table-responsive .box-data-2,
+	.table-responsive .box-data-3,
+	.table-responsive .box-data-4 {
+		width: 50px;
+		text-align: center;
+	}
+
+	.table-responsive tr th:nth-child(2),
+	.table-responsive tr th:nth-child(3),
+	.table-responsive tr th:nth-child(4),
+	.table-responsive tr td:nth-child(2),
+	.table-responsive tr td:nth-child(3),
+	.table-responsive tr td:nth-child(4) {
+		width: 80px;
+		text-align: center;
+	}
+}
+
+.top-panel {
+	margin-bottom: 20px;
+}
+
+.top-panel .box-left strong {
+	margin-left: 5px;
+}
+
+.top-panel .box-left .form-select-chosen {
+	width: 300px;
+}
+
+.top-panel .box-right .btn-st1 {
+	height: 30px;
+	padding: 0 15px;
+	font-size: 12px;
+}
+
+.top-panel .box-right .btn-st1 svg {
+	margin-right: 10px;
+}
+
+.add-permission-modal {
+	width: 600px;
+}
+
+.add-permission-modal .form-group {
+	margin-bottom: 20px;
+}
+
+.add-permission-modal .form-group > label {
+	font-weight: 600;
+	margin-bottom: 7px;
+}
+
+.add-permission-modal .form-action {
+	justify-content: center;
+}
+
+@media (max-width: 767px) {
+	.top-panel .box-left,
+	.top-panel .box-right {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.top-panel .box-left {
+		margin-bottom: 15px;
+	}
+}
+
+@media (max-width: 576px) {
+	.top-panel .box-left > * {
+		flex: 0 0 100%;
+		max-width: 100%;
+		width: 100%;
+	}
+
+	.top-panel .box-left strong {
+		margin-bottom: 7px;
+	}
+}

@@ -1,0 +1,461 @@
+.my-task {
+	margin-bottom: 25px;
+}
+
+.daterangepicker select {
+	padding: 2px 5px;
+}
+
+.my-task .sidebar {
+	flex: 0 0 315px;
+	max-width: 315px
+}
+
+.my-task .primary {
+	flex: 0 0 calc(100% - 315px);
+	max-width: calc(100% - 315px);
+	padding-left: 25px;
+}
+
+.text-center {
+  text-align: center !important;
+}
+.ml-1,
+.mx-1 {
+  margin-left: 0.25rem !important;
+}
+.top-panel {
+	margin-bottom: 15px
+}
+.top-panel * {
+	font-size: 12px;
+}
+.top-panel .box-right {
+	justify-content: flex-end;
+}
+
+.top-panel .box-right > .item:not(:last-child) {
+	margin-right: 8px;
+}
+
+.top-panel .box-right .page-number span,
+.top-panel .box-right .page-number {
+	font-size: 14px;
+}
+.my-task .heightFull {
+	height: 100%
+}
+
+.menu-calendar li {
+	border-bottom: 1px solid #F3F0FD;
+	padding: 10px 0
+}
+.menu-calendar li:first-child {
+	padding-top: 0
+}
+.menu-calendar a {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-flex-align: center;
+	align-items: center;
+	font-weight: 600
+}
+.menu-calendar a:hover, .menu-calendar a.active {
+	color: var(--pink-cl)
+}
+
+.menu-calendar a:hover svg.has-stroke path,
+.menu-calendar a.active svg.has-stroke path {
+	fill: var(--pink-cl);
+}
+
+.menu-calendar a.active svg.icon-2 path {
+	stroke: var(--pink-cl);
+}
+
+.my-task .box-data-1 {
+	width: 600px;
+}
+.my-task .box-data-2 {
+	width: 200px;
+}
+.my-task .box-data-3 {
+	width: 100px;
+}
+.my-task .table-block-row.table-responsive table tbody tr.space {
+	background-color: inherit
+}
+.title-myTask strong {
+	display: inline
+}
+
+/*custom calendar*/
+.list-reason {
+	border-radius: 8px;
+	border: 1px solid #F0EDFF;
+	background: #FBFAFF;
+	padding: 20px 0 20px 20px;
+}
+
+.list-reason .inner {
+	height: 100px;
+	overflow-y: auto;
+}
+
+.form-group label span {
+	color: var(--red-cl);
+}
+
+.list-reason .inner .item {
+	padding-right: 10px;
+}
+
+.list-reason .inner .item:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.list-reason .inner .item .box-ckb label {
+	padding-left: 35px;
+	font-weight: normal;
+}
+
+.list-tags {
+	margin-top: 10px;
+}
+
+.list-tags-sp {
+	flex: 0 0 calc(100% - 150px);
+    max-width: calc(100% - 150px);
+    padding-right: 10px;
+}
+
+.list-tags ul {
+	margin-bottom: -10px;
+}
+
+.list-tags ul li:not(:last-child) {
+	margin-right: 10px;
+}
+
+.list-tags .item {
+	padding: 5px 15px;
+	background: #FBFAFF;
+	border-radius: 8px; 
+	font-size: 12px;
+	margin-bottom: 10px;
+	display: inline-flex;
+	position: relative;
+}
+
+.list-tags .item button {
+	position: absolute;
+	top: -5px;
+	right: -7px;
+}
+
+
+.controls .periods li:nth-child(3) {
+	border-radius: 0 5px 5px 0;
+}
+
+.controls .periods li:nth-child(4),
+.controls .periods li:nth-child(5) {
+	display: none;
+}
+
+.daterangepicker .periods {
+	width: 100%;
+}
+
+.controls .periods li {
+	flex: 0 0 33.33%;
+	max-width: 33.33%;
+	text-align: center;
+	padding: 6px 10px;
+}
+
+.daterangepicker.single {
+	width: 100%;
+}
+
+.daterangepicker {
+	font-size: 14px;
+}
+
+.daterangepicker {
+	padding: 0;
+	box-shadow: 0 0 0 0;
+	font-family: 'Cera-Pro';
+}
+
+.daterangepicker .periods li,
+.daterangepicker .periods li:hover {
+	color: var(--main-cl);
+	background: rgba(189, 188, 219, 0.50);
+}
+
+.daterangepicker .periods li.active {
+	background: var(--pink-cl);
+	color: #fff!important;
+}
+
+.calendar .calendar-table .table-row .table-col.start-date .table-value-wrapper, 
+.calendar .calendar-table .table-row .table-col.start-date .table-value-wrapper:hover {
+	background: var(--pink-cl);
+}
+
+.daterangepicker select {
+	font-size: 14px;
+	height: 30px;
+	border: 1px solid #E4E4EF;
+	background: #F0EDFF;
+	border-radius: 5px;
+	color: var(--main-cl);
+}
+
+.calendar .calendar-header .arrow {
+	align-items: center;
+	display: flex;
+}
+
+.datepicker {
+	margin: 10px -5px 0 -5px;
+}
+
+/*add new calendar modal*/
+.add-new-calendar-modal {
+	width: 1150px;
+}
+
+.add-new-calendar-modal .list-radio .item {
+	height: 40px;
+	display: flex;
+	align-items: center;
+}
+
+.add-new-calendar-modal .list-radio .item:not(:last-child) {
+	margin-right: 30px;
+}
+
+.add-new-calendar-modal label span {
+	color: var(--red-cl);
+}
+
+.add-new-calendar-modal textarea {
+	resize: none;
+	padding-top: 15px;
+	height: auto!important;
+	min-height: 90px;
+}
+
+.add-new-calendar-modal .form-action {
+	margin-top: 20px;
+}
+
+.add-new-calendar-modal .list-tags {
+	margin-top: 0;
+}
+
+.check-calendar {
+	width: 100%;
+}
+
+.check-calendar > .radio-area {
+	margin-bottom: 15px;
+}
+
+.calendar-extend {
+	border-top: 1px solid #E4E4EF;
+	padding-top: 20px;
+	display: none;
+}
+
+.calendar-extend.active {
+	display: block;
+}
+
+.calendar-extend .tabs-wrapper .tabs li:not(:last-child) {
+	margin-right: 20px;
+}
+
+.calendar-extend .tabs-wrapper .tabs li a {
+	font-weight: 700;
+	padding: 0 5px 5px;
+}
+
+.calendar-extend .tabs-wrapper li.active a {
+	color: var(--pink-cl);
+	position: relative;
+}
+
+.calendar-extend .tabs-wrapper li.active a:after {
+	content: '';
+    width: 100%;
+    height: 2px;
+    background: var(--pink-cl);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.calendar-extend .tab-responsive ul {
+	padding-bottom: 10px;
+}
+
+.calendar-extend .form-group {
+	margin-bottom: 20px;
+}
+
+.calendar-extend .form-group label {
+	font-weight: 600;
+	margin-bottom: 7px;
+}
+
+.calendar-extend .inner-tab {
+	padding-top: 10px;
+}
+
+.calendar-extend .input-area .row-sm,
+.calendar-extend .input-area .row-sm .col-right .row {
+	margin: 0 -5px -20px!important;
+}
+
+.calendar-extend .input-area .row-sm > [class*="col-"],
+.calendar-extend .input-area .row-sm .col-right .row > [class*="col-"] {
+	padding: 0 5px 0!important;
+	margin-bottom: 20px;
+}
+
+.calendar-extend .input-area .row-sm .col-right .row > [class*="col-"] {
+	margin-bottom: 0;
+}
+
+.calendar-extend .input-area .row-sm .col-left {
+	flex: 0 0 40%;
+	max-width: 40%;
+}
+
+.calendar-extend .input-area .row-sm .col-right {
+	flex: 0 0 60%;
+	max-width: 60%;
+}
+
+.list-row-radio .row-item .row {
+	width: 100%;
+	margin-bottom: 0;
+}
+
+.list-row-radio .row-item .row [class*="col-"] {
+	margin-bottom: 10px;
+}
+
+.list-row-radio .row-item .box-left strong {
+	flex: 0 0 300px;
+	max-width: 300px;
+}
+
+.list-row-radio .row-item .box-right .container-ckb {
+	padding-left: 30px;
+} 
+
+.list-row-radio .row-item .box-right .list-ckb .item:not(:last-child) {
+	margin-right: 40px;
+}
+
+.list-row-radio .row-item .box-left .list-radio {
+	flex: 0 0 calc(100% - 300px);
+	max-width: calc(100% - 300px);
+}
+
+.list-row-radio .row-item .box-right .remind .form-select {
+	width: 113px;
+	margin: 0 10px;
+}
+
+@media (max-width: 1600px) {
+	.interview-schedule-tab .table-responsive tr td:nth-child(2) {
+		width: 300px;
+	}
+
+	.interview-schedule-tab .table-responsive .box-data-2 {
+		width: 270px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.list-row-radio .row-item .row [class*="col-"] {
+		margin-bottom: 5px;
+	}
+
+	.list-row-radio .row-item:not(:last-child) {
+		margin-bottom: 15px;
+	}
+}
+
+@media (max-width: 767px) {
+	.my-task .sidebar,
+	.my-task .primary {
+		flex: 0 0 100%;
+		max-width: 100%;
+		padding: 0;
+	}
+}
+
+@media (max-width: 576px) {
+	.add-new-calendar-modal .row [class*="col-"] {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.list-row-radio .row-item .box-left strong,
+	.list-row-radio .row-item .box-left .list-radio {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.list-row-radio .row-item:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	.list-row-radio .row-item .box-right .list-ckb .item {
+		flex: 0 0 100%;
+		max-width: 100%;
+		margin: 0;
+	}
+
+	.list-row-radio .row-item .box-right .list-ckb .item:not(:last-child) {
+		margin-bottom: 15px;
+	}
+
+	.calendar-extend .input-area .row-sm .col-left,
+	.calendar-extend .input-area .row-sm .col-right {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.calendar-extend .input-area .row-sm .col-right .row > [class*="col-"] {
+		margin-bottom: 20px;
+	}
+
+	.block-ct.head-info .box-avatar .box-action .action-menu {
+		right: 0;
+	}
+}
+
+.box-search {
+	margin-bottom: 15px;
+	position: relative;
+	margin-right: 20px;
+}
+
+.box-search input {
+	background: #fff;
+}
+
+.box-search button {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}

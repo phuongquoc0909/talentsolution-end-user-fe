@@ -40,7 +40,6 @@ const partnerData: PartnerItem[] = [
 ];
 
 const PartnerSection: React.FC = memo((): React.ReactElement => {
-    // Chia partnerData thành các nhóm 3 phần tử
     const chunkArray = useCallback((array: PartnerItem[], size: number): PartnerItem[][] => {
         const chunks = [];
         for (let i = 0; i < array.length; i += size) {

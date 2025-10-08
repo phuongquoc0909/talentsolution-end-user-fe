@@ -1,0 +1,226 @@
+.ml-1,
+.mx-1 {
+  margin-left: 0.25rem !important;
+}
+.d-block {
+  display: block !important;
+}
+.h-100 {
+  height: 100% !important;
+}
+.bgBox {
+	background-color: var(--dark-blue-cl);
+	border-radius: 8px;
+	padding: 30px;
+	height: 100%
+}
+.boxMainTop {
+	margin-bottom: 25px
+}
+.boxMainTop h2 {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: normal; 
+	color: #fff;
+	margin-bottom: 20px
+}
+.boxMainTop .number {
+	font-size: 36px;
+	font-weight: 600
+}
+.boxMainTop p {
+	font-size: 15px;
+	margin-top: 10px
+}
+.text-intro {
+	width: 80%
+}
+@media only screen and (max-width: 1023px) {
+	.text-intro {
+		margin-bottom: 20px;
+		padding-right: 10px
+	}
+}
+.top-panel {
+	margin-bottom: 15px
+}
+.top-panel .left-action .list-item .item:not(:last-child) {
+	margin-right: 20px;
+}
+.top-panel .btn-action {
+	height: 30px;
+	border: 1px solid #3E4B5E;
+	color: #3E4B5E;
+	background: #fff;
+	border-radius: 8px;
+	padding: 0 10px;
+	display: flex;
+	align-items: center;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all .4s;
+	font-size: 12px
+}
+.top-panel .btn-action.active {
+	border-color: var(--pink-cl);
+	color: var(--pink-cl);
+}
+.top-panel .btn-action:hover,
+.top-panel .btn-action:active {
+	color: var(--pink-cl);
+	border-color: var(--pink-cl);
+	background: #FFE0E7;
+}
+.top-panel .btn-action:hover svg.has-stroke path,
+.top-panel .btn-action.active svg.has-stroke path {
+	stroke: var(--pink-cl);
+	fill: none;
+}
+#search-collapse, .search-extend {
+	display: none;
+}
+.search-extend .form-control {
+	border-radius: 8px;
+	border: 1px solid #F0EDFF;
+	background: #FBFAFF;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	padding: 0 15px;
+	outline: none;
+	width: 100%;
+}
+
+.search-extend .form-group > label {
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.search-extend .panel-action {
+	margin-bottom: 25px;
+}
+
+.search-extend .box-detail:after {
+	content: '';
+    width: 27px;
+    height: 15px;
+    background: url(../images/arrow-top.png) no-repeat;
+    position: absolute;
+    top: -15px;
+    right: 60px;
+}
+.search-extend .box-date {
+	position: relative;
+}
+.search-extend .box-date img {
+	position: absolute;
+	top: 12px;
+	right: 15px;
+}
+@media only screen and (max-width: 767px) {
+	.search-extend .null {
+		display: none
+	}
+}
+.block-title {
+	margin-bottom: 20px
+}
+.block-title h2 {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: normal; 
+}
+@media only screen and (max-width: 992px) {
+	.block-title h2 {
+		margin-bottom: 10px
+	}
+}
+.tableFixHead { overflow-y: auto; height: 485px; }
+.tableFixHead thead th { position: sticky; top: 0 }
+.tableFixHead.table-responsive table tr:first-child th:first-child,
+.tableFixHead.table-responsive table tr:first-child th:last-child{
+	border-radius: 0
+}
+.chartWorkExperience .container-ckb {
+	padding-left: 30px
+}
+.canvasWorkExperience {
+	max-width: 950px;
+	margin: 0 auto
+}
+.chart-notes ul li {
+	-ms-flex: 0 0 50%;
+	flex: 0 0 50%;
+	max-width: 50%;
+}
+.chart-notes ul li span {
+	position: relative;
+	padding-left: 24px;
+}
+.chart-notes ul li span:after {
+	content: '';
+	width: 16px;
+	height: 16px;
+	border-radius: 100%;
+	position: absolute;
+	left: 0;
+	top: 5px;
+}
+.chart-notes em {
+	display: block;
+	padding-left: 24px;
+	color: var(--gray-cl);
+}
+.chart-notes ul li:not(:last-child) {
+	margin-bottom: 8px;
+}
+.chart-notes ul li span.label-1:after {
+	background-color: #09589E;
+}
+.chart-notes ul li span.label-2:after {
+	background-color: #FF2458;
+}
+.chart-notes ul li span.label-3:after {
+	background-color: #1C2964;
+}
+.chart-notes ul li span.label-4:after {
+	background-color: #4B5480;
+}
+.chart-notes ul li span.label-5:after {
+	background-color: #8999AF;
+}
+.chart-notes ul li span.label-6:after {
+	background-color: #4B5480;
+}
+.chart-notes ul li span.label-7:after {
+	background-color: #FFE0E7;
+}
+.chart-notes ul li span.label-8:after {
+	background-color: #5856A5;
+}
+.chart-notes ul li span.label-9:after {
+	background-color: #BDBCDB;
+}
+.chart-notes ul li span.label-10:after {
+	background-color: #F76666;
+}
+.chart-notes ul li span.label-11:after {
+	background-color: #F15C80;
+}
+.chart-notes ul li span.label-12:after {
+	background-color: #FDB816;
+}
+.chart-notes ul li span.label-13:after {
+	background-color: #90ED7D;
+}
+.chart-notes ul li span.label-14:after {
+	background-color: #FFC700;
+}
+.chart-notes ul li span.label-15:after {
+	background-color: #50BEE8;
+}
+@media only screen and (max-width: 992px) {
+	.chart-notes {
+		margin-top: 30px
+	}
+}

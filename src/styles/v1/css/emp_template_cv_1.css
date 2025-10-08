@@ -1,0 +1,2117 @@
+button:focus {
+    outline: 0
+}
+
+.row {
+    float: none!important;
+    margin-bottom: 0!important
+}
+
+.blockMy,
+.tools-schemes,
+.fontIcon a,
+.cv-template-wrapper,
+.tabmenulinks,
+.wizard-footer.sticky-wrapper,
+.register-jobalert {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2)
+}
+
+.blockMy {
+    background-color: #fff;
+    padding: 10px 15px;
+    margin-bottom: 15px
+}
+
+.btn-wd {
+    min-width: 120px
+}
+
+.ckeditor-container {
+    width: 747px
+}
+
+
+/*background color theme*/
+
+.btn-primary,
+.btn-primary:hover,
+.edit-switch .el-switch>input[type="checkbox"]:checked+.el-switch-style,
+.wizard-header .btn-next,
+.wizard-header .btn-finish,
+.wowcv-download .btn:hover,
+.el-horizontal .usethis,
+.tabmenulinks ul li a:hover,
+.tabmenulinks ul li.active a,
+.tabmenulinks ul li.abc a,
+.iconheading,
+.profile-background-image,
+#ChooseResume.fancybox-bootstrap .title_form,
+#ChooseReplaceResume.fancybox-bootstrap .title_form,
+.listSimilarJob .read-more-jobs a.btn-apply-all,
+#sliderSkill .rangeslider__fill,
+#ChooseResume a.create-cv,
+.pv-profile-section-body a.btn-edit,
+.register-jobalert,
+.listSimilarJob .top-job .apply-job a,
+#workflow_success,
+.button-actions a,
+#appendContentCV header.card-header {
+    background-color: #009b74
+}
+
+
+/*text color theme*/
+
+.fancybox-bootstrap a,
+#banner-video .btn-onvideo a:hover,
+.cvtips i.fa,
+.change-CV i.fa,
+.change-CV a:hover,
+.btn-add-more:hover,
+.card a,
+.slide-customize .title,
+.tools-schemes h3,
+.tools-schemes .btn-change-template,
+a.header-add-action:hover,
+a.header-delete-action:hover,
+a.header-add-action.addtext,
+.pv-top-card-section-body h2.pv-top-card-section-headline,
+.pv-summary-info h3,
+.wizard-footer .btn-previous,
+.wizard-header button.btn-preview,
+.wowcv-download a,
+.listSimilarJob .read-more-jobs a,
+.listSimilarJob .top-job .apply-job a,
+.wowcv-download .btn,
+#ChangeTemplateCV .name-template.hover,
+.upload-photo .fileContainer i.fa,
+.addlangauge a,
+.addlocation a {
+    color: #009b74
+}
+
+.fontCVsize12,
+.fontCVsize12 .content_fck {
+    font-size: 12px!important
+}
+
+.fontCVsize14,
+.fontCVsize14 .content_fck {
+    font-size: 14px!important
+}
+
+.fontCVsize16,
+.fontCVsize16 .content_fck {
+    font-size: 16px!important
+}
+
+.btn-primary {
+    border: 0
+}
+
+.TS_service .bpo span.text a,
+.form-control,
+.btn-default,
+.workflow a:hover,
+.accountinfo-section button.btn-default {
+    color: #505050
+}
+
+.content_fck {
+    font-size: 14px
+}
+
+#fancybox-title {
+    display: none!important
+}
+
+.date_month {
+    background-image: url('../images/calendar.png')
+}
+
+.ui-widget-header {
+    background-color: #009b74!important
+}
+
+.ui-widget-content {
+    border-color: #009b74!important
+}
+
+.ui-state-default {
+    border-color: #ccc!important
+}
+
+body.TS_service {
+    background-color: #fff
+}
+
+#banner-video {
+    float: left;
+    width: 100%;
+    position: relative;
+    height: 680px;
+    overflow: hidden
+}
+
+#banner-video .btn-onvideo {
+    position: absolute;
+    right: 15%;
+    bottom: 26%;
+    z-index: 2
+}
+
+#banner-video .btn-onvideo a {
+    display: block;
+    background-color: #fdb816;
+    color: #fff;
+    min-width: 200px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    transition: background-color 300ms ease-out 0s
+}
+
+#banner-video .btn-onvideo a:hover {
+    text-decoration: none;
+    color: #fff
+}
+
+#banner-video #bgvid {
+    width: 100%
+}
+
+#Why-TS ul.function-ts li {
+    height: 130px
+}
+
+#Template-TS h2.section-title {
+    font-size: 40px
+}
+
+.swc-wrapper {
+    clear: both
+}
+
+.swc-wrapper .container-fluid,
+#Why-TS h3,
+.pv-top-card,
+.profile-background-image,
+.skill-list .skill_info,
+.education-section .pv-profile-section-body .ember-view,
+#workflow_success span {
+    padding: 0
+}
+
+.wizard-header {
+    float: left;
+    width: 100%;
+    margin-top: 15px;
+    height: 50px;
+    text-align: center;
+    position: relative
+}
+
+.wizard-header .wizard-title {
+    padding-top: 6px
+}
+
+.wizard-header .pull-right {
+    position: absolute;
+    top: 6px;
+    right: 46px
+}
+
+.wizard-header.sticky-wrapper.is-sticky {
+    position: fixed;
+    top: 0;
+    margin: 0;
+    background-color: #fff;
+    z-index: 3;
+    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.30);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.30)
+}
+
+.wizard-header .btn,
+#ChooseResume .btn {
+    color: #fff;
+    padding: 8px 30px;
+    border-color: #007a4f
+}
+
+.wizard-header .btn:hover,
+#ChooseResume .btn:hover,
+.el-horizontal .usethis:hover,
+.btn-primary:hover,
+.btn-warning:hover,
+#banner-video .btn-onvideo a:hover,
+.pv-profile-section-body a.btn-edit:hover,
+.listSimilarJob .top-job .apply-job a:hover,
+.CB-Profile .btn:hover,
+.button-actions a:hover,
+#BlackList-Search #bt_blacklist_find:hover {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.25) inset;
+    -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.25) inset;
+    -moz-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.25) inset
+}
+
+.wizard-header .btn-previous,
+#ChooseResume .btn {
+    color: #505050;
+    background-color: #d9dbdc;
+    border-color: #c3c3c3
+}
+
+.wizard-header .btn-preview {
+    background-color: #fff;
+    border-color: #c3c3c3
+}
+
+.wizard-navigation {
+    padding: 0;
+    margin-top: 15px;
+    background-color: #fff
+}
+
+.workflow {
+    float: left;
+    width: 100%;
+    height: 61px;
+    overflow: hidden;
+    background-image: url('../images/bg-workflow.png');
+    background-repeat: no-repeat
+}
+
+.workflow li {
+    float: left;
+    position: relative
+}
+
+.workflow li.text1,
+.workflow li.text2 {
+    width: 365px
+}
+
+.workflow li.text3 {
+    width: 330px
+}
+
+.workflow a {
+    color: #fff;
+    font-size: 20px;
+    display: block;
+    text-decoration: none
+}
+
+.workflow a.active,
+.workflow.wl-step2 .text1 a,
+.workflow.wl-step3 .text1 a,
+.workflow.wl-step3 .text2 a {
+    font-size: 24px
+}
+
+.workflow a:hover {
+    text-decoration: none
+}
+
+.workflow a.active:hover,
+.listSimilarJob .read-more-jobs a.btn-apply-all {
+    color: #fff
+}
+
+.workflow.wl-step1 {
+    background-position: 0 0
+}
+
+.workflow.wl-step1 .text1 a,
+.workflow.wl-step2 .text1 a,
+.workflow.wl-step3 .text1 a {
+    margin: 23px 0 0 120px
+}
+
+.workflow.wl-step1 .text2 a,
+.workflow.wl-step1 .text3 a,
+.workflow.wl-step2 .text3 a {
+    margin: 31px 0 0 105px
+}
+
+.workflow.wl-step2 {
+    background-position: 0 -64px
+}
+
+.workflow.wl-step2 .text2 a,
+.workflow.wl-step3 .text2 a {
+    margin: 23px 0 0 100px
+}
+
+.workflow.wl-step3 {
+    background-position: 0 -126px
+}
+
+.workflow.wl-step3 .text3 a {
+    margin: 23px 0 0 120px
+}
+
+.finish-step .workflow {
+    background: url('../images/bg-notext.png') left top no-repeat
+}
+
+.finish-step .workflow span {
+    font-size: 28px;
+    color: #fff;
+    line-height: 61px;
+    padding-left: 50px;
+    display: block
+}
+
+#workflow_success {
+    background-image: none;
+    text-align: center;
+    margin: 0
+}
+
+.step-content {
+    margin-top: 30px;
+    padding: 0
+}
+
+.step-content.ebook-content {
+    margin-top: 60px
+}
+
+.step-content.ebook-content .wowcv-download {
+    margin-bottom: 60px
+}
+
+.wowcv-download {
+    float: left;
+    width: 100%;
+    margin-bottom: 30px
+}
+
+.wowcv-download h2 {
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 10px
+}
+
+.wowcv-download p {
+    font-size: 16px;
+    line-height: normal
+}
+
+.wowcv-download .btn {
+    padding: 8px 30px;
+    border-color: #009b74;
+    background-color: #fff;
+    transition: background-color 300ms ease-out 0s
+}
+
+.wowcv-download .btn:hover {
+    border-color: #009b74;
+    color: #fff
+}
+
+.searchable-switch {
+    font-size: 16px;
+    margin-bottom: 30px
+}
+
+.searchable-switch .edit-switch {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    top: 4px
+}
+
+.el-horizontal {
+    position: absolute;
+    left: 50%;
+    bottom: 45px;
+    z-index: 2;
+    display: none;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.el-horizontal .usethis {
+    color: #fff;
+    padding: 8px 15px;
+    cursor: pointer
+}
+
+.editCVtemplate-wrapper {
+    width: 85%;
+    margin: 0 auto
+}
+
+.cv-template-wrapper,
+.tools-schemes {
+    float: left;
+    width: 100%;
+    background-color: #fff
+}
+
+.cv-template-wrapper {
+    height: 850px;
+    overflow: hidden;
+    color: #58595b;
+    margin-bottom: 30px
+}
+
+.tools-schemes {
+    padding: 15px 25px 25px;
+    font-size: 16px
+}
+
+.tools-schemes h2 {
+    font-size: 26px;
+    border-bottom: 1px solid #dfdfdf;
+    padding-bottom: 5px;
+    margin-bottom: 5px
+}
+
+.tools-schemes h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-top: 15px
+}
+
+.tools-schemes select {
+    font-size: 16px;
+    height: 38px
+}
+
+.tools-schemes .btn-change-template,
+.fontIcon .fontsize14 i.fa,
+.change-CV a {
+    font-size: 14px
+}
+
+.tools-schemes .btn-change-template {
+    text-decoration: underline
+}
+
+.tools-schemes small {
+    color: #999;
+    padding-bottom: 10px
+}
+
+#colorItems .color-block {
+    float: left;
+    height: 24px;
+    width: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.7)
+}
+
+#colorItems .mb2 {
+    margin-bottom: 10px
+}
+
+#colorItems .color-item {
+    width: 110px;
+    border: 2px solid #d7d7d7;
+    padding: 2px;
+    overflow: auto
+}
+
+#colorItems .color-selector {
+    cursor: pointer
+}
+
+#colorItems .color-selector.selected .color-item,
+.fontIcon .fontsize.active a {
+    border-color: #f79c25
+}
+
+.showImgCover {
+    margin-top: 10px
+}
+
+.fontIcon span {
+    float: left;
+    width: 40px;
+    margin-right: 10px
+}
+
+.fontIcon a {
+    display: block;
+    border: 1px solid #505050;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    box-shadow: none
+}
+
+.fontIcon i.fa {
+    line-height: 40px;
+    color: #505050;
+    -webkit-transition: all .2s;
+    /* Safari */
+    transition: all .2s
+}
+
+.fontIcon .fontsize12 i.fa {
+    font-size: 10px
+}
+
+.fontIcon .fontsize16 i.fa {
+    font-size: 20px
+}
+
+.change-CV a,
+.change-CV i.fa {
+    font-size: 16px
+}
+
+.change-CV a {
+    color: #505050;
+    font-weight: bold
+}
+
+.change-CV i.fa {
+    margin-right: 10px
+}
+
+.tabmenulinks {
+    float: left;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 15px
+}
+
+.tabmenulinks ul li a {
+    width: 100%;
+    display: block;
+    color: #505050;
+    font-size: 16px;
+    padding: 14px 16px;
+    text-align: left;
+    transition: 0.3s;
+    text-decoration: none
+}
+
+.tabmenulinks ul li a:hover,
+.tabmenulinks ul li.active a,
+.tabmenulinks ul li.abc a {
+    color: #fff;
+    text-decoration: none
+}
+
+.cvtips h3 {
+    color: #000;
+    padding-bottom: 5px;
+    font-size: 20px
+}
+
+.cvtips i.fa {
+    font-size: 22px
+}
+
+.cvtips a.prev,
+.cvtips a.next {
+    position: absolute;
+    top: 45%
+}
+
+.cvtips a.prev {
+    left: 5px
+}
+
+.cvtips a.next {
+    right: 5px
+}
+
+#scroll-cvtips {
+    width: 94%!important;
+    margin: 0 auto
+}
+
+#scroll-cvtips p {
+    width: 100%!important;
+    text-align: justify
+}
+
+.pv-profile-section label,
+.pv-profile-section-body label {
+    padding-top: 7px
+}
+
+.iconheading i.fa {
+    font-size: 1em;
+    line-height: normal;
+    color: #fff;
+    -webkit-transition: all .2s;
+    /* Safari */
+    transition: all .2s
+}
+
+.iconheading {
+    display: inline-block;
+    width: 42px;
+    margin: 0 auto;
+    height: 42px;
+    margin-right: 10px;
+    border-radius: 50%;
+    outline: none;
+    text-decoration: none;
+    text-align: center
+}
+
+.button-actions {
+    position: absolute;
+    top: 12px;
+    right: 15px
+}
+
+.button-actions a {
+    font-size: 12px;
+    color: #fff;
+    display: inline-block;
+    padding: 3px 10px;
+    text-decoration: none;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px
+}
+
+a.header-add-action,
+a.header-delete-action {
+    position: absolute;
+    color: #999;
+    cursor: pointer
+}
+
+a.header-add-action {
+    top: 10px;
+    right: 0
+}
+
+a.header-delete-action {
+    top: 9px;
+    right: 30px
+}
+
+a.header-add-action.addtext,
+.txt_hidebox {
+    font-size: 16px;
+    top: 12px;
+    right: 15px
+}
+
+a.header-add-action.addtext:hover,
+#ChangeTemplateCV .el-horizontal .usethis:hover,
+.button-actions a:hover {
+    text-decoration: none
+}
+
+a.header-add-action i.fa-edit,
+a.header-delete-action i.fa-trash-o,
+.upload-photo i.fa-edit,
+.pv-top-card-section-actions i.fa-edit,
+a.header-add-action i.fa-plus-square {
+    font-size: 20px
+}
+
+.pv-profile-section .content_fck p,
+.pv-profile-section .content_fck ul,
+.pv-profile-section .content_fck ol {
+    margin-bottom: 0!important
+}
+
+header.card-header {
+    padding: 0 15px;
+    position: relative
+}
+
+h2.card-heading {
+    font-size: 24px;
+    line-height: 42px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    color: #000
+}
+
+h2.card-heading.nodata {
+    border-bottom: 0;
+    padding-bottom: 0
+}
+
+.datebox .date_month {
+    background-position: 150px 9px;
+    background-color: #fff;
+    border-color: #ccc
+}
+
+.pv-profile-section-body {
+    padding: 20px 15px
+}
+
+.pv-profile-section-body .record-view {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px
+}
+
+.pv-profile-section-body .row {
+    margin-bottom: 10px!important
+}
+
+.pv-profile-section-body .ember-view {
+    padding: 0 0 0 20px
+}
+
+#Step3.step-content #sliderSkill output {
+    top: 12px;
+    padding-top: 0
+}
+
+.btn-add-more {
+    width: 100%;
+    background-color: #eee;
+    border: 2px dashed #eee;
+    color: #787878;
+    padding: 10px;
+    text-transform: uppercase;
+    transition: 0.3s
+}
+
+.btn-add-more:hover {
+    border: 2px dashed #009b74
+}
+
+.btn-remove-row,
+.btn-remove-row2 {
+    display: block;
+    background: url('../images/icon_close.gif') center center no-repeat;
+    text-indent: -9999px;
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    outline: 0;
+    cursor: pointer;
+    z-index: 1
+}
+
+.data-row {
+    position: relative
+}
+
+.data-row .line-group {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    margin-bottom: 20px
+}
+
+.data-row:first-child .line-group {
+    border-top: 0;
+    padding-top: 0
+}
+
+.data-row:first-child .btn-remove-row,
+.data-row:first-child .btn-remove-row2 {
+    top: 0
+}
+
+.pv-top-card a.header-add-action,
+.upload-photo {
+    position: absolute;
+    top: 130px;
+    right: 18px
+}
+
+.profile-background-image {
+    height: 120px
+}
+
+.profile-photo-container {
+    width: 160px;
+    margin: -100px auto 0 15px;
+    position: relative
+}
+
+.EntityPhoto-circle-8 {
+    border-radius: 49.9%;
+    overflow: hidden;
+    border: 4px solid #fff;
+    box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, 0.3) inset, 0 1.5px 3px 0 rgba(0, 0, 0, 0.3);
+    background-color: rgba(243, 246, 248, 0.94);
+}
+
+.upload-photo .fileContainer {
+    width: 26px;
+    height: 26px;
+    line-height: 30px;
+    background: inherit;
+    background-color: #fff;
+    border: none;
+    border-radius: 100%;
+    overflow: inherit;
+    padding: 0;
+    margin: 0;
+    color: #999;
+    text-align: center;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2)
+}
+
+.upload-photo .fileContainer [type="file"],
+.fileContainer [type="button"] {
+    height: 20px;
+    padding: 0
+}
+
+.upload-photo .fileContainer i.fa {
+    font-size: 16px
+}
+
+.pv-top-card-section-body {
+    margin-top: 15px;
+    padding: 0 20px
+}
+
+.pv-top-card-section-body h1.pv-top-card-section-name {
+    font-size: 24px;
+    margin-bottom: 2px
+}
+
+.pv-top-card-section-body h2.pv-top-card-section-headline {
+    font-size: 16px;
+    padding-bottom: 20px
+}
+
+.pv-top-card-section-body .pv-top-card-section-experience {
+    padding-bottom: 20px
+}
+
+.pv-top-card,
+.pv-profile-section,
+.pv-profile-section .content_fck,
+.pv-summary-info h4 {
+    font-size: 14px
+}
+
+.pv-profile-section .note {
+    color: #999
+}
+
+.personalinfo-section .pv-profile-section-body,
+.desired-job-section .pv-profile-section-body,
+.experience-section .pv-profile-section-body,
+.education-section .pv-profile-section-body,
+.skill-section .pv-profile-section-body,
+.references-section .pv-profile-section-body,
+.accountinfo-section .pv-profile-section-body {
+    padding: 20px 15px 10px 40px
+}
+
+.personalinfo-section .profile-photo-container {
+    position: absolute;
+    margin: 0;
+    right: 5%
+}
+
+.personalinfo-section .profile-photo-container .note {
+    padding-top: 15px;
+    text-align: center
+}
+
+#desired-form .htlv .form-group,
+.dragdrop-file .htlv .form-group {
+    margin-bottom: 5px
+}
+
+#desired-form .htlv label.checkbox-inline,
+.dragdrop-file .htlv label.checkbox-inline {
+    float: none;
+    min-width: 183px
+}
+
+.pv-summary-info h3,
+.skill-list .skill_info h3,
+.skill-list .skill_info h3 i.fa-trash-o {
+    font-size: 16px
+}
+
+.pv-summary-info h3,
+.skill-list .skill_info h3,
+.pv-summary-info h4 {
+    font-weight: bold
+}
+
+.pv-summary-info h3,
+.pv-summary-info h4 {
+    padding-bottom: 5px
+}
+
+.pv-top-card,
+.pv-profile-section {
+    line-height: normal
+}
+
+ul.ember-view li {
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px
+}
+
+ul.ember-view li a.header-add-action {
+    right: 0
+}
+
+ul.ember-view li:last-child {
+    border-bottom: 0;
+    margin-bottom: 0
+}
+
+#sliderSkill {
+    margin-top: 7px
+}
+
+#sliderSkill .rangeslider__handle {
+    background-color: #006e47
+}
+
+.skill-list li {
+    float: left;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0
+}
+
+.skill-list .skill_info {
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 0;
+    border-bottom: 0
+}
+
+.skill_info .chart {
+    background-image: url("../images/bg-skill.png")
+}
+
+.skill-list .skill_info h3,
+.pv-summary-info h4 {
+    color: #000
+}
+
+.skill-list .skill_info h3 a.header-add-action,
+.skill-list .skill_info h3 a.header-delete-action {
+    position: static;
+    margin-left: 5px
+}
+
+.skill-list .skill_info h3,
+.skill-list .skill_info p {
+    width: 92%
+}
+
+.skill-list .skill_info .text-skillLevel {
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 0
+}
+
+#appendContentCV {
+    float: left;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    display: none
+}
+
+#appendContentCV .blockMy {
+    margin: 0;
+    padding: 0
+}
+
+#appendContentCV h2.card-heading {
+    color: #fff;
+    font-size: 16px;
+    padding-bottom: 0;
+    border: 0
+}
+
+#appendContentCV .txt_hidebox {
+    position: absolute;
+    color: #fff
+}
+
+#appendContentCV .scrollArea {
+    height: 350px;
+    padding: 15px;
+    overflow-y: scroll
+}
+
+.CV-colLeft {
+    max-width: 850px;
+    padding: 0
+}
+
+.listSimilarJob h2 {
+    font-size: 28px;
+    margin: 10px 0 10px 5px
+}
+
+.listSimilarJob,
+.listSimilarJob ul,
+.listSimilarJob ul li {
+    float: left;
+    width: 100%!important
+}
+
+.listSimilarJob .job-item {
+    border-bottom: dotted 1px #e5e5e5;
+    padding: 10px
+}
+
+.listSimilarJob ul li:last-child .job-item {
+    border-bottom: none
+}
+
+.listSimilarJob .job-item p,
+.listSimilarJob .top-job .salary-location p {
+    margin-bottom: 5px
+}
+
+.listSimilarJob .job-item .jobtitle img {
+    margin-right: 5px
+}
+
+.listSimilarJob .job-item .jobtitle b {
+    color: #F00;
+    font-style: italic;
+    font-weight: bold;
+    padding-right: 5px
+}
+
+.listSimilarJob .job-item .jobtitle a {
+    color: #505050;
+    font-weight: bold;
+    font-size: 13px
+}
+
+.listSimilarJob .job-item .jobcompany a,
+.listSimilarJob .top-job .salary-location {
+    color: #999;
+    font-size: 13px
+}
+
+.listSimilarJob .read-more-jobs {
+    float: left;
+    width: 100%;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 14px
+}
+
+.listSimilarJob .top-job {
+    position: relative;
+    border-bottom: 1px solid #e5e5e5
+}
+
+.listSimilarJob .top-job:last-child {
+    border-bottom: 0
+}
+
+.listSimilarJob .top-job .logocompany {
+    border: 0;
+    margin: 10px 2% 10px 0
+}
+
+.listSimilarJob .top-job .job-item {
+    float: left;
+    width: 47%;
+    margin-right: 5%;
+    border-bottom: 0;
+    padding: 10px 0
+}
+
+.listSimilarJob .top-job .job-item .jobtitle,
+.listSimilarJob .top-job .salary-location p:first-child {
+    padding-top: 8px
+}
+
+.listSimilarJob .top-job .job-item .jobtitle a,
+.listSimilarJob .top-job .job-item .jobcompany a,
+.listSimilarJob .top-job .salary-location {
+    font-size: 15px;
+    color: #666
+}
+
+.listSimilarJob .top-job .salary-location {
+    float: left;
+    width: 20%;
+    padding: 10px 0
+}
+
+.listSimilarJob .top-job .salary-location p:last-child {
+    height: 20px;
+    overflow: hidden
+}
+
+.listSimilarJob .top-job .salary-location i.fa {
+    text-align: left
+}
+
+.listSimilarJob .top-job .apply-job {
+    display: none;
+    margin-top: 15px
+}
+
+.listSimilarJob .top-job .apply-job.setcol {
+    width: 10%;
+    position: absolute;
+    right: 0;
+    top: 27px;
+    display: block;
+    margin-top: 0
+}
+
+.listSimilarJob .top-job .apply-job a {
+    padding: 4px 12px;
+    font-size: 12px;
+    color: #fff
+}
+
+.CV-colRight {
+    float: right;
+    max-width: 300px;
+    padding: 0
+}
+
+.ads300 img,
+.ads300 embed,
+.ads300 iframe {
+    margin-bottom: 15px
+}
+
+.register-jobalert {
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-shadow: none
+}
+
+.register-jobalert h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px
+}
+
+.register-jobalert .jobtitle,
+.register-jobalert .location,
+.register-jobalert .emailuser,
+.register-jobalert .btn-register {
+    padding-left: 5px;
+    padding-right: 5px
+}
+
+.register-jobalert .col-xs-12 {
+    margin-bottom: 10px;
+    text-align: center
+}
+
+.register-jobalert .btn-primary {
+    background-color: #fff;
+    color: #505050;
+    min-width: 150px;
+    font-weight: bold;
+    transition: background-color 300ms ease-out 0s
+}
+
+.register-jobalert .btn-primary:hover {
+    background-color: #fff;
+    color: #505050
+}
+
+.register-jobalert .btn-advance a {
+    color: #fff;
+    font-size: 14px
+}
+
+.register-jobalert select#locationBoxJA {
+    width: 100%
+}
+
+.register-jobalert .form-control {
+    border: 0;
+    font-size: 13px
+}
+
+.register-jobalert .chosen-container-multi .chosen-choices {
+    border: 0;
+    background-color: #fff;
+    height: 36px!important;
+    padding-left: 7px
+}
+
+.register-jobalert .chosen-container-multi .chosen-choices li.search-field input[type="text"] {
+    height: 36px;
+    line-height: 36px
+}
+
+.register-jobalert .chosen-container .chosen-results li {
+    text-align: left
+}
+
+
+/*Resize CV mode finish*/
+
+.cv-mode-finish .editCVtemplate-wrapper {
+    width: 815px
+}
+
+.cv-mode-finish .cv-template-1 .subCVpage {
+    display: flex
+}
+
+.cv-mode-finish .cv-template-wrapper,
+.cv-mode-finish .cv-template-1 .left-col,
+.cv-mode-finish .cv-template-1 .right-col {
+    height: auto
+}
+
+.cv-mode-finish ul.personal li {
+    display: flex
+}
+
+.cv-mode-finish .cv-template-1 .right-col {
+    max-width: none
+}
+
+.cv-mode-finish .cv-template-2 .employer-names {
+    max-width: 535px
+}
+
+.cv-mode-finish .cv-template-2 .employer-names h4 {
+    margin-bottom: 2px
+}
+
+.cv-mode-finish .cv-template-4 .subCVpage .right-col .bgtf {
+    top: -75px
+}
+
+.cv-mode-finish .cv-template-5 .name {
+    width: 543px
+}
+
+.cv-mode-finish .cv-template-5 .coverCVpage .top .name {
+    width: 328px
+}
+
+.cv-mode-finish .cv-template-5 label {
+    width: 100%;
+    max-width: 125px
+}
+
+.cv-mode-finish .cv-template-5 .content ul.contact .annou {
+    width: 59%
+}
+
+.cv-mode-finish .cv-template-5 .left-c ul.contact li label,
+.cv-mode-finish .cv-template-14 label {
+    max-width: 135px
+}
+
+.cv-mode-finish .cv-template-5 .right-c ul.contact li {
+    display: flex
+}
+
+.cv-mode-finish .cv-template-9 .top .right-col {
+    width: 72%
+}
+
+.cv-mode-finish .cv-template-12 h3 {
+    background-position: left top;
+    max-width: 337px
+}
+
+.cv-mode-finish .cv-template-13 label,
+.cv-mode-finish .cv-template-15 ul.contact label {
+    max-width: 145px
+}
+
+.cv-mode-finish .cv-template-14 .posAreaName {
+    right: 15px
+}
+
+.cv-mode-finish .cv-template-16, .cv-mode-finish .cv-template-19 { padding: 0; margin-bottom: 0 }
+
+/*All popup*/
+
+.fancybox-bootstrap {
+    width: 750px
+}
+
+.fancybox-bootstrap .title_form {
+    padding: 10px 25px;
+    border-bottom: 1px solid #d3d3d3;
+    font-size: 22px;
+    font-weight: normal;
+    height: auto;
+    line-height: normal;
+    position: relative
+}
+
+.fancybox-bootstrap .title_form .close2 {
+    display: block;
+    text-indent: -9999px;
+    background: url('../images/icon_close.gif') center center no-repeat;
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    outline: 0
+}
+
+.fancybox-bootstrap .msg_content {
+    padding: 20px 0 20px 20px;
+    font-size: 14px
+}
+
+.fancybox-bootstrap .form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 10px
+}
+
+.fancybox-bootstrap .form-horizontal .control-label {
+    text-align: left
+}
+
+.fancybox-bootstrap .scrollAvaibled {
+    border: 0;
+    width: 100%;
+    height: 264px
+}
+
+.fancybox-bootstrap .btn {
+    font-size: 16px
+}
+
+.form-footer-actions {
+    background-color: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    clear: both;
+    overflow: hidden;
+    padding: 16px
+}
+
+.form-footer-actions button.btn-default,
+.accountinfo-section button.btn-default {
+    border: 1px solid #d9d9d9
+}
+
+#ChangeTemplateCV.fancybox-bootstrap {
+    width: 680px
+}
+
+#ChangeTemplateCV.fancybox-bootstrap .msg_content {
+    padding: 20px 40px
+}
+
+#ChangeTemplateCV .cv-slides {
+    height: 670px;
+    overflow-y: scroll
+}
+
+#ChangeTemplateCV .cv-item {
+    width: 33.3333%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    text-align: center
+}
+
+#ChangeTemplateCV .cv-item img {
+    width: 100%;
+    max-width: 169px;
+    max-height: 300px;
+    border: 3px solid #fff
+}
+
+#ChangeTemplateCV .cv-item:hover img {
+    border-color: #009b74
+}
+
+#ChangeTemplateCV .el-horizontal {
+    width: 100%;
+    left: 0;
+    transform: none;
+    text-align: center
+}
+
+#ChangeTemplateCV .el-horizontal .usethis {
+    display: inline-block;
+    font-size: 13px
+}
+
+#ChangeTemplateCV .name-template {
+    text-align: center;
+    font-size: 11px;
+    padding-top: 5px
+}
+
+#ChooseResume.fancybox-bootstrap .msg_content,
+#ChooseReplaceResume.fancybox-bootstrap .msg_content,
+#previewCV.fancybox-bootstrap .msg_content {
+    padding: 10px 25px
+}
+
+#ChooseResume.fancybox-bootstrap .title_form,
+#ChooseReplaceResume.fancybox-bootstrap .title_form {
+    color: #fff
+}
+
+#ChooseResume ul,
+#ChooseReplaceResume ul {
+    padding: 0
+}
+
+#ChooseResume ul {
+    margin-bottom: 20px
+}
+
+#ChooseResume ul li,
+#ChooseReplaceResume ul li {
+    padding: 15px 0;
+    border-bottom: 1px solid #d3d3d3
+}
+
+#ChooseResume ul li:last-child,
+#ChooseReplaceResume ul li:last-child {
+    border-bottom: 0
+}
+
+#ChooseResume .create-cv {
+    border-color: #007a4f;
+    color: #fff;
+    margin-left: 15px
+}
+
+#ChooseResume .btn {
+    font-size: 14px;
+    border-width: 1px;
+    border-style: solid
+}
+
+#ChooseResume .txt-kindcv {
+    color: #999
+}
+
+#ChooseResume i.fa-info-circle {
+    width: 1em;
+    text-align: left;
+    color: #ff0000;
+    font-size: 16px;
+    vertical-align: middle
+}
+
+.iframe-preview-CV {
+    height: 500px;
+    overflow-y: scroll
+}
+
+#previewCV.fancybox-bootstrap {
+    width: 1000px
+}
+
+#previewCV.fancybox-bootstrap .msg_content {
+    background-color: #f2f2f2
+}
+
+#previewCV .step-content {
+    margin-top: 10px
+}
+
+.JobAlert_sucess h1 {
+    font-size: 28px;
+    color: #f79d25;
+    padding: 0 0 5px
+}
+
+#CropAvatar.fancybox-bootstrap {
+    width: 600px!important
+}
+
+
+/*#CropAvatar .jcrop-holder { width: 100%!important; height: 380px!important; text-align: center }
+#CropAvatar .jcrop-holder img { height: auto!important; min-height: 380px; max-height: 380px; margin: 0 auto!important; position: relative!important }*/
+
+#preview_large {
+    height: 390px;
+    overflow: hidden
+}
+
+#preview_large,
+#preview_footer {
+    width: 550px;
+    margin: 0 auto
+}
+
+#preview_footer input.btn {
+    width: 50%
+}
+
+#preview_footer input.btn-primary {
+    color: #fff
+}
+
+.RightButtonFix {
+    position: fixed;
+    top: 25%;
+    right: 0;
+    z-index: 1000000;
+    display: block
+}
+
+.topToPage {
+    float: left;
+    width: 100%
+}
+
+.topToPage a {
+    width: 30px;
+    height: 28px;
+    background-position: -446px -160px;
+    display: block
+}
+
+.feedback-new a {
+    background-position: -350px -159px;
+    height: 101px;
+    width: 30px;
+    display: block
+}
+
+.feedback-new a.en {
+    background-position: -400px -159px
+}
+
+ul.gui-ban-be {
+    list-style: outside none none;
+    margin: 10px 0;
+    width: 530px
+}
+
+ul.gui-ban-be li,
+ul.gui-ban-be li .box_text {
+    width: 100%!important
+}
+
+ul.gui-ban-be .box_text {
+    clear: left;
+    color: #333;
+    float: left;
+    height: auto;
+    overflow: hidden;
+    padding: 2px 5px 0 0;
+    width: 134px
+}
+
+ul.gui-ban-be .box_frm {
+    color: #888889;
+    float: left;
+    margin-right: 5px;
+    padding: 2px;
+    width: 370px
+}
+
+.btn_submit input {
+    background-color: #f79d25;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    height: 38px;
+    min-width: 80px;
+    text-align: center
+}
+
+#txt_your_email {
+    height: 30px!important
+}
+
+.TS_service #fancybox-close {
+    right: 50px!important
+}
+
+.TS_service #Template-TS {
+    padding-top: 0
+}
+
+
+/*customize multiselect*/
+
+.edit-multiselect .ui-multiselect-menu {
+    top: 34px!important;
+    left: 15px!important
+}
+
+.edit-multiselect button.ui-multiselect {
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-color: #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+}
+
+.edit-multiselect button.ui-multiselect:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)
+}
+
+.edit-multiselect .ui-multiselect span {
+    color: #505050
+}
+
+.edit-multiselect .ui-state-default .ui-icon {
+    background-image: url('../images/row_submenu.png')
+}
+
+.edit-multiselect .ui-icon-triangle-2-n-s {
+    background-position: 5px 6px
+}
+
+.edit-multiselect .ui-widget-header .ui-helper-reset,
+.edit-multiselect .ui-helper-reset {
+    width: 100%
+}
+
+.edit-multiselect .ui-multiselect-checkboxes li {
+    font-size: 12px
+}
+
+.edit-multiselect .ui-multiselect-checkboxes label {
+    width: 100%!important;
+    padding: 0;
+    margin: 0;
+    font-weight: normal
+}
+
+.edit-multiselect.multiselect-nlvmm-district .ui-multiselect-menu {
+    width: 180px;
+    left: 0!important
+}
+
+.nlvmm2 .edit-multiselect.multiselect-nlvmm-district button.ui-state-default {
+    width: 195px!important
+}
+
+.nlvmm2 .edit-multiselect.multiselect-nlvmm-district .ui-multiselect-checkboxes label span {
+    width: 135px
+}
+
+
+/*customize switch*/
+
+.edit-switch .el-switch {
+    height: 22px;
+    margin-bottom: 0
+}
+
+.edit-switch .el-switch .el-switch-style {
+    height: 20px;
+    left: 0;
+    top: 0;
+    width: 50px
+}
+
+.edit-switch .el-switch .el-switch-style:before {
+    height: 18px;
+    width: 18px;
+    left: 1px;
+    top: 1px
+}
+
+.edit-switch .el-switch>input[type="checkbox"]:checked+.el-switch-style:before {
+    left: 62%
+}
+
+
+/*customize slick slider*/
+
+.cv-item {
+    float: left;
+    width: 300px;
+    position: relative
+}
+
+.slide-customize {
+    float: left;
+    width: 100%;
+    height: 547px;
+    margin-bottom: 60px;
+    overflow: hidden
+}
+
+.slide-customize .cv-slides {
+    width: 900px;
+    margin: 0 auto;
+    height: 485px
+}
+
+.slide-customize .slick-track {
+    float: left
+}
+
+.slide-customize .title {
+    font-family: "Roboto-Light";
+    font-weight: bold;
+    font-size: 28px;
+    text-align: center;
+    line-height: normal;
+    margin-bottom: 25px
+}
+
+.slick-current .img-wrapper {
+    border: none;
+    transform: scale(1.1);
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out
+}
+
+.slick-current .el-horizontal {
+    display: block
+}
+
+.slide-customize .slick-prev,
+.slide-customize .slick-next {
+    width: 45px;
+    height: 45px;
+    background-color: #cbcbcb;
+    border-radius: 50%
+}
+
+.slide-customize .slick-prev {
+    left: -50px
+}
+
+.slide-customize .slick-next {
+    right: -50px
+}
+
+.slide-customize .slick-prev:hover,
+.slide-customize .slick-prev:focus,
+.slide-customize .slick-next:hover,
+.slide-customize .slick-next:focus {
+    background: #009b74
+}
+
+.slide-customize .slick-prev:before,
+.slide-customize .slick-next:before {
+    color: #fff;
+    font-family: "FontAwesome";
+    font-size: 25px
+}
+
+.slide-customize .slick-prev:before {
+    content: "\f060"
+}
+
+.slide-customize .slick-next:before {
+    content: "\f061"
+}
+
+.cv-item.slick-current .bolder-template {
+    border: 3px solid #009b74
+}
+
+.p3 {
+    padding: 3em
+}
+
+.el-img-fit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.el-wrapper-cv {
+    width: 100%;
+    height: 400px;
+    position: relative
+}
+
+#Template-TS .slide-customize .title {
+    color: #505050
+}
+
+
+/*Responsive*/
+
+@media only screen and (max-width: 1169px) {
+    .container-fluid {
+        padding: 0
+    }
+    .editCVtemplate-wrapper {
+        width: 100%
+    }
+    .tools-schemes {
+        margin-bottom: 15px
+    }
+    .cv-template-1 .left-col {
+        max-width: none;
+        width: 33.3333%
+    }
+    .cv-template-1 .right-col {
+        max-width: none;
+        width: 66.6667%
+    }
+    .CV-colLeft,
+    .CV-colRight {
+        max-width: none
+    }
+    .ads300 {
+        width: 300px;
+        margin: 0 auto
+    }
+    .pv-profile-section .ckeditor-container {
+        width: 100%
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    #banner-video {
+        height: auto
+    }
+    .workflow,
+    .workflow-cbprofile .workflow {
+        background: #009b74;
+        margin: 0
+    }
+    .workflow li {
+        width: 100%!important;
+        text-align: center;
+        line-height: 63px
+    }
+    .workflow li a {
+        margin: 0!important
+    }
+    .wl-step1 li.text2,
+    .wl-step1 li.text3,
+    .wl-step2 li.text1,
+    .wl-step2 li.text3,
+    .wl-step3 li.text1,
+    .wl-step3 li.text2 {
+        display: none
+    }
+    .change-CV.hidden {
+        display: block!important
+    }
+    .listSimilarJob .top-job .apply-job {
+        display: block
+    }
+    .listSimilarJob .top-job .job-item {
+        width: 52%
+    }
+    .listSimilarJob .top-job .salary-location {
+        width: 24%
+    }
+    .CB-Profile .step-content .panel-content {
+        width: 100%
+    }
+    .CB-Profile .listSimilarJob .top-job .job-item {
+        width: 56%
+    }
+    #left-control-wrapper,
+    .listSimilarJob .top-job .apply-job.setcol {
+        display: none
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .cv-mode-finish .editCVtemplate-wrapper {
+        width: 100%
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .personalinfo-section #lastname,
+    .personalinfo-section #firstname {
+        width: 100%
+    }
+    #fancybox-wrap {
+        left: 0!important
+    }
+    .slide-customize .cv-slides,
+    #fancybox-wrap,
+    #fancybox-content,
+    .fancybox-bootstrap,
+    #EditJobAlert {
+        width: 100%!important
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .wizard-header .wizard-title {
+        text-align: left;
+        padding-left: 20px
+    }
+    #colorItems .color-selector-mb {
+        width: 25%
+    }
+    .CB-Profile .listSimilarJob .top-job .job-item {
+        width: 53%
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .personalinfo-section .profile-photo-container {
+        position: relative;
+        margin-bottom: 15px;
+        right: inherit
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .listSimilarJob .top-job .job-item,
+    .CB-Profile .listSimilarJob .top-job .job-item {
+        width: 47%
+    }
+
+    .cv-template-wrapper {
+        zoom: 0.8;
+    }
+}
+
+@media only screen and (max-width: 579px) {
+    .wizard-header {
+        height: auto
+    }
+    .wizard-header .wizard-title {
+        float: left;
+        width: 100%;
+        text-align: center
+    }
+    .wizard-header .pull-right {
+        float: left;
+        width: 100%;
+        text-align: center;
+        position: static;
+        margin-top: 15px
+    }
+    .wizard-header.sticky-wrapper.is-sticky .pull-right {
+        padding-bottom: 10px
+    }
+    #colorItems .color-selector-mb {
+        width: 33.3333%
+    }
+    .desired-job-section .nlvmm2 .multiselect-nlvmm {
+        width: 100%!important
+    }
+    .listSimilarJob .top-job .job-item,
+    .listSimilarJob .top-job .salary-location,
+    .CB-Profile .listSimilarJob .top-job .job-item {
+        width: 100%;
+        margin: 0
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #Why-TS ul.function-ts li {
+        height: auto
+    }
+    #colorItems .color-selector-mb {
+        width: 50%
+    }
+    .cv-template-wrapper {
+        zoom: 0.6
+    }
+    @-moz-document url-prefix() {
+        .cv-template-wrapper {
+            width: 635px
+        }
+        .editCVtemplate .col-xs-12.col-sm-12.col-md-8 {
+            height: 620px!important
+        }
+        .cv-template-wrapper {
+            -moz-transform: scale(0.66);
+            /* Firefox */
+            -moz-transform-origin: 50% 0;
+            transform: scale(0.66);
+            /* Standard Property */
+            transform-origin: 0 0;
+            /* Standard Property */
+        }
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .wizard-header .btn {
+        margin-bottom: 5px
+    }
+    #colorItems .color-selector-mb {
+        width: 100%
+    }
+    @-moz-document url-prefix() {
+        .editCVtemplate .col-xs-12.col-sm-12.col-md-8 {
+            height: 450px!important
+        }
+        .cv-template-wrapper {
+            -moz-transform: scale(0.47);
+            /* Firefox */
+            -moz-transform-origin: 50% 0;
+            transform: scale(0.47);
+            /* Standard Property */
+            transform-origin: 0 0;
+            /* Standard Property */
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .CV-colRight .ads300 {
+        display: none
+    }
+    .tools-schemes .btn-change-template {
+        font-size: 12px
+    }
+    @-moz-document url-prefix() {
+        .editCVtemplate .col-xs-12.col-sm-12.col-md-8 {
+            height: 400px!important
+        }
+        .cv-template-wrapper {
+            -moz-transform: scale(0.41);
+            /* Firefox */
+            -moz-transform-origin: 50% 0;
+            transform: scale(0.41);
+            /* Standard Property */
+            transform-origin: 0 0;
+            /* Standard Property */
+        }
+    }
+}

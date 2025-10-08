@@ -1,0 +1,143 @@
+.top-panel .form-group label {
+	font-weight: 600;
+	margin-bottom: 7px;
+}
+
+.top-panel .form-group .form-select-sp {
+	width: 350px;
+}
+
+.top-panel .page-number {
+	margin-top: 27px;
+}
+
+.table-responsive tr td:nth-child(1) {
+	width: 150px;
+}
+
+.table-responsive .box-data-1 {
+	width: 120px;
+}
+
+.table-responsive tr td:nth-child(2) {
+	width: 250px;
+}
+
+.table-responsive .box-data-2 {
+	width: 220px;
+}
+
+.table-responsive .box-data-2 .thumb-img {
+	padding-top: 0;
+	height: 90px;
+	width: 155px;
+}
+
+.table-responsive .box-data-2 .thumb-img span {
+	border-radius: 8px;
+}
+
+.table-responsive .box-data-2 .thumb-img .box-icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 24px;
+	height: 16px;
+	background: #fff;
+	border-radius: 8px;
+}
+
+.table-responsive tr td:nth-child(4),
+.table-responsive tr th:nth-child(4) {
+	width: 250px;
+	text-align: center;
+}
+
+.table-responsive .box-data-4 {
+	width: 220px;
+}
+
+.container-ckb .checkmark {
+	left: 50%;
+	margin-left: -10px;
+}
+
+.table-responsive tr td:nth-child(5),
+.table-responsive tr th:nth-child(5) {
+	width: 200px;
+}
+
+.table-responsive .box-data-5 {
+	width: 170px;
+}
+
+
+.table-responsive tr td:nth-child(6) {
+	width: 120px;
+}
+
+.table-responsive .box-data-6 {
+	width: 90px;
+}
+
+.gallery-video-modal {
+	width: 550px;
+}
+
+.gallery-video-modal .form-group {
+	margin-bottom: 20px;
+}
+
+.gallery-video-modal .form-group label {
+	font-weight: 600;
+	margin-bottom: 7px;
+}
+
+.gallery-video-modal .form-group label span {
+	color: var(--red-cl);
+}
+.top-panel .box-left > a {
+    margin-top: 33px;
+    margin-left: 20px;
+}
+.action .container-ckb .checkmark {
+    left: 0%;
+    margin-left: 0px;
+}
+@media (max-width: 1600px) {
+	.table-responsive tr td:nth-child(3) {
+		width: 320px;
+	}
+
+	.table-responsive .box-data-3 {
+		width: 290px;
+	}
+}
+
+@media (max-width: 767px) {
+	.top-panel .form-group .form-select-sp {
+		width: 300px;
+	}
+}
+
+@media (max-width: 576px) {
+	.top-panel > * {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.top-panel .form-group .form-select-sp,
+	.top-panel .form-group {
+		width: 100%;
+	}
+
+	.top-panel .page-number {
+		margin-top: 10px;
+	}
+}
+.form-group > label.error {
+    color: #F76666;
+    font-size: 12px;
+    margin-top: 5px;
+}

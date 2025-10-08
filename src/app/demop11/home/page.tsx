@@ -85,10 +85,12 @@ const HomePage: React.FC = memo(() => {
 
   return (
     <>
+      {/* Photo area - above-the-fold content */}
       <div id="photo-area">
         {photoAreaContent}
       </div>
       
+      {/* Other sections - rendered by priority */}
       {otherSections}
     </>
   );

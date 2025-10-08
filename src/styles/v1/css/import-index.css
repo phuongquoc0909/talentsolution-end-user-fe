@@ -1,0 +1,300 @@
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile+label {
+    font-size: 1.25em;
+    color: white;
+    width: 100%;
+    height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px dashed rgba(62, 75, 94, 0.20);
+    background: #FBFAFF;
+}
+
+.inputfile+label em {
+    width: 26px;
+    height: 26px;
+    background: var(--pink-cl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.inputfile+label span {
+    color: var(--main-cl);
+    margin-left: 10px
+}
+
+.info-file {
+    border-radius: 5px;
+    border: 1px solid #E4E4EF;
+    background-color: #FFF;
+    height: 80px;
+}
+
+.limit-file {
+    color: #7C8FAC;
+    font-size: 12px;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.import-candidate-live .block-1 .item {
+    width: 435px;
+}
+
+.import-candidate-live .block-1 .item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.import-candidate-live .form-group>label {
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.import-candidate-live .block-1 .form-group {
+    position: relative;
+    width: 545px;
+}
+
+.import-candidate-live .block-1 .form-group .btn-st1 {
+    position: absolute;
+    top: 28px;
+    right: 0;
+    width: 90px;
+}
+
+.import-candidate-live .block-1 .form-group .input-area {
+    padding-right: 110px;
+}
+
+.search-extend {
+    margin-bottom: 30px;
+    display: none;
+}
+
+.search-extend .inner {
+    display: block;
+    width: 100%;
+}
+
+.import-candidate-live .top-panel button {
+    height: 30px;
+    border: 1px solid #3E4B5E;
+    color: #3E4B5E;
+    background: #fff;
+    border-radius: 8px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .4s;
+    margin-right: 20px;
+}
+
+.import-candidate-live .top-panel button:hover {
+    color: var(--pink-cl);
+    border-color: var(--pink-cl);
+    background: #FFE0E7;
+}
+
+.import-candidate-live .top-panel button svg * {
+    transition: all .4s;
+}
+
+.import-candidate-live .top-panel button:hover svg path {
+    fill: var(--pink-cl);
+}
+
+.import-candidate-live .top-panel button .text-collapse,
+.import-candidate-live .top-panel button.active .text-extend {
+    display: none;
+}
+
+.import-candidate-live .top-panel button.active .text-collapse {
+    display: inline-block;
+}
+
+.import-candidate-live .top-panel>* {
+    line-height: 1;
+}
+
+.search-extend .form-group label {
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.search-extend .inner>* {
+    margin-right: 25px;
+    margin-bottom: 20px;
+}
+
+.search-extend .inner {
+    margin-bottom: -30px;
+}
+
+.table-responsive tr td:nth-child(1) {
+    width: 120px;
+}
+
+.table-responsive .box-data-1 {
+    width: 90px;
+}
+
+.table-responsive tr td:nth-child(3),
+.table-responsive tr td:nth-child(4),
+.table-responsive tr td:nth-child(5),
+.table-responsive tr td:nth-child(6),
+.table-responsive tr td:nth-child(7),
+.table-responsive tr td:nth-child(8) {
+    width: 160px;
+}
+
+.table-responsive .box-data-3,
+.table-responsive .box-data-4,
+.table-responsive .box-data-5,
+.table-responsive .box-data-6,
+.table-responsive .box-data-7,
+.table-responsive .box-data-8 {
+    width: 130px;
+}
+
+.table-responsive tr td:nth-child(9) {
+    width: 110px;
+}
+
+.table-responsive .box-data-9 {
+    width: 80px;
+}
+
+.table-responsive .box-data-9 ul li:not(:last-child) {
+    margin-right: 10px;
+}
+
+.table-responsive .box-edit,
+.table-responsive .box-data-9>ul,
+.table-responsive .record-requisition.edit .df-value,
+.table-responsive .record-requisition.edit .box-data-9 .btn-edit {
+    display: none;
+}
+
+.record-requisition.edit .box-edit {
+    display: block;
+}
+
+.record-requisition.edit .box-data-9>ul {
+    display: flex;
+}
+
+.table-responsive tr td {
+    vertical-align: middle !important;
+}
+
+@media (max-width: 1800px) {
+    .table-responsive tr td:nth-child(2) {
+        width: 330px;
+    }
+
+    .table-responsive .box-data-2 {
+        width: 300px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .search-extend .row [class*="col-"] {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+
+    .search-extend .row-sm [class*="col-"] {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+}
+
+@media (max-width: 1365px) {
+    .search-extend .row [class*="col-"] {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .search-extend .action {
+        margin-top: -27px;
+    }
+}
+
+@media (max-width: 992px) {
+    .search-extend .inner>* {
+        margin-right: 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .search-extend .inner ul {
+        margin-top: -25px;
+    }
+
+    .import-candidate-live .block-1 .item,
+    .import-candidate-live .block-1 .form-group {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .search-extend .row [class*="col-"] {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .import-candidate-live .top-panel>* {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .import-candidate-live .top-panel .page-number {
+        justify-content: flex-end;
+    }
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
