@@ -1,12 +1,13 @@
-import React, { memo, useCallback, useEffect, useRef, useState, useMemo } from 'react';
+'use client';
+
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { BaseDialog } from '@/components/UI/dialog/base/BaseDialog';
 import imageCaptcha from '@/styles/common/images/8a4ba5a06b3e22cce803747eb6cfc5cc.png';
-import { socialLoginData } from '@/contants/social-login';
+import { socialLoginData, SocialLoginItem } from '@/contants/social-login';
 
 import '@/styles/v1/css/ts-jobseeker.css';
 import '@/styles/v1/css/jsk-login.css';
 
-// Extracted styles for better performance (Google approach)
 const DIALOG_STYLES = {
   container: {
     backgroundColor: '#fff',
@@ -28,24 +29,15 @@ interface Props {
   onClose: () => void;
 }
 
-const LoginDialog = memo(({ isOpen, onClose }: Props) => {
+const LoginDialog = ({ isOpen, onClose }: Props) => {
   const closeButtonRef = useRef<HTMLDivElement>(null);
   
-  // Focus management (Google approach) with performance monitoring
   useEffect(() => {
     if (isOpen && closeButtonRef.current) {
-      const startTime = performance.now();
       closeButtonRef.current.focus();
-      const endTime = performance.now();
-      
-      // Performance monitoring (only in development)
-      if (process.env.NODE_ENV === 'development') {
-        console.log(`Focus management took ${endTime - startTime} milliseconds`);
-      }
     }
   }, [isOpen]);
 
-  // ESC key handler at document level (Google approach) with enhanced accessibility
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent): void => {
       if (!isOpen) return;
@@ -87,21 +79,10 @@ const LoginDialog = memo(({ isOpen, onClose }: Props) => {
     };
   }, [isOpen, onClose]);
 
-  // Optimized close handler (Facebook approach)
   const handleClose = useCallback((): void => {
     onClose();
   }, [onClose]);
 
-  const refreshCaptcha = useCallback((): void => {
-    try {
-      // TODO: Implement captcha refresh logic
-      if (process.env.NODE_ENV === 'development') {
-        console.log('refreshCaptcha');
-      }
-    } catch (error) {
-      console.error('Error refreshing captcha:', error);
-    }
-  }, []);
 
   // Helper function để check hiển thị/ẩn từ API data
   const isSocialLoginVisible = useCallback((id: string): boolean => {
@@ -114,11 +95,82 @@ const LoginDialog = memo(({ isOpen, onClose }: Props) => {
     }
   }, [socialLoginData]);
 
-  // Check nếu tất cả social login đều bị ẩn (show: 0) - Memoized for performance
-  const hasAnyVisibleSocialLogin = useMemo(() => 
-    socialLoginData.some(item => item.show === 1),
-    [socialLoginData]
-  );
+  // Check nếu tất cả social login đều bị ẩn (show: 0)
+  const hasAnyVisibleSocialLogin = socialLoginData.some(item => item.show === 1);
+
+  // Social login data map for O(1) lookup (Google approach)
+  const socialLoginMap = (() => {
+    const map = new Map<string, SocialLoginItem>();
+    socialLoginData.forEach(item => {
+      if (item.show === 1) {
+        map.set(item.id, item);
+      }
+    });
+    return map;
+  })();
+
+
+  const POPUP_CONFIG = {
+    width: 600,
+    height: 600,
+    features: [
+      'scrollbars=yes',
+      'resizable=yes', 
+      'status=yes',
+      'location=yes',
+      'toolbar=no',
+      'menubar=no',
+      'directories=no',
+      'copyhistory=no'
+    ].join(','),
+    windowName: 'socialLogin'
+  };
+
+  const handleSocialLogin = useCallback((e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    if (!id || typeof id !== 'string') {
+      return;
+    }
+
+    // Prevent default immediately
+    e.preventDefault();
+    e.stopPropagation();
+
+    // O(1) lookup instead of O(n) find
+    const socialItem = socialLoginMap.get(id);
+    
+    if (!socialItem) {
+      return;
+    }
+
+    // Validate URL before opening
+    let popupUrl: string;
+    try {
+      popupUrl = new URL(socialItem.popupapi).href;
+    } catch (error) {
+      console.error(`Invalid popup URL for ${id}:`, socialItem.popupapi);
+      return;
+    }
+
+    const screenWidth = window.screen.width;
+    const screenHeight = window.screen.height;
+    const left = Math.round((screenWidth - POPUP_CONFIG.width) / 2);
+    const top = Math.round((screenHeight - POPUP_CONFIG.height) / 2);
+
+    // Open popup with optimized configuration
+    const popup = window.open(
+      popupUrl,
+      POPUP_CONFIG.windowName,
+      `width=${POPUP_CONFIG.width},height=${POPUP_CONFIG.height},left=${left},top=${top},${POPUP_CONFIG.features}`
+    );
+
+    if (!popup) {
+      return;
+    }
+
+    // Focus popup immediately
+    popup.focus();
+
+  }, [socialLoginMap, POPUP_CONFIG]);
 
   const passwordInputRef = useRef<HTMLInputElement>(null);
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
@@ -161,14 +213,14 @@ const LoginDialog = memo(({ isOpen, onClose }: Props) => {
         <div id="LoginTalentNetwork" className="wrapDialog msgbox">
           <div className="inner-login d-flex align-center">
             <div className="box-img"></div>
-            <div className="box-text d-flex align-center">
+            <div className="box-text d-flex">
               <div className="form-area crv-hgRRfv">
                 <p className="crv-gRtvSG">Login</p>
                 <p style={{display: 'none'}} id="boxmsg"></p>
                 <div className="form-login">
                   <form name="frmLogin" id="frmLogin" method="post" className="fontCore">
-                    <div className="form-group">
-                      <div className="label" style={{padding: 0}}>
+                    <div className="form-group align-left">
+                      <div className="label align-left" style={{padding: 0}}>
                         <label htmlFor="email">
                           Email <span aria-label="required">*</span>
                         </label>
@@ -186,7 +238,7 @@ const LoginDialog = memo(({ isOpen, onClose }: Props) => {
                       </div>
                     </div>
                     <div className="form-group">
-                      <div className="label d-flex just-ct-sp" style={{padding: 0, display: 'flex'}}>
+                      <div className="label just-ct-sp align-left" style={{padding: 0, display: 'flex'}}>
                         <label htmlFor="password">
                           Password <span aria-label="required">*</span>
                         </label>
@@ -304,7 +356,6 @@ const LoginDialog = memo(({ isOpen, onClose }: Props) => {
                               <div className="col-3">
                                 <a 
                                   id="trynewcode" 
-                                  onClick={refreshCaptcha} 
                                   role="button" 
                                   tabIndex={0} 
                                   aria-label="Refresh security code"
@@ -342,6 +393,7 @@ const LoginDialog = memo(({ isOpen, onClose }: Props) => {
                             tabIndex={0} 
                             role="button"
                             aria-label="Sign in with Google"
+                            onClick={(e) => handleSocialLogin(e, 'google')}
                           >
                             <span>
                               <svg fill="currentColor" className="" stroke="unset" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="20" height="20">
@@ -361,6 +413,7 @@ const LoginDialog = memo(({ isOpen, onClose }: Props) => {
                             role="button" 
                             title="Facebook"
                             aria-label="Sign in with Facebook"
+                            onClick={(e) => handleSocialLogin(e, 'facebook')}
                           >
                             <span>
                               <svg width="20" viewBox="0 0 39 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -385,6 +438,7 @@ const LoginDialog = memo(({ isOpen, onClose }: Props) => {
                             role="button" 
                             title="LinkedIn"
                             aria-label="Sign in with LinkedIn"
+                            onClick={(e) => handleSocialLogin(e, 'linkedin')}
                           >
                             <span>
                               <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -429,11 +483,7 @@ const LoginDialog = memo(({ isOpen, onClose }: Props) => {
       </div>
     </BaseDialog>
   );
-});
+};
 
-// Performance optimization - Static display name (React DevTools optimization)
-LoginDialog.displayName = 'LoginDialog';
-
-// Export with performance hint (Webpack optimization)
 export default LoginDialog;
 

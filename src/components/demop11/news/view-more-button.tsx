@@ -1,16 +1,16 @@
-"use client"
 import React from 'react';
+import Link from 'next/link';
 
 const ViewMoreButton: React.FC = (): React.ReactElement => {
     return (
         <div className="row">
             <div className="col-sm-2 col-sm-offset-5 btn-viewmore">
-                <a 
+                <Link 
                     className="btn btn-block btn-primary"
                     href="/demop11/news/vinasoy-news"
                 >
                     View More
-                </a>
+                </Link>
             </div>
         </div>
     );

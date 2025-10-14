@@ -187,7 +187,6 @@ header.container-fluid p {
 	width: 100%;
 	background-color: #fff;
 	z-index: 400;
-	border-bottom: 1px solid #e5e5e5
 }
 .header.not-docked {
 	position: static
@@ -346,7 +345,7 @@ header.container-fluid p {
 }
 
 .main-container {
-	padding-top: 65px;
+	padding-top: 90px;
 	position: relative;
 	text-rendering: geometricPrecision;
 	background-repeat: repeat;

@@ -79,15 +79,18 @@ export default function NewTopBanner({ banners = arrTopBanner }: NewTopBannerSwi
   };
 
   function handleBannerCounterClick(item: Banner): void {
+    // TODO handle banner counter click
     console.log('Banner clicked:', item.PHOTO_ID);
   }
 
   const handleSwiperInit = (wrapperId: string) => (swiper: SwiperType): void => {
+    // Thêm id vào swiper-wrapper khi Swiper được khởi tạo
     if (swiper.wrapperEl && !swiper.wrapperEl.id) {
       swiper.wrapperEl.id = wrapperId;
     }
   };
 
+  // Don't render if no banners
   if (!banners || banners.length === 0) {
     console.log('NewTopBanner - No banners to display');
     return null;

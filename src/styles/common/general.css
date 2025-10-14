@@ -1,4 +1,12 @@
 *{margin:0px; padding:0px}
+
+/* Media Section Hover Effect */
+.calendarImageWrapper:hover .eventOverlay {
+    bottom: 0 !important;
+}
+.eventOverlay {
+    bottom: -300px;
+}
 .clear { clear: both }
 .clearfix:after{
 	content:'[DO NOT LEAVE IT IS NOT REAL]'; 

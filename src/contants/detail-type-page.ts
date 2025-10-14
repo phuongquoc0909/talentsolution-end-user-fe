@@ -56,5 +56,16 @@ export const NEWS_CONTENT_TYPE_PAGE: ItemTypePage[] = [
         <p><strong>Ở Vinasoy, bạn sẽ được hòa vào một môi trường làm việc minh bạch</strong></p>
         <p>Vinasoy tự hào là một môi trường minh bạch. Trong công việc hằng ngày, đồng nghiệp làm việc với nhau bằng tinh thần đồng đội, cởi mở như anh em trong một gia đình. Cấp trên đối với nhân viên với tinh thần cầu thị, lắng nghe và thấu hiểu cùng phương châm “người bước nhanh sẽ dìu dắt người bước chậm”. Đặc biệt, trong công tác tuyển dụng, sự minh bạch, rõ ràng, công khai là những điều kiện quan trọng để Vinasoy tuyển chọn nhân tài có năng lực thật sự.</p>
         `
+    },
+    {
+        CATE_NAME: 'Vinasoy News',
+        CATE_CONTENT:
+        `
+        <p style="text-align:justify"><span style="color:black; font-family:chevinvns,serif; font-size:12.0pt">&nbsp; &nbsp; Vừa qua tại trường Đại học Bách Khoa Đà Nẵng, Vinasoy đã tham gia Ngày hội việc làm – “</span><strong><span style="color:#70AD47; font-family:chevinvns,serif; font-size:12.0pt">DUT JOB FAIR 2024</span></strong><span style="color:black; font-family:chevinvns,serif; font-size:12.0pt">” và mang đến những cơ hội và trải nghiệm thú vị cho các bạn sinh viên. Chương trình được diễn ra từ ngày 19 – 20/4/2024 thu hút hơn 3.000 sinh viên quan tâm tham dự với hơn 3.000 vị trí việc làm đến từ nhiều doanh nghiệp lớn trong đó có Vinasoy.</span></p>
+        <p><img alt="DSC03014" src="https://image.talentnetwork.vn/vinasoy///news/2024/04/26/1714119183_dsc03014.jpg">&nbsp; &nbsp;</p>
+        <p>&nbsp;<span style="color:black; font-family:chevinvns,serif; font-size:12.0pt">Tại đây, chúng ta đã có cơ hội gặp gỡ, trò chuyện và chia sẻ nhiều thông tin hữu ích đến các bạn trẻ trong buổi Talkshow với 02 chủ đề “<strong>Giới thiệu về Vinasoy &amp; các cơ hội nghề nghiệp tại Vinasoy</strong>” và “<strong>Xu hướng Thực phẩm dinh dưỡng có nguồn gốc từ thực vật</strong>”. Từ đó mang đến góc nhìn toàn cảnh về tương lai ngành dinh dưỡng thực vật cũng như kỹ năng tìm việc làm, giúp các bạn tự tin chinh phục mọi nhà tuyển dụng.</span></p>
+        <p><img alt="z5363660958893_bfd85c915c43595e8bc794bfb459ade9" src="https://image.talentnetwork.vn/vinasoy///news/2024/04/26/1714119440_z5363660958893-bfd85c915c43595e8bc794bfb459ade9.jpg"></p>
+        <p>&nbsp; &nbsp;<span style="color:black; font-family:chevinvns,serif; font-size:12pt">Ngày hội việc làm - “</span><strong><span style="color:rgb(112, 173, 71); font-family:chevinvns,serif; font-size:12pt">DUT JOB FAIR 2024</span></strong><span style="color:black; font-family:chevinvns,serif; font-size:12pt">” đã diễn ra trong không khí nhộn nhịp và kết thúc thành công tốt đẹp. Đây là cơ hội để Nhà Nành gặp gỡ, giao lưu quảng bá hình ảnh nhà tuyển dụng và tiếp cận nguồn ứng viên tiềm năng chất lượng cao cho doanh nghiệp./.</span></p>
+        `
     }
 ];

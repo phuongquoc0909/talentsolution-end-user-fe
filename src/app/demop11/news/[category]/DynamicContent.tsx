@@ -1,7 +1,7 @@
 'use client';
 
 import useSanitizedHTML from '@/hooks/useSanitizedHTML';
-import { useState, useEffect, useMemo, memo, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import Pagination from "@/components/common/pagination";
 import { newsData } from "@/contants/news";
 import { NEWS_CONTENT_TYPE_PAGE, ItemTypePage } from "@/contants/detail-type-page";
@@ -24,22 +24,16 @@ interface DynamicContentProps {
 
 type NewsType = '2' | '3' | '';
 
-const DynamicContent: React.FC<DynamicContentProps> = memo(({ 
+const DynamicContent: React.FC<DynamicContentProps> = ({ 
     newsItems = newsData, 
     CATE_NAME = "News",
     }) => {
     const [type, setType] = useState<NewsType>('');
     const sessionStorageRef = useRef<boolean>(false); // Prevent multiple sessionStorage reads
 
-    const normalizedCateName: string = useMemo(() => 
-        CATE_NAME.toLowerCase().replace(REGEX_POOL.NON_ALPHANUMERIC, ''), 
-        [CATE_NAME]
-    );
+    const normalizedCateName: string = CATE_NAME.toLowerCase().replace(REGEX_POOL.NON_ALPHANUMERIC, '');
 
-    const hasCustomContent: boolean = useMemo(() => 
-        NORMALIZED_CONTENT_MAP.has(normalizedCateName), 
-        [normalizedCateName]
-    );
+    const hasCustomContent: boolean = NORMALIZED_CONTENT_MAP.has(normalizedCateName);
 
     const handleSessionStorage = useCallback((): void => {
         if (sessionStorageRef.current) return; // Prevent duplicate reads
@@ -53,23 +47,27 @@ const DynamicContent: React.FC<DynamicContentProps> = memo(({
     }, []);
 
     useEffect(() => {
-        if (hasCustomContent) {
+        // Priority 1: Get type from sessionStorage (admin can change type dynamically)
+        handleSessionStorage();
+        
+        // Priority 2: Fallback to custom content if no type from sessionStorage
+        if (!sessionStorageRef.current && hasCustomContent) {
             setType('2');
-        } else {
-            handleSessionStorage();
         }
     }, [hasCustomContent, handleSessionStorage]);
 
-    const currentContent: ItemTypePage | null = useMemo(() => {
+    const getCurrentContent = (): ItemTypePage | null => {
         if (type === '2') {
             return NORMALIZED_CONTENT_MAP.get(normalizedCateName) || null;
         }
         return null; // For type 3, we don't need currentContent
-    }, [type, normalizedCateName]);
+    };
+
+    const currentContent: ItemTypePage | null = getCurrentContent();
 
     const sanitizedContent: string = useSanitizedHTML(currentContent?.CATE_CONTENT || '');
 
-    const ContentType2: React.FC = memo((): React.ReactElement => (
+    const ContentType2: React.FC = (): React.ReactElement => (
         <div className='pageType'>
             <div className="container">
                 <div className="col-xs-12">
@@ -80,9 +78,9 @@ const DynamicContent: React.FC<DynamicContentProps> = memo(({
                 </div>
             </div>
         </div>
-    ));
+    );
 
-    const ContentType3: React.FC = memo((): React.ReactElement => {
+    const ContentType3: React.FC = (): React.ReactElement => {
         const newsItemsLength = newsItems.length;
         
         return (
@@ -115,14 +113,12 @@ const DynamicContent: React.FC<DynamicContentProps> = memo(({
                 </div>
             </div>
         );
-    });
+    };
 
     if (type === '2') {
         return <ContentType2 />;
     }
     return <ContentType3 />;
-});
-
-DynamicContent.displayName = 'DynamicContent';
+};
 
 export default DynamicContent;

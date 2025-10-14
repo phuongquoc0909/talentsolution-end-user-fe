@@ -1,4 +1,6 @@
-import { memo, useCallback, useEffect, useRef } from 'react';
+'use client';
+
+import { useCallback, useEffect, useRef } from 'react';
 import { BaseDialog } from '@/components/UI/dialog/base/BaseDialog';
 
 import '@/styles/v1/css/ts-jobseeker.css';
@@ -9,7 +11,6 @@ interface Props {
   onClose: () => void;
 }
 
-// Extracted styles for better performance (Google approach)
 const DIALOG_STYLES = {
   container: {
     backgroundColor: '#fff',
@@ -27,17 +28,15 @@ const DIALOG_STYLES = {
   }
 } as const;
 
-const ConfirmApply = memo(({ isOpen, onClose }: Props) => {
+const ConfirmApply = ({ isOpen, onClose }: Props) => {
   const closeButtonRef = useRef<HTMLDivElement>(null);
 
-  // Focus management (Google approach)
   useEffect(() => {
     if (isOpen && closeButtonRef.current) {
       closeButtonRef.current.focus();
     }
   }, [isOpen]);
 
-  // ESC key handler at document level (Google approach)
   useEffect(() => {
     const handleEscapeKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && isOpen) {
@@ -55,7 +54,6 @@ const ConfirmApply = memo(({ isOpen, onClose }: Props) => {
     };
   }, [isOpen, onClose]);
 
-  // Optimized close handler (Facebook approach)
   const handleClose = useCallback(() => {
     onClose();
   }, [onClose]);
@@ -94,10 +92,6 @@ const ConfirmApply = memo(({ isOpen, onClose }: Props) => {
       </div>
     </BaseDialog>
   );
-});
+};
 
-// Performance optimization - Static display name (React DevTools optimization)
-ConfirmApply.displayName = 'ConfirmApply';
-
-// Export with performance hint (Webpack optimization)
 export default ConfirmApply;

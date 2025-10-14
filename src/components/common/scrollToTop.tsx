@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect, useCallback, memo } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 interface ScrollTopButtonProps {
   showAfter?: number; // số px cuộn xuống mới hiện nút, mặc định 120
@@ -10,7 +10,7 @@ const BUTTON_STYLES = {
   cursor: 'pointer',
 } as const;
 
-const ScrollTopButton = memo(({ showAfter = 120 }: ScrollTopButtonProps): React.ReactElement | null => {
+const ScrollTopButton = ({ showAfter = 120 }: ScrollTopButtonProps): React.ReactElement | null => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -24,6 +24,7 @@ const ScrollTopButton = memo(({ showAfter = 120 }: ScrollTopButtonProps): React.
 
     window.addEventListener('scroll', handleScroll);
 
+    // Kiểm tra ngay khi mount
     handleScroll();
 
     return () => {
@@ -58,8 +59,6 @@ const ScrollTopButton = memo(({ showAfter = 120 }: ScrollTopButtonProps): React.
       <a className="bgcolor_theme" id="topToPage">_Top_</a>
     </div>
   );
-});
-
-ScrollTopButton.displayName = 'ScrollTopButton';
+};
 
 export default ScrollTopButton;

@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { jobViewedData } from '@/contants/list-job-viewed';
 
 const ListJobViewed: React.FC = (): React.ReactElement => {
@@ -16,7 +17,7 @@ const ListJobViewed: React.FC = (): React.ReactElement => {
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <a href={job.COMPANY_URL}>
+                                                <Link href={job.COMPANY_URL}>
                                                     <Image 
                                                         src={job.JOB_LOGO} 
                                                         alt={job.COMPANY_NAME}
@@ -26,7 +27,7 @@ const ListJobViewed: React.FC = (): React.ReactElement => {
                                                         style={{ maxWidth: '98px', width: '100%', height: 'auto' }}
                                                         unoptimized={true}
                                                     />
-                                                </a>
+                                                </Link>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -35,11 +36,11 @@ const ListJobViewed: React.FC = (): React.ReactElement => {
                         </div>
                         <div className="col-xs-9 col-md-9 col-right">
                             <h3>
-                                <a href={job.LINK}>{job.JOB_TITLE}</a>
+                                <Link href={job.LINK}>{job.JOB_TITLE}</Link>
                             </h3>
                             {job.COMPANY_NAME && (
                                 <p className="company-name">
-                                    <a href={job.COMPANY_URL}>{job.COMPANY_NAME}</a>
+                                    <Link href={job.COMPANY_URL}>{job.COMPANY_NAME}</Link>
                                 </p>
                             )}
                             <p className="area">

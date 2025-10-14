@@ -1,0 +1,91 @@
+// Type definitions for better performance (TypeScript optimization)
+export interface MenuItem {
+    CATE_ID?: string;
+    CATE_NAME: string;
+    CATE_LINK: string;
+    CATE_LINKTARGET?: string;
+    hasSubmenu?: boolean;
+    submenu?: any[];
+    className?: string;
+}
+
+export interface FooterProps {
+    menuItems?: MenuItem[];
+}
+
+// Static data optimization - Pre-compute at module level (Facebook approach)
+export const DEFAULT_MENU_ITEMS: MenuItem[] = [
+    {
+        CATE_ID: 'menu_16018',
+        CATE_NAME: 'Home',
+        CATE_LINK: 'https://career.vinasoy.com/en',
+        CATE_LINKTARGET: '_blank',
+        className: 'focus'
+    },
+    {
+        CATE_ID: 'menu_11378',
+        CATE_NAME: 'Vinasoy Discovery',
+        CATE_LINK: 'https://career.vinasoy.com/en/#11378',
+        submenu: [
+        {
+            CATE_NAME: 'Vinasoy People',
+            CATE_LINK: 'https://career.vinasoy.com/vinasoy-people-35A51578/en',
+            CATE_LINKTARGET: '_self'
+        }
+        ]
+    },
+    {
+        CATE_ID: 'menu_11379',
+        CATE_NAME: 'Career Opportunities',
+        CATE_LINK: 'https://career.vinasoy.com/en/#11379',
+        submenu: [
+        {
+            CATE_NAME: 'Potential Candidates',
+            CATE_LINK: 'https://career.vinasoy.com/potential-candidates-35A5157C/en',
+            CATE_LINKTARGET: '_self' 
+        },
+        {
+            CATE_NAME: 'Hiring Process',
+            CATE_LINK: 'https://career.vinasoy.com/hiring-process-35A5157D/en',
+            CATE_LINKTARGET: '_self'
+        },
+        {
+            CATE_NAME: 'All Jobs',
+            CATE_LINK: 'https://career.vinasoy.com/job-search/all-jobs/en',
+            CATE_LINKTARGET: '_self'
+        },
+        {
+            CATE_NAME: 'Benefits',
+            CATE_LINK: 'https://career.vinasoy.com/benefits-35A51574/en',
+            CATE_LINKTARGET: '_self'
+        },
+        {
+            CATE_NAME: 'Why Vinasoy?',
+            CATE_LINK: 'https://career.vinasoy.com/why-vinasoy-35A51579/en',
+            CATE_LINKTARGET: '_self' 
+        }
+        ]
+    },
+    {
+        CATE_ID: 'menu_11381',
+        CATE_NAME: 'News',
+        CATE_LINK: 'https://career.vinasoy.com/en/#11381',
+        submenu: [
+        {
+            CATE_NAME: 'Vinasoy News',
+            CATE_LINK: 'https://career.vinasoy.com/vinasoy-news-35A5157A/en',
+            CATE_LINKTARGET: '_self' 
+        },
+        {
+            CATE_NAME: 'Career Advices',
+            CATE_LINK: 'https://career.vinasoy.com/career-advices-35A5157B/en',
+            CATE_LINKTARGET: '_self' 
+        }
+        ]
+    },
+    {
+        CATE_ID: 'menu_11382',
+        CATE_NAME: 'Contact Us',
+        CATE_LINK: 'https://career.vinasoy.com/contact/en'
+    }
+];

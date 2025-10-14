@@ -1,7 +1,6 @@
-'use client';
-
-import { useMemo } from 'react';
-import { benefitsData, jobData } from '@/contants/data';
+import React from 'react';
+import { jobData } from '@/components/demop11/job/dataJob';
+import { benefitsData } from '@/contants/benefit';
 
 interface BenefitProps {
     jobId?: number;
@@ -10,7 +9,7 @@ interface BenefitProps {
 const ICON_STYLE = { width: '25px', textAlign: 'center' as const };
 
 const Benefit: React.FC<BenefitProps> = ({ jobId }): React.ReactElement => {
-    const jobBenefits = useMemo(() => {
+    const getJobBenefits = () => {
         if (!jobId) {
             return benefitsData;
         }
@@ -26,7 +25,9 @@ const Benefit: React.FC<BenefitProps> = ({ jobId }): React.ReactElement => {
         return benefitsData.filter(benefit => 
             benefitIds.has(benefit.BENEFIT_ID)
         );
-    }, [jobId]);
+    };
+
+    const jobBenefits = getJobBenefits();
 
     return (
         <ul className="list-benefits">

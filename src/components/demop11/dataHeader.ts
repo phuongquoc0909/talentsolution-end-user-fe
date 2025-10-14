@@ -84,7 +84,7 @@ export const defaultMenuItems: MenuItem[] = [
             CATE_NAME: 'Vinasoy News',
             CATE_LINK: '/demop11/news/',
             CATE_LINKTARGET: '_self',
-            type: '3'
+            type: '2'
         },
         {
             CATE_NAME: 'Career Advices',

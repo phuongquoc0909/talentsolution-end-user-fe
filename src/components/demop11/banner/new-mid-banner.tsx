@@ -83,15 +83,18 @@ export default function NewMidBanner({ banners = arrMidBanner }: NewMidBannerSwi
   };
 
   function handleBannerCounterClick(item: Banner): void {
+    // TODO handle banner counter click
     console.log('Banner clicked:', item.PHOTO_ID);
   }
 
   const handleSwiperInit = (swiper: SwiperType): void => {
+    // Thêm id vào swiper-wrapper khi Swiper được khởi tạo
     if (swiper.wrapperEl && !swiper.wrapperEl.id) {
       swiper.wrapperEl.id = 'divMiddleBannerSlide';
     }
   };
 
+  // Don't render if no banners
   if (!banners || banners.length === 0) {
     console.log('NewMidBanner - No banners to display');
     return null;

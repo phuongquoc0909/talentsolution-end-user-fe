@@ -1,5 +1,6 @@
 'use client';
-import { useState, useCallback, memo, useMemo } from 'react';
+
+import { useState, useCallback } from 'react';
 import SelectSingle from '@/components/UI/select/SelectSingle';
 import '@/components/UI/chosen/chosen.css';
 
@@ -44,7 +45,7 @@ const FORM_CONFIG = {
   LOCATION_PLACEHOLDER: 'Select location...',
 } as const;
 
-const SearchJobSection = memo((): React.ReactElement => {
+const SearchJobSection = (): React.ReactElement => {
   const [selectedIndustry, setSelectedIndustry] = useState<string>('');
   const [selectedLocation, setSelectedLocation] = useState<string>('');
 
@@ -58,7 +59,8 @@ const SearchJobSection = memo((): React.ReactElement => {
     setSelectedLocation(value);
   }, []);
 
-  const SearchInput: React.ReactElement = useMemo(() => (
+  // Form components
+  const SearchInput: React.ReactElement = (
     <input 
       name={FORM_CONFIG.SEARCH_INPUT_NAME} 
       type="text" 
@@ -66,9 +68,9 @@ const SearchJobSection = memo((): React.ReactElement => {
       placeholder={FORM_CONFIG.SEARCH_PLACEHOLDER}
       aria-label="Search for jobs"
     />
-  ), []);
+  );
 
-  const IndustrySelect: React.ReactElement = useMemo(() => (
+  const IndustrySelect: React.ReactElement = (
     <div className="chosen-container">
       <SelectSingle
         name="industry"
@@ -78,9 +80,9 @@ const SearchJobSection = memo((): React.ReactElement => {
         onChange={handleIndustryChange}
       />
     </div>
-  ), [selectedIndustry, handleIndustryChange]);
+  );
 
-  const LocationSelect: React.ReactElement = useMemo(() => (
+  const LocationSelect: React.ReactElement = (
     <div className="chosen-container">
       <SelectSingle
         name="location"
@@ -91,9 +93,9 @@ const SearchJobSection = memo((): React.ReactElement => {
         isGrouped={true}
       />
     </div>
-  ), [selectedLocation, handleLocationChange]);
+  );
 
-  const SearchButton: React.ReactElement = useMemo(() => (
+  const SearchButton: React.ReactElement = (
     <button 
       className="searchvt1" 
       type="submit"
@@ -102,7 +104,7 @@ const SearchJobSection = memo((): React.ReactElement => {
       <i className="fa fa-search" aria-hidden="true"></i> 
       <span>Search</span>
     </button>
-  ), []);
+  );
   
   return (
     <div className="search-jobs-main">
@@ -120,9 +122,7 @@ const SearchJobSection = memo((): React.ReactElement => {
       </form>
     </div>
   );
-});
-
-SearchJobSection.displayName = 'SearchJobSection';
+};
 
 export default SearchJobSection;
   

@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { jobData } from '@/contants/data';
+import { jobData } from '@/components/demop11/job/dataJob';
 
 const ListJobType: React.FC = (): React.ReactElement => {
     const [activeShareId, setActiveShareId] = useState<number | null>(null);
@@ -93,7 +93,7 @@ const ListJobType: React.FC = (): React.ReactElement => {
                                 <p className="name_job"><Link href={job.LINK} title={job.JOB_TITLE}>{job.JOB_TITLE}</Link></p>
                                 <p className="name_com">
                                     {job.COMPANY_NAME ? (
-                                        <a href={job.COMPANY_URL} title={job.COMPANY_NAME}>{job.COMPANY_NAME}</a>
+                                        <Link href={job.COMPANY_URL} title={job.COMPANY_NAME}>{job.COMPANY_NAME}</Link>
                                     ) : (
                                         <span dangerouslySetInnerHTML={{ __html: '&nbsp;' }} />
                                     )}

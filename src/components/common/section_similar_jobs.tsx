@@ -1,7 +1,7 @@
-import React, { memo } from 'react';
+import React from 'react';
 import BoxJobType from "@/components/demop11/job/list_job_index4"; 
 
-const SimilarJobs = memo((): React.ReactElement => {
+const SimilarJobs = (): React.ReactElement => {
     return (
         <section 
             className="section-page result-job-search similar-jobs"
@@ -14,8 +14,6 @@ const SimilarJobs = memo((): React.ReactElement => {
             </div>
         </section>
     );
-});
-
-SimilarJobs.displayName = 'SimilarJobs';
+};
 
 export default SimilarJobs;

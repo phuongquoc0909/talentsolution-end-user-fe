@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import DOMPurify from 'dompurify';
 import { Config } from 'dompurify';

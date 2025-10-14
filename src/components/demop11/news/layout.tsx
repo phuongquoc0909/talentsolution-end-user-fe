@@ -1,6 +1,5 @@
-"use client"
-
-import React, { memo, useMemo } from 'react';
+import Link from 'next/link';
+import React from 'react';
 import { newsData } from "@/contants/news";   
 import ViewMoreButton from './view-more-button';
 
@@ -25,52 +24,56 @@ const NewsItem: React.FC<{
     item: NewsItem;
     className: string;
     showSubContent?: boolean;
-}> = memo(({ item, className, showSubContent = true }): React.ReactElement => (
+}> = ({ item, className, showSubContent = true }): React.ReactElement => (
     <div className={className}>
         <div 
             className="box bg-size-cover lazyload" 
             style={{backgroundImage: `url(${item.NEWS_PICTURE})`}} 
         >
             <div className="blurb">
-                <p><a href={item.LINK}>{item.NEWS_TITLE}</a></p>
+                <p><Link href={item.LINK}>{item.NEWS_TITLE}</Link></p>
             </div>
             <div className="excerpt">
-                <p className="title"><a href={item.LINK}>{item.NEWS_TITLE}</a></p>
+                <p className="title"><Link href={item.LINK}>{item.NEWS_TITLE}</Link></p>
                 {showSubContent && item.NEWS_SUBCONTENT && <p className="note">{item.NEWS_SUBCONTENT}</p>}
-                <p className="viewmore"><a href={item.LINK}>view detail</a></p>
+                <p className="viewmore"><Link href={item.LINK}>view detail</Link></p>
             </div>
         </div>
     </div>
-));
+);
 
+// News Item Component for 3items layout
 const NewsItem3Items: React.FC<{
     item: NewsItem;
-}> = memo(({ item }): React.ReactElement => (
+}> = ({ item }): React.ReactElement => (
     <div className="col-xs-12 col-sm-4 article">
         <div className="name-item"><span>{item.NEWS_TITLE}</span></div>
         <div className="mask-img lazyload" style={{backgroundImage: `url(${item.NEWS_PICTURE})`}}></div>
         <div className="mask-hover">
-            <div className="description-item"><a href={item.LINK}>{item.NEWS_SUBCONTENT}</a></div>
+            <div className="description-item"><Link href={item.LINK}>{item.NEWS_SUBCONTENT}</Link></div>
         </div>
     </div>
-));
+);
 
-const BoxNews: React.FC<BoxNewsProps> = memo(({ 
+const BoxNews: React.FC<BoxNewsProps> = ({ 
     newsItems = newsData, 
     CATE_NAME = "News",
     layout
     }) => {
-        const HeaderSection: React.ReactElement = useMemo(() => (
+        // Header section
+        const HeaderSection: React.ReactElement = (
             <header className="container-fluid">
                 <h2 className="section-title">{CATE_NAME}</h2>
             </header>
-        ), [CATE_NAME]);
+        );
 
-        const ViewMoreSection: React.ReactElement = useMemo(() => (
+        // ViewMoreButton section
+        const ViewMoreSection: React.ReactElement = (
             <ViewMoreButton />
-        ), []);
+        );
 
-        const renderContent: React.ReactElement | null = useMemo(() => {
+        // Content rendering based on layout
+        const renderContent: React.ReactElement | null = (() => {
             switch (layout as LayoutType) {
                 case '2items':
                     return (
@@ -175,15 +178,13 @@ const BoxNews: React.FC<BoxNewsProps> = memo(({
                 default:
                     return null;
             }
-        }, [layout, newsItems, HeaderSection, ViewMoreSection]);
+        })();
 
         return (
             <div id="11381" className="section-page">
                 {renderContent}
             </div>
         );
-});
-
-BoxNews.displayName = 'BoxNews';
+};
 
 export default BoxNews;

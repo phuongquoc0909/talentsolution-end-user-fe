@@ -1,11 +1,12 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useParams, notFound } from 'next/navigation';
-import { useState, useEffect, memo, useMemo, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import useSanitizedHTML from '@/hooks/useSanitizedHTML';
-
-import { jobData } from '@/contants/data';
+import LoginDialog from '@/components/UI/dialog/login_ajax_v1';
+import { jobData } from '@/components/demop11/job/dataJob';
 import Benefit from '@/components/demop11/job/benefit';
 import ListJobViewed from '@/components/demop11/job/box_job_view5';
 import BoxJoin from '@/components/common/box_join';
@@ -19,17 +20,26 @@ interface JobDetailState {
     isOpenConfirmApply: boolean;
 }
 
-const JobsDetailPage: React.FC = memo((): React.ReactElement => {
+const JobsDetailPage: React.FC = (): React.ReactElement => {
+    const [isOpenLogin, setIsOpenLogin] = useState(false);
+    const handleSaveJob = useCallback(() => {
+        setIsOpenLogin(true);
+    }, []);
+    const handleCloseLogin = useCallback(() => {
+        setIsOpenLogin(false);
+    }, []);
+
     const params = useParams();
     const jobId = parseInt(params.id as string);
     
-    const currentJob = useMemo(() => {
+    // Find job by ID
+    const currentJob = (() => {
         const job = jobData.find(job => job.JOB_ID === jobId);
         if (!job) {
             notFound();
         }
         return job;
-    }, [jobId]);
+    })();
 
     const safeJOB_CONTENT_HTML = useSanitizedHTML(currentJob.JOB_CONTENT);
     const safeJOB_REQUIRESKILL_HTML = useSanitizedHTML(currentJob.JOB_REQUIRESKILL);
@@ -71,7 +81,7 @@ const JobsDetailPage: React.FC = memo((): React.ReactElement => {
         }
     }, [state.activeShareId, handleOutsideClick]);
 
-    const CompanyLogoSection: React.ReactElement = useMemo(() => (
+    const CompanyLogoSection: React.ReactElement = (
         <div className="col-xs-12 col-md-2 company-logo">
             <table width="100%" cellSpacing="0" cellPadding="0" style={{tableLayout: 'fixed'}}>
                 <tbody>
@@ -91,9 +101,9 @@ const JobsDetailPage: React.FC = memo((): React.ReactElement => {
                 </tbody>
             </table>
         </div>
-    ), [currentJob.JOB_LOGO, currentJob.COMPANY_NAME]);
+    );
 
-    const JobInfoSection: React.ReactElement = useMemo(() => (
+    const JobInfoSection: React.ReactElement = (
         <div className="col-xs-12 record-main">
             <div className="row">
                 <span className="col-xs-12 col-sm-4 label-cate">Work Location</span>
@@ -136,16 +146,16 @@ const JobsDetailPage: React.FC = memo((): React.ReactElement => {
                 <span className="col-xs-12 col-sm-8 value">{currentJob.JOB_CONTACT_NAME}</span>
             </div>
         </div>
-    ), [currentJob]);
+    );
 
-    const ActionsSection: React.ReactElement = useMemo(() => (
+    const ActionsSection: React.ReactElement = (
         <div className="col-xs-12 actions-apply">
-            <a className="btn btn-primary" onClick={handleConfirmApply}>Apply</a>
+            <a role="button" tabIndex={0} className="btn btn-primary" onClick={handleConfirmApply}>Apply</a>
             <a className="showDialogD not-ready" href="#">Not ready to apply?</a>
         </div>
-    ), [handleConfirmApply]);
+    );
 
-    const ShareSection: React.ReactElement = useMemo(() => (
+    const ShareSection: React.ReactElement = (
         <div className="col-xs-12 actions-invite">
             <div className="sharejob">
                 <span 
@@ -162,22 +172,22 @@ const JobsDetailPage: React.FC = memo((): React.ReactElement => {
                     )}
                 </span>
             </div>
-            <span><a href="#" className="showDialogD save-job"><i className="fa fa-heart"></i>Save to My Jobs</a></span>
+            <span><a href="#" className="showDialogD save-job" onClick={handleSaveJob}><i className="fa fa-heart"></i>Save to My Jobs</a></span>
         </div>
-    ), [currentJob, state.activeShareId, handleShareClick]);
+    );
 
-    const JobTagsSection: React.ReactElement = useMemo(() => (
+    const JobTagsSection: React.ReactElement = (
         <div className="tagskilldetail">
             <span>Job Tag:</span>&nbsp;
             {currentJob.JOB_TAGS.map((tag, index) => (
-                <a key={`${tag.TAG_NAME}-${index}`} href={tag.TAG_URL} title={tag.TAG_NAME}>
+                <Link key={`${tag.TAG_NAME}-${index}`} href={tag.TAG_URL} title={tag.TAG_NAME}>
                     {tag.TAG_NAME}
-                </a>
+                </Link>
             ))}
         </div>
-    ), [currentJob.JOB_TAGS]);
+    );
 
-    const RightSidebarSection: React.ReactElement = useMemo(() => (
+    const RightSidebarSection: React.ReactElement = (
         <div className="col-xs-12 col-md-4 column-right">
             <ListJobViewed />
             <BoxJoin />
@@ -187,7 +197,7 @@ const JobsDetailPage: React.FC = memo((): React.ReactElement => {
             </div>
             <div className="col-xs-12 section-box"></div>
         </div>
-    ), []);
+    );
 
     return (
         <>
@@ -199,7 +209,7 @@ const JobsDetailPage: React.FC = memo((): React.ReactElement => {
                                 {CompanyLogoSection}
                                 <div className="col-xs-12 col-md-10 detail-head-right">
                                     <h1>{currentJob.JOB_TITLE}</h1>
-                                    <p className="company-name"><a href="{currentJob.COMPANY_URL}">{currentJob.COMPANY_NAME}</a></p>
+                                    <p className="company-name"><Link href="{currentJob.COMPANY_URL}">{currentJob.COMPANY_NAME}</Link></p>
                                     {JobInfoSection}
                                     {ActionsSection}
                                     {ShareSection}
@@ -226,10 +236,9 @@ const JobsDetailPage: React.FC = memo((): React.ReactElement => {
                 isOpen={state.isOpenConfirmApply}
                 onClose={handleCloseConfirmApply}
             />
+            <LoginDialog isOpen={isOpenLogin} onClose={handleCloseLogin} />
         </>
     );
-});
-
-JobsDetailPage.displayName = 'JobsDetailPage';
+};
 
 export default JobsDetailPage;

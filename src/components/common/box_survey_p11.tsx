@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback, memo } from 'react';
+import React, { useState, useCallback } from 'react';
 import { surveyData } from '@/contants/survey';
 
 const SURVEY_STYLES = {
@@ -9,9 +9,10 @@ const SURVEY_STYLES = {
     }
 } as const;
 
-const BoxSurveyP11 = memo((): React.ReactElement | null => {
+const BoxSurveyP11 = (): React.ReactElement | null => {
     const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
 
+    // Check render conditions: show === 1 and QUESTION_CONTENT exists
     if (surveyData.show !== 1 || !surveyData.QUESTION_CONTENT) {
         return null;
     }
@@ -28,6 +29,7 @@ const BoxSurveyP11 = memo((): React.ReactElement | null => {
         } else {
             const errorMessage = 'Please select an answer before voting';
             console.warn(errorMessage);
+            // Could use a toast notification instead of alert
             alert(errorMessage);
         }
     }, [selectedAnswer]);
@@ -90,8 +92,6 @@ const BoxSurveyP11 = memo((): React.ReactElement | null => {
             </div>
         </div>
     );
-});
-
-BoxSurveyP11.displayName = 'BoxSurveyP11';
+};
 
 export default BoxSurveyP11;

@@ -10,6 +10,7 @@ body, a:focus, .all-jobs-pre .browser-job a.active, .social_col a:hover i, .quot
 .main-nav a:hover, .main-nav a.focus { border-color: var(--bgcolormenu-theme,#f9a619) }
 .main-nav a:hover, .insight .join-talent-box, .header .header-container, #footer, .apply-job-container .jsk-card .jsk-card--bg { background-color: var(--bgcolor-theme,#1e4ca0) }
 .main-nav a.focus { background-color: inherit }
+.main-nav .submenu a { color: #333; border: none }
 .user-nav .sign-in-wrapper a, .user-nav .language21 a { line-height: 90px }
 #back-top a, .CoreGeneral .header, #jb_pagination .active, .scroll_thongke li .scroll_color .bg_center_scroll, .tm-brighter-blue-round-button:hover:not([disabled]) { background-color: var(--bgcolor-theme,#1e4ca0) }
 .btn-primary, .tm-bright-blue-round-button, .tm-brighter-blue-round-button, .blue-solid-button-xs, .blue-solid-button-sm, .blue-solid-button-md, .blue-solid-button-lg, .JoinNow .joinnowBtn input, .frmContact input.ui_btnCb, .frmChangePass input.ui_btnCb, .JoinNow .joinnowBtn input, .ApplyBtn input, .EditRecommendJob button, .fontCoreJobseeker .RightPanel .ShowData input.ui_btnCb, .JoinNow .Frm_Login .loginBtn input.ui_btnCb, #btnLogin, .JoinNow .loginJoinTalentNetwork a, .btnContinute a { background-color: var(--bgcolormenu-theme,#f9a619); border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px }

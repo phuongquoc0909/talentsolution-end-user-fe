@@ -1,11 +1,9 @@
-'use client';
-
-import React, { memo } from 'react';
+import React from 'react';
 import imgJoinNow from '@/assets/demop21/images/join_now.png';
 import imgQuoteGreenBottom from '@/assets/demop21/images/quote_green_bottom.png';
 import imgQuoteYellowBottom from '@/assets/demop21/images/quote_yellow_bottom.png';
 
-const HomePage: React.FC = memo(() => {
+const HomePage: React.FC = () => {
   return (
     <>
       <div className="main-container">
@@ -179,7 +177,7 @@ const HomePage: React.FC = memo(() => {
                       <div className="insight-image join-talent-box">
                         <div className="title">Gia nhập Talent Network của chúng tôi sẽ giúp bạn nâng cao khả năng tìm kiếm việc làm.</div>
                         <div className="full-width center">
-                          <a href="https://careers.himlamis.edu.vn/join-talent-network/vi" className="showDialogD join-button"><img src="images/join_now.png" /></a>
+                          <a href="https://careers.himlamis.edu.vn/join-talent-network/vi" className="showDialogD join-button"><img src={imgJoinNow.src} /></a>
                           <p className="stayconnect">Kết nối với chúng tôi <a tabIndex={0} role="button" className="showDialog">Vì sao?</a></p>
                         </div>
                       </div>
@@ -193,8 +191,6 @@ const HomePage: React.FC = memo(() => {
       </div>
     </>
   );
-});
-
-HomePage.displayName = 'HomePage';
+};
 
 export default HomePage;

@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { jobData } from '@/contants/data';
+import { jobData } from '@/components/demop11/job/dataJob';
 
 interface BoxJobTypeProps {
     showTitleSimilarJobs?: boolean;
@@ -49,7 +49,7 @@ const BoxJobType: React.FC<BoxJobTypeProps> = ({ showTitleSimilarJobs = false })
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <a href={job.COMPANY_URL}>
+                                                <Link href={job.COMPANY_URL}>
                                                     <Image 
                                                         src={job.JOB_LOGO} 
                                                         alt={job.COMPANY_NAME}
@@ -59,7 +59,7 @@ const BoxJobType: React.FC<BoxJobTypeProps> = ({ showTitleSimilarJobs = false })
                                                         style={{ maxWidth: '61px', width: '100%', height: 'auto' }}
                                                         unoptimized={true}
                                                     />
-                                                </a>
+                                                </Link>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -68,7 +68,7 @@ const BoxJobType: React.FC<BoxJobTypeProps> = ({ showTitleSimilarJobs = false })
                             <h2 className="job"><Link href={job.LINK} title={job.JOB_TITLE}>{job.JOB_TITLE}</Link></h2>
                             <p className="company-name">
                                 {job.COMPANY_NAME ? (
-                                    <a href={job.COMPANY_URL} title={job.COMPANY_NAME}>{job.COMPANY_NAME}</a>
+                                    <Link href={job.COMPANY_URL} title={job.COMPANY_NAME}>{job.COMPANY_NAME}</Link>
                                 ) : (
                                     <span dangerouslySetInnerHTML={{ __html: '&nbsp;' }} />
                                 )}

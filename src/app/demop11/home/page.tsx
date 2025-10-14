@@ -1,6 +1,4 @@
-'use client';
-
-import React, { memo, useMemo } from 'react';
+import React from 'react';
 import SearchJobSection from "@/components/common/_searchjob_section";
 import BannerVideo from "@/components/demop11/banner/BannerVideo";
 import BannerSlide, { arrBannerSlide } from "@/components/demop11/banner/BannerSlide";
@@ -12,8 +10,9 @@ import NewMidBanner, { arrMidBanner } from "@/components/demop11/banner/new-mid-
 import BoxNews from "@/components/demop11/news/layout";
 import MediaSection from "@/components/common/media_section";
 
-const HomePage: React.FC = memo(() => {
-  const sectionsConfig = useMemo(() => [
+const HomePage: React.FC = () => {
+  // Priority configuration for homepage sections
+  const sectionsConfig = [
     { id: 'banner-video', priority: 1, component: BannerVideo, props: {} },
     { id: 'search-section', priority: 2, component: SearchJobSection, props: {} },
     // { id: 'banner-slide', priority: 3, component: BannerSlide, props: { banners: arrBannerSlide } },
@@ -24,40 +23,15 @@ const HomePage: React.FC = memo(() => {
     { id: 'mid-banner', priority: 8, component: NewMidBanner, props: { banners: arrMidBanner } },
     { id: 'news-section', priority: 9, component: BoxNews, props: { layout: '5items' } },
     { id: 'media-section', priority: 10, component: MediaSection, props: {} }
-  ], []);
+  ];
 
-  const sortedSections = useMemo(() => 
-    sectionsConfig.sort((a, b) => a.priority - b.priority),
-    [sectionsConfig]
-  );
+  // Sorted sections by priority
+  const sortedSections = sectionsConfig.sort((a, b) => a.priority - b.priority);
 
-  const renderSections = useMemo(() => {
-    return sortedSections.map((section) => {
-      const Component = section.component;
-      const props = section.props || {};
-      
-      if (section.id === 'search-section') {
-        return (
-          <div key={section.id} className="container-search">
-            <Component {...(props as any)} />
-          </div>
-        );
-      }
-
-      if (section.id === 'banner-video' || section.id === 'banner-slide') {
-        return <Component key={section.id} {...(props as any)} />;
-      }
-
-      return <Component key={section.id} {...(props as any)} />;
-    });
-  }, [sortedSections]);
-
-  const photoAreaContent = useMemo(() => {
-    const photoAreaSections = sortedSections.filter(section => 
-      ['banner-video', 'search-section', 'banner-slide'].includes(section.id)
-    );
-
-    return photoAreaSections.map((section) => {
+  // Photo-area content (above-the-fold optimization)
+  const photoAreaContent = sortedSections
+    .filter(section => ['banner-video', 'search-section', 'banner-slide'].includes(section.id))
+    .map((section) => {
       const Component = section.component;
       const props = section.props || {};
       
@@ -71,17 +45,15 @@ const HomePage: React.FC = memo(() => {
 
       return <Component key={section.id} {...(props as any)} />;
     });
-  }, [sortedSections]);
 
-  const otherSections = useMemo(() => {
-    return sortedSections
-      .filter(section => !['banner-video', 'search-section', 'banner-slide'].includes(section.id))
-      .map((section) => {
-        const Component = section.component;
-        const props = section.props || {};
-        return <Component key={section.id} {...(props as any)} />;
-      });
-  }, [sortedSections]);
+  // Other sections (below photo-area)
+  const otherSections = sortedSections
+    .filter(section => !['banner-video', 'search-section', 'banner-slide'].includes(section.id))
+    .map((section) => {
+      const Component = section.component;
+      const props = section.props || {};
+      return <Component key={section.id} {...(props as any)} />;
+    });
 
   return (
     <>
@@ -94,8 +66,6 @@ const HomePage: React.FC = memo(() => {
       {otherSections}
     </>
   );
-});
-
-HomePage.displayName = 'HomePage';
+};
 
 export default HomePage;

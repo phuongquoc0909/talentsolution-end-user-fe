@@ -1,19 +1,19 @@
-'use client'
-
-import React, { memo, useMemo } from 'react';
+import React from 'react';
 
 interface HeaderSectionProps {
     title?: string;
     className?: string;
 }
 
-const HeaderSection: React.FC<HeaderSectionProps> = memo(({     
+const HeaderSection: React.FC<HeaderSectionProps> = ({     
     title = "News",
     className = "container-fluid"
 }): React.ReactElement => {
+    // Get title from props or sessionStorage
     const getTitle = (): string => {
         if (title) return title;
         
+        // Try to get from sessionStorage (set by Header click)
         if (typeof window !== 'undefined') {
             const storedName = sessionStorage.getItem('currentCategoryName');
             if (storedName) {
@@ -24,17 +24,11 @@ const HeaderSection: React.FC<HeaderSectionProps> = memo(({
         return 'News'; // fallback
     };
 
-    const headerContent: React.ReactElement = useMemo(() => (
+    return (
         <header className={className}>
             <h2 className="section-title">{getTitle()}</h2>
         </header>
-    ), [title, className]);
-
-    return (
-        <>
-            {headerContent}
-        </>
     );
-});
+};
 
 export default HeaderSection;

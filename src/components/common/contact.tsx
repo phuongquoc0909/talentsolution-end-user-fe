@@ -1,17 +1,9 @@
-'use client'
-
-import React, { memo, useCallback, useMemo } from 'react';
+import React from 'react';
 import imageCaptcha from '@/styles/common/images/8a4ba5a06b3e22cce803747eb6cfc5cc.png';
 
-const FormContact: React.FC = memo((): React.ReactElement => {
-    const handleTryNewCode = useCallback(() => {
-        console.log('Try new code');
-    }, []);
-    const handleCancel = useCallback(() => {
-        console.log('Cancel');
-    }, []);
+const FormContact: React.FC = (): React.ReactElement => {
 
-    const LeftContactSection: React.ReactElement = useMemo(() => (
+    const LeftContactSection: React.ReactElement = (
         <div className="LeftContact">
             <div className="content_fck" role="complementary" aria-label="Contact information">
                 <p className="text"></p><p><em><strong>Hãy để chúng tôi chủ động liên lạc với bạn. Chỉ cần click vào đây <a href="http://career.vinasoy.vn/join-talent-network/en" title="Join Our Talent Network"><img alt="Join Our Talent Network" src="http://static.talentnetwork.vn/talentnetwork/source/vinasoy/vinasoy/images/join_now.png" style={{maxWidth: '190px'}} /></a> và điền thông tin chính xác của bạn.</strong></em></p>
@@ -41,9 +33,9 @@ const FormContact: React.FC = memo((): React.ReactElement => {
                 <p className="text"><i className="fa fa-map-marker"></i> Quang Ngai, Vietnam<br /><i className="fa fa-phone-square"></i> <a href="tel:0255-3726699">0255-3726699</a><br /><i className="fa fa-envelope"></i> <a href="mailto:tuyendung@vinasoy.com">tuyendung@vinasoy.com</a>					</p>	
             </div>
         </div>
-    ), []);
+    );
 
-    const RightContactSection: React.ReactElement = useMemo(() => (
+    const RightContactSection: React.ReactElement = (
         <div className="RightContact">
             <form name="frmContact" id="frmContact" method="post" className="frmContact" role="form" aria-label="Contact form">
                 <p className="text"><b>Please make sure to provide correct email so that we can contact you for support.</b></p>
@@ -131,7 +123,7 @@ const FormContact: React.FC = memo((): React.ReactElement => {
                             tabIndex={0} 
                             className="line_bot" 
                             id="trynewcode" 
-                            onClick={handleTryNewCode}
+                            href="#"
                             aria-label="Generate a new security code"
                         >
                             Try new code
@@ -149,7 +141,7 @@ const FormContact: React.FC = memo((): React.ReactElement => {
                         role="button" 
                         tabIndex={0} 
                         className="btnTextLink" 
-                        onClick={handleCancel}
+                        href="#"
                         aria-label="Clear form and start over"
                     >
                         Cancel
@@ -157,7 +149,7 @@ const FormContact: React.FC = memo((): React.ReactElement => {
                 </div>
             </form>
         </div>
-    ), []);
+    );
 
     return (
         <>
@@ -169,8 +161,6 @@ const FormContact: React.FC = memo((): React.ReactElement => {
             </div>
         </>
     );
-});
-
-FormContact.displayName = 'FormContact';
+};
 
 export default FormContact;

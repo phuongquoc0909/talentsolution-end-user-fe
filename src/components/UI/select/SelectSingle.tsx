@@ -1,5 +1,5 @@
 'use client';
-import { useCallback, useMemo } from 'react';
+import { useCallback } from 'react';
 import Select from 'react-select';
 import {
   SingleValue,
@@ -143,7 +143,7 @@ const SelectSingle = ({
     );
 
     // Find the selected option based on value
-    const selectedOption = useMemo(() => {
+    const selectedOption = (() => {
       if (!value) return null;
       
       if (isGrouped) {
@@ -157,7 +157,7 @@ const SelectSingle = ({
         return flatOptions.find(option => option.value === value) || null;
       }
       return null;
-    }, [value, options, isGrouped]);
+    })();
 
     return (
         <Select<Option, false >
