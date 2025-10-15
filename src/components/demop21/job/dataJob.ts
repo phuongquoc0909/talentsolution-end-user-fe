@@ -13,6 +13,7 @@ export interface JobItem {
     JOB_EXPERIENCE: string;
     JOB_SALARY: string;
     JOB_INDUSTRIES: string;
+    JOB_DEPARTMENT: string;
     WORK_TYPE: string;
     JOB_ACTIVEDATE: Date;
     JOB_EXPIREDATE: Date;
@@ -46,6 +47,7 @@ export const jobData: JobItem[] = [
         JOB_EXPERIENCE: "1-3 years",
         JOB_SALARY: "Competitive",
         JOB_INDUSTRIES: "Retail / Wholesale, Sales / Business Development, Marketing",
+        JOB_DEPARTMENT: "Internal Audit dept",
         WORK_TYPE: "Work From Home",
         JOB_ACTIVEDATE: new Date("2025-10-12"),
         JOB_EXPIREDATE: new Date("11/12/2025"),
@@ -122,6 +124,7 @@ export const jobData: JobItem[] = [
         JOB_EXPERIENCE: "1-3 years",
         JOB_SALARY: "1,500 USD",
         JOB_INDUSTRIES: "Retail / Wholesale, Sales / Business Development, Marketing",
+        JOB_DEPARTMENT: "Him Lam International School, Him Lam Green Park, Dai Phuc, Bac Ninh",
         WORK_TYPE: "Work From Home",
         JOB_ACTIVEDATE: new Date("2025-02-11"),
         JOB_EXPIREDATE: new Date("15/12/2026"),
@@ -184,6 +187,7 @@ export const jobData: JobItem[] = [
         JOB_EXPERIENCE: "1-3 years",
         JOB_SALARY: "20,000,000 - 30,000,000 VND",
         JOB_INDUSTRIES: "Retail / Wholesale, Sales / Business Development, Marketing",
+        JOB_DEPARTMENT: "Marketing Department",
         WORK_TYPE: "Work From Home",
         JOB_ACTIVEDATE: new Date("2025-10-08"),
         JOB_EXPIREDATE: new Date("20/11/2025"),

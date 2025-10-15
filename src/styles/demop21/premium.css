@@ -1132,7 +1132,6 @@ button:hover, button:active, button:focus, input[type="submit"]:hover, input[typ
 }
 .jobs-browse-section .browse-heading {
 	width: 100%;
-	padding: 0 15px;
 }
 .jobs-browse-section .browse-heading:before, .jobs-browse-section .browse-heading:after {
 	content: " ";
@@ -1554,15 +1553,19 @@ button:hover, button:active, button:focus, input[type="submit"]:hover, input[typ
 .job-individual .job-post .job-post-description ul, .job-individual .job-post .job-post-description ol {
 	padding: 0 0 0 2em;
 }
-.job-individual .job-post .job-post-description ul li {
+.job-individual .job-post .job-post-description .content_fck ul li {
 	list-style-type: disc;
 }
 .job-individual .job-post .job-post-description iframe {
 	width: 700px;
 	height: 338px;
 }
+.job-individual .job-post .job-post-description .list-benefits li {
+	width: 100%;
+	padding: 0;
+}
 .job-individual .job-post .bottom-ctas {
-	margin: 40px 0;
+	margin: 40px 0!important;
 }
 .job-individual .job-post .bottom-ctas:before, .job-individual .job-post .bottom-ctas:after {
 	content: " ";
@@ -1573,7 +1576,7 @@ button:hover, button:active, button:focus, input[type="submit"]:hover, input[typ
 }
 .job-individual .job-post .external-apply {
 	width: 320px;
-	margin: 0 auto;
+	margin: 0 auto!important;
 }
 .job-individual .job-post .external-apply p.notready {
 	font-size: 12px;

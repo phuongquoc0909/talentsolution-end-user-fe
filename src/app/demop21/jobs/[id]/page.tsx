@@ -1,21 +1,15 @@
 'use client';
 
-import Image from 'next/image';
 import { useParams, notFound } from 'next/navigation';
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import useSanitizedHTML from '@/hooks/useSanitizedHTML';
 
 import { jobData } from '@/components/demop21/job/dataJob';
 import Benefit from '@/components/demop11/job/benefit';
-import ListJobViewed from '@/components/demop11/job/box_job_view5';
-import BoxJoin from '@/components/common/box_join';
-import CurrentJob from '@/components/demop11/job/CurrentJob';
-import BoxSurveyP11 from '@/components/common/box_survey_p11';
-import SimilarJobs from '@/components/common/section_similar_jobs';
+import BoxJobType from "@/components/demop21/job/jobs-browse-section"; 
 import ConfirmApply from '@/components/UI/dialog/ConfirmApply';
 
 interface JobDetailState {
-    activeShareId: number | null;
     isOpenConfirmApply: boolean;
 }
 
@@ -35,26 +29,8 @@ const JobsDetailPage = () => {
     const safeJOB_REQUIRESKILL_HTML = useSanitizedHTML(currentJob.JOB_REQUIRESKILL);
 
     const [state, setState] = useState<JobDetailState>({
-        activeShareId: null,
         isOpenConfirmApply: false
     });
-
-    const handleShareClick = useCallback((jobId: number, e: React.MouseEvent<HTMLSpanElement>): void => {
-        e.stopPropagation();
-        setState(prev => ({
-            ...prev,
-            activeShareId: prev.activeShareId === jobId ? null : jobId
-        }));
-    }, []);
-
-    const handleOutsideClick = useCallback((e: MouseEvent): void => {
-        const target = e.target as Element;
-        const container = document.querySelector('.sharejob');
-        
-        if (container && !container.contains(target)) {
-            setState(prev => ({ ...prev, activeShareId: null }));
-        }
-    }, []);
 
     const handleConfirmApply = useCallback((): void => {
         setState(prev => ({ ...prev, isOpenConfirmApply: true }));
@@ -62,110 +38,81 @@ const JobsDetailPage = () => {
 
     const handleCloseConfirmApply = useCallback((): void => {
         setState(prev => ({ ...prev, isOpenConfirmApply: false }));
-    }, []);
-
-    useEffect(() => {
-        if (state.activeShareId !== null) {
-            document.addEventListener('mousedown', handleOutsideClick);
-            return () => document.removeEventListener('mousedown', handleOutsideClick);
-        }
-    }, [state.activeShareId, handleOutsideClick]);
-
-    const CompanyLogoSection = (
-        <div className="col-xs-12 col-md-2 company-logo">
-            <table width="100%" cellSpacing="0" cellPadding="0" style={{tableLayout: 'fixed'}}>
-                <tbody>
-                    <tr>
-                        <td>
-                            <Image 
-                                src={currentJob.JOB_LOGO} 
-                                alt={`${currentJob.COMPANY_NAME} logo`}
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                style={{ maxWidth: '98px', width: '100%', height: 'auto' }}
-                                unoptimized={true}
-                            />
-                        </td>   
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    );
+    }, []);    
 
     const JobInfoSection = (
-        <div className="col-xs-12 record-main">
-            <div className="row">
-                <span className="col-xs-12 col-sm-4 label-cate">Work Location</span>
-                <span className="col-xs-12 col-sm-8 value">{currentJob.JOB_LOCATION}</span>
+        <>
+            <h3>About This Job</h3>
+            <div className="metadata metadata-list">
+                <div className="metadata-list_section metadata-list_section--blue">
+                    <h4 className="metadata-list_header">Work Location</h4>
+                    <ul className="metadata-list_items">
+                        <li>{currentJob.JOB_LOCATION}</li>
+                    </ul>
+                </div>
+                <div className="metadata-list_section metadata-list_section--orange">
+                    <h4 className="metadata-list_header">Job Level</h4>
+                    <ul className="metadata-list_items">
+                        <li>{currentJob.JOB_LEVEL}</li>
+                    </ul>
+                </div>
+                <div className="metadata-list_section metadata-list_section--orange">
+                    <h4 className="metadata-list_header">Job Type</h4>
+                    <ul className="metadata-list_items">
+                        <li>{currentJob.JOB_TYPE}</li>
+                    </ul>
+                </div>
+                <div className="metadata-list_section metadata-list_section--orange">
+                    <h4 className="metadata-list_header">Qualification</h4>
+                    <ul className="metadata-list_items">
+                        <li>{currentJob.JOB_QUALIFICATION}</li>
+                    </ul>
+                </div>
+                <div className="metadata-list_section metadata-list_section--orange">
+                    <h4 className="metadata-list_header">Experiences</h4>
+                    <ul className="metadata-list_items">
+                        <li>{currentJob.JOB_EXPERIENCE}</li>
+                    </ul>
+                </div>
+                <div className="metadata-list_section metadata-list_section--orange">
+                    <h4 className="metadata-list_header">Salary</h4>
+                    <ul className="metadata-list_items">
+                        <li>{currentJob.JOB_SALARY}</li>
+                    </ul>
+                </div>
+                <div className="metadata-list_section metadata-list_section--orange">
+                    <h4 className="metadata-list_header">Industry</h4>
+                    <ul className="metadata-list_items">
+                        <li>{currentJob.JOB_INDUSTRIES}</li>
+                    </ul>
+                </div>
+                <div className="metadata-list_section metadata-list_section--orange">
+                    <h4 className="metadata-list_header">Department</h4>
+                    <ul className="metadata-list_items">
+                        <li>{currentJob.JOB_DEPARTMENT}</li>
+                    </ul>
+                </div>
+                <div className="metadata-list_section metadata-list_section--orange">
+                    <h4 className="metadata-list_header">Deadline to Apply</h4>
+                    <ul className="metadata-list_items">
+                        <li>{currentJob.JOB_EXPIREDATE.toLocaleDateString('vi-VN')}</li>
+                    </ul>
+                </div>
             </div>
-            <div className="row">
-                <span className="col-xs-12 col-sm-4 label-cate">Job Level</span>
-                <span className="col-xs-12 col-sm-8 value">{currentJob.JOB_LEVEL}</span>
-            </div>
-            <div className="row">
-                <span className="col-xs-12 col-sm-4 label-cate">Job Type</span>
-                <span className="col-xs-12 col-sm-8 value">{currentJob.JOB_TYPE}</span>
-            </div>
-            <div className="row">
-                <span className="col-xs-12 col-sm-4 label-cate">Qualification</span>
-                <span className="col-xs-12 col-sm-8 value">{currentJob.JOB_QUALIFICATION}</span>
-            </div>
-            <div className="row">
-                <span className="col-xs-12 col-sm-4 label-cate">Experiences</span>
-                <span className="col-xs-12 col-sm-8 value">{currentJob.JOB_EXPERIENCE}</span>
-            </div>
-            <div className="row">
-                <span className="col-xs-12 col-sm-4 label-cate">Salary</span>
-                <span className="col-xs-12 col-sm-8 value">{currentJob.JOB_SALARY}</span>
-            </div>
-            <div className="row">
-                <span className="col-xs-12 col-sm-4 label-cate">Industry</span>
-                <span className="col-xs-12 col-sm-8 value">{currentJob.JOB_INDUSTRIES}</span>
-            </div>
-            <div className="row">
-                <span className="col-xs-12 col-sm-4 label-cate">Work Type</span>
-                <span className="col-xs-12 col-sm-8 value">{currentJob.WORK_TYPE}</span>
-            </div>
-            <div className="row">
-                <span className="col-xs-12 col-sm-4 label-cate">Deadline to Apply</span>
-                <span className="col-xs-12 col-sm-8 value">{currentJob.JOB_EXPIREDATE.toLocaleDateString('vi-VN')}</span>
-            </div>
-            <div className="row">
-                <span className="col-xs-12 col-sm-4 label-cate">Contact Name</span>
-                <span className="col-xs-12 col-sm-8 value">{currentJob.JOB_CONTACT_NAME}</span>
-            </div>
-        </div>
+        </>
     );
 
     const ActionsSection = (
-        <div className="col-xs-12 actions-apply">
-            <a className="btn btn-primary" onClick={handleConfirmApply}>Apply</a>
-            <a className="showDialogD not-ready" href="#">Not ready to apply?</a>
-        </div>
-    );
-
-    const ShareSection = (
-        <div className="col-xs-12 actions-invite">
-            <div className="sharejob">
-                <span 
-                    className="genericButton tpt_socialShareButton" 
-                    onClick={(e) => handleShareClick(currentJob.JOB_ID, e)}
-                >
-                    Share
-                    {state.activeShareId === currentJob.JOB_ID && (
-                        <span className="tpt_socialShareBar" style={{display: 'inline'}}>
-                            <a href={currentJob.LINK_FACEBOOK} className="icon32 iconFacebook32 tpt_socialShareIcon tpt_socialSharePopupTrigger">Facebook</a>
-                            <a href={currentJob.LINK_LINKEDIN} className="icon32 iconLinkedin32 tpt_socialShareIcon tpt_socialSharePopupTrigger">Linkedin</a>
-                            <a href={currentJob.LINK_TWITTER} className="icon32 iconTwitter32 tpt_socialShareIcon tpt_socialSharePopupTrigger">Twitter</a>
-                        </span>
-                    )}
-                </span>
+        <div className="job-post">
+            <div className="bottom-ctas">
+                <div className="external-apply center">
+                    <a role="button" tabIndex={0} onClick={handleConfirmApply} className="tm-bright-blue-round-button btn-block apply-external">Apply Now <i className="fa fa-angle-right"></i></a>
+                    <p className="notready"><a role="button" tabIndex={0} className="showDialogD">Not ready to apply?</a></p>
+                </div>
             </div>
-            <span><a href="#" className="showDialogD save-job"><i className="fa fa-heart"></i>Save to My Jobs</a></span>
         </div>
     );
-
+    
     const JobTagsSection = (
         <div className="tagskilldetail">
             <span>Job Tag:</span>&nbsp;
@@ -178,50 +125,67 @@ const JobsDetailPage = () => {
     );
 
     const RightSidebarSection = (
-        <div className="col-xs-12 col-md-4 column-right">
-            <ListJobViewed />
-            <BoxJoin />
-            <CurrentJob />
-            <div className='col-xs-12 section-box survey-talent'>
-                <BoxSurveyP11 />
+        <div className="job-body">
+            <div className="job-post">
+                <div className="job-post-description">
+                    <h2 className="col_theme">Job Benefit</h2>
+                    <Benefit jobId={jobId} />
+                    <h2>Job Description</h2>
+                    <div className="content_fck" dangerouslySetInnerHTML={{__html: safeJOB_CONTENT_HTML }}></div>
+                    <h2>Job Requirement</h2>
+                    <div className="content_fck" dangerouslySetInnerHTML={{__html: safeJOB_REQUIRESKILL_HTML }}></div>
+                    {JobTagsSection}
+                    {ActionsSection}
+                </div>
             </div>
-            <div className="col-xs-12 section-box"></div>
         </div>
     );
 
     return (
         <>
-            <div className="section-page job-detail-pre">
+            <div className="docked-nav job hidden-xs" id="job-nav">
                 <div className="container">
-                    <div className="job-detail-wrapper">
-                        <div className="col-xs-12 col-md-8 column-left">
-                            <div className="col-xs-12 detail-head">
-                                {CompanyLogoSection}
-                                <div className="col-xs-12 col-md-10 detail-head-right">
-                                    <h1>{currentJob.JOB_TITLE}</h1>
-                                    <p className="company-name"><a href="{currentJob.COMPANY_URL}">{currentJob.COMPANY_NAME}</a></p>
-                                    {JobInfoSection}
-                                    {ActionsSection}
-                                    {ShareSection}
-                                </div>
-                            </div>
-                            <div className="col-xs-12 section-detail detail-midle">
-                                <div className="col-xs-12 left-des">
-                                    <h2 className="col_theme">Job Benefit</h2>
-                                    <Benefit jobId={jobId} />
-                                    <h2>Job Description</h2>
-                                    <div className="content_fck" dangerouslySetInnerHTML={{__html: safeJOB_CONTENT_HTML }}></div>
-                                    <h2>Job Requirement</h2>
-                                    <div className="content_fck" dangerouslySetInnerHTML={{__html: safeJOB_REQUIRESKILL_HTML }}></div>
-                                    {JobTagsSection}
-                                </div>
-                            </div>
-                        </div>
-                        {RightSidebarSection}
+                    <div className="docked-title">
+                        <h3>{currentJob.JOB_TITLE}</h3>
+                    </div>
+                    <div className="docked-ctas">
+                        <div className="favorite-container"><a href="#" className="favorite"><i className="fa fa-heart-o"></i></a></div>
+                        <a href="#" className="tm-bright-blue-round-button apply-external">Apply Now <i className="fa fa-long-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
-            <SimilarJobs />
+            <div className="main-container">
+                <div className="job-individual" id="job-container">
+                    <div style={{background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url('https://image.talentnetwork.vn/geet//job/image/2025/07/18/1752833916_hlis-campus.jpg')`}} className="top-block">
+                        <div className="bg-image" id="top-image">
+                            <h1>{currentJob.JOB_TITLE}</h1>
+                            <div className="ctas center">
+                                <a href="#" className="tm-bright-blue-round-button apply-external hidden-xs">Apply Now <i aria-hidden="true" className="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="white-container">
+                        <div className="container">
+                            <div className="job-side-section sidebar-content">
+                                {JobInfoSection}
+                            </div>
+                            <div className="job-main-section">
+                                {RightSidebarSection}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section 
+                className="section-page result-job-search similar-jobs"
+                role="region"
+                aria-labelledby="similar-jobs-title"
+            >
+                <div className="container">
+                    <h2>Similar Jobs</h2>
+                    <BoxJobType />
+                </div>
+            </section>
             <ConfirmApply
                 isOpen={state.isOpenConfirmApply}
                 onClose={handleCloseConfirmApply}
