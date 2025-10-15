@@ -50,7 +50,7 @@ const JobItem: React.FC<JobItemProps> = ({ job, onSaveJob }) => {
                 </div>
                 <div className="tile-bg">
                     <Image
-                        src={job.JOB_LOGO}
+                        src={job.JOB_IMAGE_DEFAULT}
                         alt={`Logo công ty ${job.COMPANY_NAME || 'tuyển dụng'}`}
                         width={0}
                         height={0}
@@ -70,14 +70,7 @@ const JobItem: React.FC<JobItemProps> = ({ job, onSaveJob }) => {
                     </div>
                 )}
                 <div className="favorite-container">
-                    <button
-                        type="button"
-                        className="favorite showDialogD"
-                        onClick={onSaveJob}
-                        aria-label="Lưu tin tuyển dụng"
-                    >
-                        <i className="fa fa-heart-o" aria-hidden="true"></i>
-                    </button>
+                    <a role="button" tabIndex={0} onClick={onSaveJob} className="favorite"><i className="fa fa-heart-o"></i></a>
                 </div>
             </div>
         </div>

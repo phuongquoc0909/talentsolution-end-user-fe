@@ -3,6 +3,7 @@
 import React from "react";
 import SearchJobSection from "@/components/common/_searchjob_section";
 import BoxJobType from "@/components/demop21/job/jobs-browse-section"; 
+import { jobData } from "@/components/demop21/job/dataJob";
 
 const JobsListPage = () => {
   return (
@@ -23,8 +24,22 @@ const JobsListPage = () => {
         </div>
         <div className="section-page jobs-browse-section">
           <div className="container1200">
-            <div className="browse-heading"><h2>Some Jobs You Might Like</h2></div>
-            <BoxJobType />
+            {jobData.length > 0 ? (
+              <>
+                <div className="browse-heading"><h2>Some Jobs You Might Like</h2></div>
+                <div className="block">
+                  <BoxJobType />
+                </div>
+                <div className="full-width back-to-browse">
+                  <a className="tm-brighter-blue-round-button view-jobs hidden-sm hidden-xs" href="#" id="btnNext">View More Jobs <i className="fa fa-long-arrow-right"></i></a>
+                </div>
+              </>
+            ) : (
+              <div className="no-job">
+                <p><strong>No jobs found</strong></p>
+                <p><a href="#">Join Our Talent Network</a> Công ty sẽ gửi thông báo việc làm phù hợp với mục tiêu nghề nghiệp của bạn .</p>
+              </div>
+            )}
           </div>
         </div>
       </div>

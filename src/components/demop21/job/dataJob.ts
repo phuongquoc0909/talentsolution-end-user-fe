@@ -39,7 +39,7 @@ export const jobData: JobItem[] = [
         LINK: "/demop21/jobs/428737",
         COMPANY_NAME: "Internal Audit dept",
         COMPANY_URL: "https://tuyendung.vcbs.com.vn/job-search/department-internal-audit-dept.6276/en",
-        JOB_LOCATION: "Ho Chi Minh, Nghe An, Binh Dinh, Dong Nai, Dong Thap, Hung Yen, Binh Duong",
+        JOB_LOCATION: "Ho Chi Minh",
         JOB_LEVEL: "Experienced (Non - Manager)",
         JOB_TYPE: "Full Time",
         JOB_QUALIFICATION: "Bachelor's Degree",
@@ -110,7 +110,7 @@ export const jobData: JobItem[] = [
     {
         JOB_ID: 433930,
         JOB_LOGO: "https://static.talentnetwork.vn/talentnetwork/source/vinasoy/images/logo-default.png",
-        JOB_IMAGE_DEFAULT: "",
+        JOB_IMAGE_DEFAULT: "https://image.talentnetwork.vn/geet//job/image/2025/09/11/1757578731_r.jpg",
         JOB_TITLE: "Senior Developer - Full Stack",
         LINK: "/demop21/jobs/433930",
         COMPANY_NAME: "",
@@ -172,7 +172,7 @@ export const jobData: JobItem[] = [
     {
         JOB_ID: 433152,
         JOB_LOGO: "https://static.talentnetwork.vn/talentnetwork/source/vinasoy/images/logo-default.png",
-        JOB_IMAGE_DEFAULT: "",
+        JOB_IMAGE_DEFAULT: "https://image.talentnetwork.vn/geet//job/image/2025/09/11/1757578731_r.jpg",
         JOB_TITLE: "Marketing Manager",
         LINK: "/demop21/jobs/433152",
         COMPANY_NAME: "Vinasoy",

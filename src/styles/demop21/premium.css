@@ -101,6 +101,11 @@ a:hover, #footer .column h6, .main-nav ul.submenu li a:hover, .all-jobs-pre .bro
 	line-height: 22px!important;
 	font-size: 15px
 }
+
+.content_fck img {
+	max-width: 100%;
+	height: auto;
+}
 .radius3px {
 	border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -1158,7 +1163,8 @@ button:hover, button:active, button:focus, input[type="submit"]:hover, input[typ
 	border: none;
 }
 .jobs-browse-section .no-job {
-	text-align: center
+	text-align: center;
+	font-size: 16px;
 }
 .job-element {
 	background-color: #f9f9f9;
@@ -1253,7 +1259,7 @@ button:hover, button:active, button:focus, input[type="submit"]:hover, input[typ
 	border-top: 3px solid #666;
 	background-color: #fff;
 	z-index: 20;
-	height: 170px;
+	min-height: 170px;
 	overflow: hidden;
 }
 .job-element .white-gradient {
@@ -2734,7 +2740,7 @@ button:hover, button:active, button:focus, input[type="submit"]:hover, input[typ
 		font-size: 0.8em;
 	}
 	.job-element .tile-copy {
-		height: auto
+		min-height: inherit
 	}
 	.job-element .new-label {
 		top: 10px

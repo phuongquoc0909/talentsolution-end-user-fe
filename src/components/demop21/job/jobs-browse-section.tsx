@@ -26,9 +26,7 @@ const BoxJobType = () => {
     
     return (
         <>
-            <div className="block">
-                {jobItems}
-            </div>
+            {jobItems}
             <LoginDialog isOpen={isOpenLogin} onClose={handleCloseLogin} />
         </>
     );
