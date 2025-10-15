@@ -63,11 +63,14 @@ export default function RootPage() {
         padding: '2rem',
         borderRadius: '8px',
         boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
-        minWidth: '400px'
+        minWidth: '400px',
+        position: 'fixed',
+        top: '60px',
       }}>
         <h1 style={{ 
           textAlign: 'center', 
           marginBottom: '2rem',
+          marginTop: '0',
           color: '#333'
         }}>
           Select Owner/Template
@@ -105,7 +108,7 @@ export default function RootPage() {
                     minHeight: '3rem',
                     border: '2px solid #ddd',
                     borderRadius: '6px',
-                    fontSize: '1.1rem',
+                    fontSize: '16px',
                     boxShadow: state.isFocused ? '0 0 0 1px #007bff' : 'none',
                     borderColor: state.isFocused ? '#007bff' : '#ddd',
                   }),

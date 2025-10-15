@@ -10,7 +10,7 @@ const BUTTON_STYLES = {
   cursor: 'pointer',
 } as const;
 
-const ScrollTopButton = ({ showAfter = 120 }: ScrollTopButtonProps): React.ReactElement | null => {
+const ScrollTopButton = React.memo(({ showAfter = 120 }: ScrollTopButtonProps): React.ReactElement | null => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -59,6 +59,8 @@ const ScrollTopButton = ({ showAfter = 120 }: ScrollTopButtonProps): React.React
       <a className="bgcolor_theme" id="topToPage">_Top_</a>
     </div>
   );
-};
+});
+
+ScrollTopButton.displayName = 'ScrollTopButton';
 
 export default ScrollTopButton;

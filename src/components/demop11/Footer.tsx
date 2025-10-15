@@ -18,7 +18,7 @@ const PowerBySection: React.FC = (): React.ReactElement => (
   </div>
 );
 
-const Footer: React.FC<FooterProps> = ({ menuItems = DEFAULT_MENU_ITEMS }): React.ReactElement => {
+const Footer: React.FC<FooterProps> = React.memo(({ menuItems = DEFAULT_MENU_ITEMS }): React.ReactElement => {
   const MenuItemsSection: React.ReactElement = (
     <div className="col-xs-12 col-sm-9 menu-footer">
       <ul>
@@ -39,6 +39,8 @@ const Footer: React.FC<FooterProps> = ({ menuItems = DEFAULT_MENU_ITEMS }): Reac
       </div>
     </>
   );
-};
+});
+
+Footer.displayName = 'Footer';
 
 export default Footer;

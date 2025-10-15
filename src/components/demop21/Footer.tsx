@@ -39,7 +39,7 @@ const REGEX_POOL = {
   NEWS_LINK_CHECK: /^\/demop21\/news\//
 } as const;
 
-const Footer: React.FC = (): React.ReactElement => {
+const Footer = React.memo((): React.ReactElement => {
   const [isZalo, setIsZalo] = useState<boolean>(false);
   const [isTiktok, setIsTiktok] = useState<boolean>(false);
   
@@ -209,6 +209,8 @@ const Footer: React.FC = (): React.ReactElement => {
       </div>
     </div>
   );
-};
+});
+
+Footer.displayName = 'Footer';
 
 export default Footer;

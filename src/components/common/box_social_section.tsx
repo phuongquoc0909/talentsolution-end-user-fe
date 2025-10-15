@@ -38,7 +38,7 @@ const SocialIcon: React.FC<{ item: SocialItem }> = ({ item }): React.ReactElemen
     </div>
 );
 
-const SocialSection: React.FC<SocialSectionProps> = ({ show = 0 }) => {
+const SocialSection: React.FC<SocialSectionProps> = React.memo(({ show = 0 }) => {
     return (
         <>
             <div className="section-page social-pre bg-odd">
@@ -58,6 +58,7 @@ const SocialSection: React.FC<SocialSectionProps> = ({ show = 0 }) => {
             )}
         </>
     );
-};
+});
 
+SocialSection.displayName = 'SocialSection';
 export default SocialSection;

@@ -3,7 +3,7 @@
 import { useLayoutEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 
-// Global set to track loaded CSS files
+// Global cache để tránh load CSS nhiều lần
 const loadedCSS = new Set<string>();
 const STORAGE_KEY = 'current-template';
 
@@ -12,35 +12,30 @@ export default function DynamicCSSImporter() {
   const ownerName = searchParams.get('template');
 
   useLayoutEffect(() => {
-    // Get template from URL or localStorage
-    const currentTemplate = ownerName || (typeof window !== 'undefined' ? localStorage.getItem(STORAGE_KEY) : null);
+    const currentTemplate = ownerName || 
+      (typeof window !== 'undefined' ? localStorage.getItem(STORAGE_KEY) : null);
     
-    if (!currentTemplate) {
-      return;
-    }
+    if (!currentTemplate) return;
     
-    // Save template to localStorage for persistence
+    // Save template to localStorage
     if (ownerName && typeof window !== 'undefined') {
       localStorage.setItem(STORAGE_KEY, ownerName);
     }
     
-    // Check if CSS is already loaded
+    // Check if CSS already loaded
     if (loadedCSS.has(currentTemplate)) {
       return;
     }
     
-    // Load CSS dynamically
-    const loadCSS = async () => {
-      try {
-        await import(`@/styles/owner/${currentTemplate}/themes.css`);
+    // Load CSS only once
+    import(`@/styles/owner/${currentTemplate}/themes.css`)
+      .then(() => {
         loadedCSS.add(currentTemplate);
         console.log(`✅ CSS loaded: ${currentTemplate}`);
-      } catch (error) {
+      })
+      .catch((error) => {
         console.warn(`❌ Failed to load CSS: ${currentTemplate}`, error);
-      }
-    };
-
-    loadCSS();
+      });
   }, [ownerName]);
 
   return null;

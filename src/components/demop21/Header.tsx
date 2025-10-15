@@ -14,7 +14,7 @@ const REGEX_POOL = {
   NEWS_LINK_CHECK: /^\/demop21\/news\//
 } as const;
 
-const Header = ({ menuItems = defaultMenuItems }: HeaderProps): React.ReactElement => {
+const Header = React.memo(({ menuItems = defaultMenuItems }: HeaderProps): React.ReactElement => {
   const [isOpenLogin, setIsOpenLogin] = useState(false);
   
   const handleLogin = useCallback(() => {
@@ -188,6 +188,8 @@ const Header = ({ menuItems = defaultMenuItems }: HeaderProps): React.ReactEleme
       <LoginDialog isOpen={isOpenLogin} onClose={handleCloseLogin} />
     </>
   );
-};
+});
+
+Header.displayName = 'Header';
 
 export default Header;
