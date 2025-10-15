@@ -1,6 +1,3 @@
-'use client';
-
-import { useMemo } from 'react';
 import { MenuItem, SubMenuItem } from '@/components/demop21/dataHeader';
 import { FooterLink } from '@/components/demop21/dataFooter';
 
@@ -53,53 +50,51 @@ export const useMenuItems = (
     customFilter
   } = options;
 
-  return useMemo(() => {
-    const filteredItems: FooterLink[] = [];
+  const filteredItems: FooterLink[] = [];
 
-    // Process main menu items
-    if (includeMainMenu) {
-      menuItems.forEach((menuItem) => {
-        const shouldInclude = customFilter 
-          ? customFilter(menuItem)
-          : menuItem.menucross === menucrossValue;
+  // Process main menu items
+  if (includeMainMenu) {
+    menuItems.forEach((menuItem) => {
+      const shouldInclude = customFilter 
+        ? customFilter(menuItem)
+        : menuItem.menucross === menucrossValue;
 
-        if (shouldInclude) {
-          const target = isValidTarget(menuItem.CATE_LINKTARGET) ? menuItem.CATE_LINKTARGET : '_self';
-          filteredItems.push({
-            href: menuItem.CATE_LINK,
-            text: menuItem.CATE_NAME,
-            target,
-            type: menuItem.type
-          });
-        }
-      });
-    }
+      if (shouldInclude) {
+        const target = isValidTarget(menuItem.CATE_LINKTARGET) ? menuItem.CATE_LINKTARGET : '_self';
+        filteredItems.push({
+          href: menuItem.CATE_LINK,
+          text: menuItem.CATE_NAME,
+          target,
+          type: menuItem.type
+        });
+      }
+    });
+  }
 
-    // Process submenu items
-    if (includeSubmenu) {
-      menuItems.forEach((menuItem) => {
-        if (menuItem.submenu) {
-          menuItem.submenu.forEach((subItem) => {
-            const shouldInclude = customFilter 
-              ? customFilter(subItem)
-              : subItem.menucross === menucrossValue;
+  // Process submenu items
+  if (includeSubmenu) {
+    menuItems.forEach((menuItem) => {
+      if (menuItem.submenu) {
+        menuItem.submenu.forEach((subItem) => {
+          const shouldInclude = customFilter 
+            ? customFilter(subItem)
+            : subItem.menucross === menucrossValue;
 
-            if (shouldInclude) {
-              const target = isValidTarget(subItem.CATE_LINKTARGET) ? subItem.CATE_LINKTARGET : '_self';
-              filteredItems.push({
-                href: subItem.CATE_LINK,
-                text: subItem.CATE_NAME,
-                target,
-                type: subItem.type
-              });
-            }
-          });
-        }
-      });
-    }
+          if (shouldInclude) {
+            const target = isValidTarget(subItem.CATE_LINKTARGET) ? subItem.CATE_LINKTARGET : '_self';
+            filteredItems.push({
+              href: subItem.CATE_LINK,
+              text: subItem.CATE_NAME,
+              target,
+              type: subItem.type
+            });
+          }
+        });
+      }
+    });
+  }
 
-    return filteredItems;
-  }, [menuItems, menucrossValue, includeMainMenu, includeSubmenu, customFilter]);
+  return filteredItems;
 };
 
 // Backward compatibility alias
