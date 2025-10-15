@@ -106,13 +106,13 @@ const Header = React.memo(({ menuItems = defaultMenuItems }: HeaderProps): React
     }
   }, [transformToSlug]);
 
-  const DownloadSection: React.ReactElement = (
+  const DownloadSection = (
       <div id="my-download">
         <div className="download_form_premium"><a href="#">Download application form</a></div>
       </div>
   );
 
-  const HeaderMainSection: React.ReactElement = (
+  const HeaderMainSection = (
     <>
       <div className="columns hidden"><div id="show-menu"><span className="fa fa-bars"></span></div></div>
       <div className="header-container">

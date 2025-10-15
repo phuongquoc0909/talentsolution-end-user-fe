@@ -4,7 +4,7 @@ import React from "react";
 import SearchJobSection from "@/components/common/_searchjob_section";
 import BoxJobType from "@/components/demop21/job/jobs-browse-section"; 
 
-const JobsListPage: React.FC = () => {
+const JobsListPage = () => {
   return (
     <>
       <div className="main-container">

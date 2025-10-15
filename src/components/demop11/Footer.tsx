@@ -9,7 +9,7 @@ const FooterMenuItem: React.FC<{ menuItem: MenuItem; index: number }> = ({ menuI
   </li>
 );
 
-const PowerBySection: React.FC = (): React.ReactElement => (
+const PowerBySection = () => (
   <div className="col-xs-12 col-sm-3 powerby">
     <a href="https://VieclamIT.vn/" target="_blank" style={{color: 'inherit'}}>Talent&nbsp;</a>
     <a href="https://careerviet.vn/careermap" target="_blank" style={{color: 'inherit'}}>Solution&nbsp;</a>

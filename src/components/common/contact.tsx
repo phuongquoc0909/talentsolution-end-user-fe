@@ -1,9 +1,9 @@
 import React from 'react';
 import imageCaptcha from '@/styles/common/images/8a4ba5a06b3e22cce803747eb6cfc5cc.png';
 
-const FormContact: React.FC = (): React.ReactElement => {
+const FormContact = () => {
 
-    const LeftContactSection: React.ReactElement = (
+    const LeftContactSection = (
         <div className="LeftContact">
             <div className="content_fck" role="complementary" aria-label="Contact information">
                 <p className="text"></p><p><em><strong>Hãy để chúng tôi chủ động liên lạc với bạn. Chỉ cần click vào đây <a href="http://career.vinasoy.vn/join-talent-network/en" title="Join Our Talent Network"><img alt="Join Our Talent Network" src="http://static.talentnetwork.vn/talentnetwork/source/vinasoy/vinasoy/images/join_now.png" style={{maxWidth: '190px'}} /></a> và điền thông tin chính xác của bạn.</strong></em></p>
@@ -35,7 +35,7 @@ const FormContact: React.FC = (): React.ReactElement => {
         </div>
     );
 
-    const RightContactSection: React.ReactElement = (
+    const RightContactSection = (
         <div className="RightContact">
             <form name="frmContact" id="frmContact" method="post" className="frmContact" role="form" aria-label="Contact form">
                 <p className="text"><b>Please make sure to provide correct email so that we can contact you for support.</b></p>

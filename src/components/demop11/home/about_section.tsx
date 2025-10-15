@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AboutSection: React.FC = (): React.ReactElement => {
+const AboutSection = () => {
     return (
         <div id="11378" className="section-page page-content-pre">
             <header className="container-fluid">

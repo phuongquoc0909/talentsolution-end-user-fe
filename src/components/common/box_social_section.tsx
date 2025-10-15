@@ -61,4 +61,5 @@ const SocialSection: React.FC<SocialSectionProps> = React.memo(({ show = 0 }) =>
 });
 
 SocialSection.displayName = 'SocialSection';
+
 export default SocialSection;

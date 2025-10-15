@@ -8,7 +8,7 @@ import Pagination from "@/components/common/pagination";
 
 type GridJobType = 'box' | 'list';
 
-const JobsListPage: React.FC = () => {
+const JobsListPage = () => {
   const [gridJobType, setGridJobType] = useState<GridJobType>('box');
   
   const handleBoxView = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {

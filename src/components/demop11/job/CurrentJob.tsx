@@ -11,7 +11,7 @@ interface JobDetailState {
     isOpenConfirmApply: boolean;
 }
 
-const CurrentJob: React.FC = (): React.ReactElement => {
+const CurrentJob = () => {
     const params = useParams();
     const jobId = parseInt(params.id as string);
     // Find job by ID

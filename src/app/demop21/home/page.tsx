@@ -3,7 +3,7 @@ import imgJoinNow from '@/assets/demop21/images/join_now.png';
 import imgQuoteGreenBottom from '@/assets/demop21/images/quote_green_bottom.png';
 import imgQuoteYellowBottom from '@/assets/demop21/images/quote_yellow_bottom.png';
 
-const HomePage: React.FC = () => {
+const HomePage = () => {
   return (
     <>
       <div className="main-container">

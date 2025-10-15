@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const ViewMoreButton: React.FC = (): React.ReactElement => {
+const ViewMoreButton = () => {
     return (
         <div className="row">
             <div className="col-sm-2 col-sm-offset-5 btn-viewmore">

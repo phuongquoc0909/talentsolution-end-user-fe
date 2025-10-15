@@ -9,7 +9,7 @@ const SURVEY_STYLES = {
     }
 } as const;
 
-const BoxSurveyP11 = (): React.ReactElement | null => {
+const BoxSurveyP11 = () => {
     const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
 
     // Check render conditions: show === 1 and QUESTION_CONTENT exists

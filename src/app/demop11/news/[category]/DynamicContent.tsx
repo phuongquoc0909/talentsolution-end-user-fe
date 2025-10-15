@@ -67,7 +67,7 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
 
     const sanitizedContent: string = useSanitizedHTML(currentContent?.CATE_CONTENT || '');
 
-    const ContentType2: React.FC = (): React.ReactElement => (
+    const ContentType2 = () => (
         <div className='pageType'>
             <div className="container">
                 <div className="col-xs-12">
@@ -80,7 +80,7 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
         </div>
     );
 
-    const ContentType3: React.FC = (): React.ReactElement => {
+    const ContentType3 = () => {
         const newsItemsLength = newsItems.length;
         
         return (

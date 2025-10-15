@@ -10,7 +10,7 @@ import NewMidBanner, { arrMidBanner } from "@/components/demop11/banner/new-mid-
 import BoxNews from "@/components/demop11/news/layout";
 import MediaSection from "@/components/common/media_section";
 
-const HomePage: React.FC = () => {
+const HomePage = () => {
   // Priority configuration for homepage sections
   const sectionsConfig = [
     { id: 'banner-video', priority: 1, component: BannerVideo, props: {} },

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { jobViewedData } from '@/contants/list-job-viewed';
 
-const ListJobViewed: React.FC = (): React.ReactElement => {
+const ListJobViewed = () => {
 
     return (
         <div className="col-xs-12 section-box also-viewed">

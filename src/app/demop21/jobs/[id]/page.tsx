@@ -19,7 +19,7 @@ interface JobDetailState {
     isOpenConfirmApply: boolean;
 }
 
-const JobsDetailPage: React.FC = (): React.ReactElement => {
+const JobsDetailPage = () => {
     const params = useParams();
     const jobId = parseInt(params.id as string);
     
@@ -71,7 +71,7 @@ const JobsDetailPage: React.FC = (): React.ReactElement => {
         }
     }, [state.activeShareId, handleOutsideClick]);
 
-    const CompanyLogoSection: React.ReactElement = (
+    const CompanyLogoSection = (
         <div className="col-xs-12 col-md-2 company-logo">
             <table width="100%" cellSpacing="0" cellPadding="0" style={{tableLayout: 'fixed'}}>
                 <tbody>
@@ -93,7 +93,7 @@ const JobsDetailPage: React.FC = (): React.ReactElement => {
         </div>
     );
 
-    const JobInfoSection: React.ReactElement = (
+    const JobInfoSection = (
         <div className="col-xs-12 record-main">
             <div className="row">
                 <span className="col-xs-12 col-sm-4 label-cate">Work Location</span>
@@ -138,14 +138,14 @@ const JobsDetailPage: React.FC = (): React.ReactElement => {
         </div>
     );
 
-    const ActionsSection: React.ReactElement = (
+    const ActionsSection = (
         <div className="col-xs-12 actions-apply">
             <a className="btn btn-primary" onClick={handleConfirmApply}>Apply</a>
             <a className="showDialogD not-ready" href="#">Not ready to apply?</a>
         </div>
     );
 
-    const ShareSection: React.ReactElement = (
+    const ShareSection = (
         <div className="col-xs-12 actions-invite">
             <div className="sharejob">
                 <span 
@@ -166,7 +166,7 @@ const JobsDetailPage: React.FC = (): React.ReactElement => {
         </div>
     );
 
-    const JobTagsSection: React.ReactElement = (
+    const JobTagsSection = (
         <div className="tagskilldetail">
             <span>Job Tag:</span>&nbsp;
             {currentJob.JOB_TAGS.map((tag, index) => (
@@ -177,7 +177,7 @@ const JobsDetailPage: React.FC = (): React.ReactElement => {
         </div>
     );
 
-    const RightSidebarSection: React.ReactElement = (
+    const RightSidebarSection = (
         <div className="col-xs-12 col-md-4 column-right">
             <ListJobViewed />
             <BoxJoin />

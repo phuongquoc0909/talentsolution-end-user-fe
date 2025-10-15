@@ -3,14 +3,14 @@ import { careerData, CareerItem } from '@/contants/careerAtHome';
 
 export const backgroundImageSection = "https://image.talentnetwork.vn/staging5///news/2020/06/24/1592995941_home.png";
 
-const CareerSection: React.FC = (): React.ReactElement => {
-    const HeaderSection: React.ReactElement = (
+const CareerSection = () => {
+    const HeaderSection = (
         <header className="container-fluid">
             <h2 className="section-title">Career Opportunities</h2>
         </header>
     );
     
-    const CareerListSection: React.ReactElement = (
+    const CareerListSection = (
         <div className="container-fluid container-narrow">
             <ul className="flex-row jobs">
                 {careerData.map((career: CareerItem, index: number) => (
@@ -30,7 +30,7 @@ const CareerSection: React.FC = (): React.ReactElement => {
         </div>
     );
     
-    const ViewMoreSection: React.ReactElement = (
+    const ViewMoreSection = (
         <div className="row">
             <div className="col-xs-3 btn-viewmore">
                 <a href="#" className="btn btn-block btn-primary">View More</a>

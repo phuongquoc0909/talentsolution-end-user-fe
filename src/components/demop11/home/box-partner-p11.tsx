@@ -1,7 +1,7 @@
 import React from 'react';
 import { partnerData, PartnerItem } from '@/contants/partner';
 
-const PartnerSection: React.FC = (): React.ReactElement => {
+const PartnerSection = () => {
     // Chia partnerData thành các nhóm 3 phần tử
     const chunkArray = (array: PartnerItem[], size: number): PartnerItem[][] => {
         const chunks = [];
@@ -13,13 +13,13 @@ const PartnerSection: React.FC = (): React.ReactElement => {
     const partnerChunks: PartnerItem[][] = chunkArray(partnerData, 3);
 
 
-    const HeaderSection: React.ReactElement = (
+    const HeaderSection = (
         <header className="container-fluid">
             <h2 className="section-title">Partner</h2>
         </header>
     );
 
-    const PartnerListSection: React.ReactElement = (
+    const PartnerListSection = (
         <div className="container-fluid">
             {partnerChunks.map((chunk, chunkIndex) => (
                 <div key={chunkIndex} className="row setheight">
@@ -52,7 +52,7 @@ const PartnerSection: React.FC = (): React.ReactElement => {
         </div>
     );
 
-    const ViewMoreSection: React.ReactElement = (
+    const ViewMoreSection = (
         <div className="row">
             <div className="col-xs-3 btn-viewmore">
                 <a href="#" className="btn btn-block btn-primary">View More</a>

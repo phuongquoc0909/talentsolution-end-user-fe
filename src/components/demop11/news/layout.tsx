@@ -61,14 +61,14 @@ const BoxNews: React.FC<BoxNewsProps> = ({
     layout
     }) => {
         // Header section
-        const HeaderSection: React.ReactElement = (
+        const HeaderSection = (
             <header className="container-fluid">
                 <h2 className="section-title">{CATE_NAME}</h2>
             </header>
         );
 
         // ViewMoreButton section
-        const ViewMoreSection: React.ReactElement = (
+        const ViewMoreSection = (
             <ViewMoreButton />
         );
 

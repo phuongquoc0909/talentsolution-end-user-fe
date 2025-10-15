@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BoxJoin: React.FC = (): React.ReactElement => {
+const BoxJoin = () => {
     return (
         <div className="col-xs-12 section-box join-talent-onclip">
             <a href="#" className="showDialogD">Join Vinasoy Talent Network</a>

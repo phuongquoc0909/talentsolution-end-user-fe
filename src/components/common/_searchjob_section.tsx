@@ -45,7 +45,7 @@ const FORM_CONFIG = {
   LOCATION_PLACEHOLDER: 'Select location...',
 } as const;
 
-const SearchJobSection = (): React.ReactElement => {
+const SearchJobSection = () => {
   const [selectedIndustry, setSelectedIndustry] = useState<string>('');
   const [selectedLocation, setSelectedLocation] = useState<string>('');
 
@@ -60,7 +60,7 @@ const SearchJobSection = (): React.ReactElement => {
   }, []);
 
   // Form components
-  const SearchInput: React.ReactElement = (
+  const SearchInput = (
     <input 
       name={FORM_CONFIG.SEARCH_INPUT_NAME} 
       type="text" 
@@ -70,7 +70,7 @@ const SearchJobSection = (): React.ReactElement => {
     />
   );
 
-  const IndustrySelect: React.ReactElement = (
+  const IndustrySelect = (
     <div className="chosen-container">
       <SelectSingle
         name="industry"
@@ -82,7 +82,7 @@ const SearchJobSection = (): React.ReactElement => {
     </div>
   );
 
-  const LocationSelect: React.ReactElement = (
+  const LocationSelect = (
     <div className="chosen-container">
       <SelectSingle
         name="location"
@@ -95,7 +95,7 @@ const SearchJobSection = (): React.ReactElement => {
     </div>
   );
 
-  const SearchButton: React.ReactElement = (
+  const SearchButton = (
     <button 
       className="searchvt1" 
       type="submit"

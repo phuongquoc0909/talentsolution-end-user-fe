@@ -5,7 +5,7 @@ const OVERLAY_STYLES = {
     transition: 'bottom 0.3s ease-in-out'
 } as const;
 
-const MediaSection = (): React.ReactElement => {
+const MediaSection = () => {
     return (
         <div id="media_section" className="section-page ImageService-pre" role="region" aria-label="Media gallery">
             {MEDIA_ITEMS.map((item: MediaItem, index: number) => (

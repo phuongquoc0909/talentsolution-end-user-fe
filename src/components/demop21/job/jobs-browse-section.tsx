@@ -5,7 +5,7 @@ import { jobData } from '@/components/demop21/job/dataJob';
 import JobItem from '@/components/demop21/job/JobItem';
 import LoginDialog from '@/components/UI/dialog/login_ajax_v1';
 
-const BoxJobType: React.FC = () => {
+const BoxJobType = () => {
     const [isOpenLogin, setIsOpenLogin] = useState(false);
   
     const handleSaveJob = useCallback(() => {

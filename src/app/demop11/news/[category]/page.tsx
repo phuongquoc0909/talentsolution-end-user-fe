@@ -35,21 +35,21 @@ const NewsByType: React.FC<NewsByTypeProps> = async ({
     const categorySlug = resolvedParams.category;
     const categoryName: string = categorySlug ? transformCategorySlug(categorySlug) : CATE_NAME;
 
-    const SearchSection: React.ReactElement = (
+    const SearchSection = (
         <div id="job-search">
             <SearchJobSection />
         </div>
     );
 
-    const BreadcrumbSection: React.ReactElement = (
+    const BreadcrumbSection = (
         <Breadcrumb categoryName={categoryName} />
     );
 
-    const HeaderSectionComponent: React.ReactElement = (
+    const HeaderSectionComponent = (
         <HeaderSection title={categoryName} />
     );
 
-    const ContentSection: React.ReactElement = (
+    const ContentSection = (
         <DynamicContent 
             newsItems={newsItems} 
             CATE_NAME={categoryName} 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BannerVideo: React.FC = (): React.ReactElement => {
+const BannerVideo = () => {
     return (
         <>
         <div className="texton">
