@@ -1,4 +1,4 @@
-body, .quote .quote-body, .quote .quote-source .quote-author, .quote .quote-source .quote-author-position, .join-talent-box .title, .head-spec .btn-row .download_form, .job-individual .job-post .job-post-description, .sidebar-content .useful-links a, #WhyJoin h4, #WhyJoin .content_why_join { font-size: 15px }
+body, .join-talent-box .title, .head-spec .btn-row .download_form, .job-individual .job-post .job-post-description, .sidebar-content .useful-links a, #WhyJoin h4, #WhyJoin .content_why_join { font-size: 15px }
 body, input, select, textarea, .content_fck, .ui_btnCb { font-family: var(--fontmain-theme,'Montserrat')!important }
 body, a:focus, .all-jobs-pre .browser-job a.active, .social_col a:hover i, .quote .quote-source { color: #464646 }
 .header .header-container, .user-nav .sign-in-wrapper, .user-nav .language21 { height: 90px }

@@ -2,9 +2,10 @@ import React from 'react';
 
 import BoxCareer from '@/components/demop21/job/box_career';
 import Share from '@/components/demop21/share';
-import imgJoinNow from '@/styles/owner/geet/images/join_now.png';
 import imgQuoteGreenBottom from '@/styles/owner/geet/images/quote_green_bottom.png';
 import imgQuoteYellowBottom from '@/styles/owner/geet/images/quote_yellow_bottom.png';
+import ButtonJoin from '@/components/demop21/button_join';
+import { testimonialData } from '@/contants/testimonial';
 
 const HomePage = () => {
   return (
@@ -24,8 +25,7 @@ const HomePage = () => {
                 </div>
                 <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                     <div className="join-talent-top center">
-                        <a tabIndex={0} role="button" className="showDialogD join-button"><img src={imgJoinNow.src} /></a>
-                        <p className="stayconnect">Kết nối với chúng tôi <a tabIndex={0} role="button" className="showDialog">Vì sao?</a></p>
+                        <ButtonJoin />
                     </div>
                 </div>
             </div>
@@ -111,13 +111,13 @@ const HomePage = () => {
                             &nbsp;
                         </div>
                         <div className="quote-body">
-                          "Hệ thống trường Quốc tế Him Lam được xây dựng dựa trên những chuẩn mực và tinh hoa của giáo dục quốc tế kết hợp với sự tận tâm và nhiệt huyết của các nhà giáo dày dặn kinh nghiệm, cung cấp nền giáo dục đẳng cấp Quốc tế cho học sinh từ 2-18 tuổi.."
+                          "{testimonialData[0].TESTIMONIAL_CONTENT}"
                           <div className="quote-source">
                             <div className="quote-author">
-                              HIMLAMIS
+                              {testimonialData[0].TESTIMONIAL_CONTACT_NAME}
                             </div>
                             <div className="quote-author-position">
-                              Him Lam Green Park, Bắc Ninh
+                              {testimonialData[0].TESTIMONIAL_CONTACT_POSITION}
                             </div>
                           </div>
                         </div>
@@ -136,13 +136,13 @@ const HomePage = () => {
                             &nbsp;
                         </div>
                         <div className="quote-body">
-                          "Hello! My name is Kimberly House and I teach early years at Him Lam International School. I am really glad to be at Him Lam International School this year and I really enjoy the beautiful campus and facilities! Working with kind, knowledgeable and passionate leaders and colleagues makes working at Him Lam a very positive experience. The Vietnamese people are very kind and generous and enjoy teaching you about their unique culture. Once you get to know them, you will have lifelong friends! Coming from Ho Chi Minh City which is very warm, I am enjoying the cooler weather in the north. The cost of living is relatively cheap compared to other parts of the world. There are many schools in Vietnam, but so far HIMLAMIS is my favorite one!"
+                          "{testimonialData[1].TESTIMONIAL_CONTENT}"
                           <div className="quote-source">
                               <div className="quote-author">
-                                  Ms. Kimberly House
+                                  {testimonialData[1].TESTIMONIAL_CONTACT_NAME}
                               </div>
                               <div className="quote-author-position">
-                                  Early Years Teacher
+                                  {testimonialData[1].TESTIMONIAL_CONTACT_POSITION}
                               </div>
                           </div>
                         </div>
@@ -159,8 +159,7 @@ const HomePage = () => {
                       <div className="insight-image join-talent-box">
                         <div className="title">Gia nhập Talent Network của chúng tôi sẽ giúp bạn nâng cao khả năng tìm kiếm việc làm.</div>
                         <div className="full-width center">
-                          <a href="https://careers.himlamis.edu.vn/join-talent-network/vi" className="showDialogD join-button"><img src={imgJoinNow.src} /></a>
-                          <p className="stayconnect">Kết nối với chúng tôi <a tabIndex={0} role="button" className="showDialog">Vì sao?</a></p>
+                          <ButtonJoin />
                         </div>
                       </div>
                     </div>
