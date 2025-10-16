@@ -1,11 +1,9 @@
-// Simple state for controlling social login visibility
 export interface SocialLoginItem {
     id: string;
     popupapi: string;
-    show: 0 | 1; // Strict literal types: 1 = show, 0 = hide
+    show?: number; 
 }
 
-// Data từ API (có thể fetch từ server) - Memoized for performance
 export const socialLoginData: SocialLoginItem[] = [
     {
         id: 'google',
@@ -19,7 +17,6 @@ export const socialLoginData: SocialLoginItem[] = [
     },
     {
         id: 'linkedin',
-        popupapi: "https://talentnetwork.vn/api/login/linkedin",
-        show: 1
+        popupapi: "https://talentnetwork.vn/api/login/linkedin"
     }
 ];

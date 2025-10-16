@@ -43,27 +43,9 @@ const LoginDialog = ({ isOpen, onClose }: Props) => {
       if (!isOpen) return;
       
       try {
-        switch (e.key) {
-          case 'Escape':
-            e.preventDefault();
-            onClose();
-            break;
-          case 'Tab':
-            // Trap focus within dialog (accessibility best practice)
-            const focusableElements = document.querySelectorAll(
-              'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-            );
-            const firstElement = focusableElements[0] as HTMLElement;
-            const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-            
-            if (e.shiftKey && document.activeElement === firstElement) {
-              e.preventDefault();
-              lastElement?.focus();
-            } else if (!e.shiftKey && document.activeElement === lastElement) {
-              e.preventDefault();
-              firstElement?.focus();
-            }
-            break;
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          onClose();
         }
       } catch (error) {
         console.error('Error handling keyboard event:', error);
@@ -84,7 +66,6 @@ const LoginDialog = ({ isOpen, onClose }: Props) => {
   }, [onClose]);
 
 
-  // Helper function để check hiển thị/ẩn từ API data
   const isSocialLoginVisible = useCallback((id: string): boolean => {
     try {
       const item = socialLoginData.find(item => item.id === id);
@@ -95,7 +76,6 @@ const LoginDialog = ({ isOpen, onClose }: Props) => {
     }
   }, [socialLoginData]);
 
-  // Check nếu tất cả social login đều bị ẩn (show: 0)
   const hasAnyVisibleSocialLogin = socialLoginData.some(item => item.show === 1);
 
   const socialLoginMap = (() => {
@@ -130,11 +110,9 @@ const LoginDialog = ({ isOpen, onClose }: Props) => {
       return;
     }
 
-    // Prevent default immediately
     e.preventDefault();
     e.stopPropagation();
 
-    // O(1) lookup instead of O(n) find
     const socialItem = socialLoginMap.get(id);
     
     if (!socialItem) {
