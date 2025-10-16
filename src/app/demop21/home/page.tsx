@@ -1,5 +1,6 @@
 import React from 'react';
 
+import BoxCareer from '@/components/demop21/job/box_career';
 import Share from '@/components/demop21/share';
 import imgJoinNow from '@/styles/owner/geet/images/join_now.png';
 import imgQuoteGreenBottom from '@/styles/owner/geet/images/quote_green_bottom.png';
@@ -152,14 +153,7 @@ const HomePage = () => {
                       </div>
                     </div>
                     <div className="widget insight grid_1 widget-col-2">
-                      <div className="insight-image career-box">
-                        <h2>Cơ Hội Nghề Nghiệp</h2>
-                        <ul>
-                          <li><a href="https://careers.himlamis.edu.vn/viec-lam/tro-giang.35ab8c8d.html" title="Trợ Giảng">Trợ Giảng</a></li>
-                          <li><a href="https://careers.himlamis.edu.vn/viec-lam/chuyen-vien-tuyen-sinh-va-tiep-thi.35ab828d.html" title="Chuyên viên Tuyển sinh và Tiếp thị">Chuyên viên Tuyển sinh và Tiếp thị</a></li>
-                        </ul>
-                        <div className="full-width center"><a href="https://careers.himlamis.edu.vn/tim-viec-lam/tat-ca-viec-lam/vi" className="tm-bright-blue-round-button view-jobs">Xem tất cả <i className="fa fa-angle-right"></i></a></div>
-                      </div>
+                      <BoxCareer />
                     </div>
                     <div className="widget insight grid_1 widget-col-2">
                       <div className="insight-image join-talent-box">

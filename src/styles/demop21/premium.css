@@ -791,12 +791,25 @@ button:hover, button:active, button:focus, input[type="submit"]:hover, input[typ
 	margin-bottom: 20px
 }
 .career-box ul li {
-	list-style: outside disc;
-	padding-bottom: 8px;
-	margin-left: 15px
+	list-style: none;
+	margin-bottom: 8px;
+	margin-left: 15px;
+	position: relative;
+}
+.career-box ul li::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: #333;
+    border-radius: 50%;
 }
 .career-box ul li a {
-	color: #666
+	color: #666;
+	font-size: 16px;
 }
 .career-box .view-jobs, .survey-box .view-jobs {
 	padding: 8px 30px;
