@@ -35,7 +35,7 @@ export const jobData: JobItem[] = [
     {
         JOB_ID: 428737,
         JOB_LOGO: "https://static.talentnetwork.vn/talentnetwork/source/vinasoy/images/logo-default.png",
-        JOB_IMAGE_DEFAULT: "https://image.talentnetwork.vn/geet//job/image/2025/09/11/1757578731_r.jpg",
+        JOB_IMAGE_DEFAULT: "/images/job/Image1.jpg",
         JOB_TITLE: "Nhân viên bán hàng thị trường - Kênh truyền thống",
         LINK: "/demop21/jobs/428737",
         COMPANY_NAME: "Internal Audit dept",
@@ -51,7 +51,7 @@ export const jobData: JobItem[] = [
         WORK_TYPE: "Work From Home",
         JOB_ACTIVEDATE: new Date("2025-10-12"),
         JOB_EXPIREDATE: new Date("11/12/2025"),
-        JOB_CONTACT_NAME: "John Doe",
+        JOB_CONTACT_NAME: "HR Dept.",
         JOB_CONTENT: 
         `
         <p><u><strong>Trách nhiệm:</strong></u></p>
@@ -127,8 +127,8 @@ export const jobData: JobItem[] = [
         JOB_DEPARTMENT: "Him Lam International School, Him Lam Green Park, Dai Phuc, Bac Ninh",
         WORK_TYPE: "Work From Home",
         JOB_ACTIVEDATE: new Date("2025-02-11"),
-        JOB_EXPIREDATE: new Date("15/12/2026"),
-        JOB_CONTACT_NAME: "John Doe",
+        JOB_EXPIREDATE: new Date("11/12/2026"),
+        JOB_CONTACT_NAME: "HR Dept.",
         JOB_CONTENT:
         `
         <ul>
@@ -175,7 +175,7 @@ export const jobData: JobItem[] = [
     {
         JOB_ID: 433152,
         JOB_LOGO: "https://static.talentnetwork.vn/talentnetwork/source/vinasoy/images/logo-default.png",
-        JOB_IMAGE_DEFAULT: "https://image.talentnetwork.vn/geet//job/image/2025/09/11/1757578731_r.jpg",
+        JOB_IMAGE_DEFAULT: "/images/job/Image18.jpg",
         JOB_TITLE: "Marketing Manager",
         LINK: "/demop21/jobs/433152",
         COMPANY_NAME: "Vinasoy",
@@ -190,8 +190,8 @@ export const jobData: JobItem[] = [
         JOB_DEPARTMENT: "Marketing Department",
         WORK_TYPE: "Work From Home",
         JOB_ACTIVEDATE: new Date("2025-10-08"),
-        JOB_EXPIREDATE: new Date("20/11/2025"),
-        JOB_CONTACT_NAME: "John Doe",
+        JOB_EXPIREDATE: new Date("2/11/2028"),
+        JOB_CONTACT_NAME: "HR Dept.",
         JOB_CONTENT:
         `
         <ul>

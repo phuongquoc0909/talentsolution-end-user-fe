@@ -9,7 +9,7 @@ import '@/styles/common/general.css';
 import '@/styles/common/core.css';
 import '@/styles/common/theme_default.css';
 import '@/styles/demop21/premium.css';
-import '@/styles/owner/demop21/themes.css';
+import '@/styles/owner/geet/themes.css';
 // import '@/styles/demop21/nav_vi.css';
 
 interface Demop21Props {

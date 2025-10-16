@@ -1490,6 +1490,9 @@ button:hover, button:active, button:focus, input[type="submit"]:hover, input[typ
 	padding: 10px 0;
 	cursor: pointer
 }
+.job-side-section #share a:hover {
+	text-decoration: none;
+}
 .fixed-apply-now .favorite-box-container i {
 	padding: 0.85em;
 }

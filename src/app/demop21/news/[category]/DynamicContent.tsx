@@ -5,6 +5,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import Pagination from "@/components/common/pagination";
 import { newsData } from "@/contants/news";
 import { NEWS_CONTENT_TYPE_PAGE, ItemTypePage } from "@/contants/detail-type-page";
+import Share from '@/components/demop21/share';
 
 const NORMALIZED_CONTENT_MAP = new Map<string, ItemTypePage>();
 NEWS_CONTENT_TYPE_PAGE.forEach(item => {
@@ -75,6 +76,12 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
                         className="content_fck text-intro" 
                         dangerouslySetInnerHTML={{ __html: sanitizedContent }}
                     />
+                    <div className='fl_right job-side-section' style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
+                        <span>Share</span>
+                        <div className='grey-buttons' id='share' style={{margin: '0'}}>
+                            <Share />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
