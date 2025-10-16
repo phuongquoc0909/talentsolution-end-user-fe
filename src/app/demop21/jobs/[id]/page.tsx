@@ -3,10 +3,10 @@
 import { useParams, notFound } from 'next/navigation';
 import { useState, useCallback } from 'react';
 import useSanitizedHTML from '@/hooks/useSanitizedHTML';
-
 import { jobData } from '@/components/demop21/job/dataJob';
 import Benefit from '@/components/demop11/job/benefit';
-import BoxJobType from "@/components/demop21/job/jobs-browse-section"; 
+import BoxJobType from "@/components/demop21/job/jobs-browse-section";
+import Share from '@/components/demop21/share';
 import ConfirmApply from '@/components/UI/dialog/ConfirmApply';
 
 interface JobDetailState {
@@ -98,6 +98,12 @@ const JobsDetailPage = () => {
                         <li>{currentJob.JOB_EXPIREDATE.toLocaleDateString('vi-VN')}</li>
                     </ul>
                 </div>
+                <div className="metadata-list_section metadata-list_section--orange">
+                    <h4 className="metadata-list_header">Contact Person</h4>
+                    <ul className="metadata-list_items">
+                        <li>{currentJob.JOB_CONTACT_NAME}</li>
+                    </ul>
+                </div>
             </div>
         </>
     );
@@ -168,6 +174,12 @@ const JobsDetailPage = () => {
                         <div className="container">
                             <div className="job-side-section sidebar-content">
                                 {JobInfoSection}
+                                <div className="favorite-box-container">
+                                    <a role="button" tabIndex={0} className="favorite showDialogD"><i className="fa fa-heart-o"></i> Save For Later</a>
+                                </div>
+                                <div className="grey-buttons companies" id="share">
+                                    <Share />
+                                </div>
                             </div>
                             <div className="job-main-section">
                                 {RightSidebarSection}
@@ -176,11 +188,7 @@ const JobsDetailPage = () => {
                     </div>
                 </div>
             </div>
-            <section 
-                className="section-page result-job-search similar-jobs"
-                role="region"
-                aria-labelledby="similar-jobs-title"
-            >
+            <section className="section-page result-job-search similar-jobs">
                 <div className="container">
                     <h2>Similar Jobs</h2>
                     <BoxJobType />

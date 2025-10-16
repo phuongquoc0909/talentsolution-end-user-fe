@@ -98,7 +98,6 @@ const LoginDialog = ({ isOpen, onClose }: Props) => {
   // Check nếu tất cả social login đều bị ẩn (show: 0)
   const hasAnyVisibleSocialLogin = socialLoginData.some(item => item.show === 1);
 
-  // Social login data map for O(1) lookup (Google approach)
   const socialLoginMap = (() => {
     const map = new Map<string, SocialLoginItem>();
     socialLoginData.forEach(item => {

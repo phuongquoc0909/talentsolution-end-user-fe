@@ -1,4 +1,6 @@
 import React from 'react';
+
+import Share from '@/components/demop21/share';
 import imgJoinNow from '@/assets/demop21/images/join_now.png';
 import imgQuoteGreenBottom from '@/assets/demop21/images/quote_green_bottom.png';
 import imgQuoteYellowBottom from '@/assets/demop21/images/quote_yellow_bottom.png';
@@ -32,23 +34,9 @@ const HomePage = () => {
                   <div className="icon-wrapper favorite-container">
                     <div><a tabIndex={0} role="button" aria-label="favorite" className="favorite showDialogD"><i aria-hidden="true" className="fa fa-heart-o"></i></a></div>
                   </div>
-                  <div className="icon-wrapper fb-lg">
-                    <a tabIndex={0} role="button" className="btn-greyscale facebook" aria-label="facebook">
-                        <i className="fa fa-facebook" aria-hidden="true"></i>
-                    </a>
-                  </div>
+                  <Share />
                   <div className="icon-wrapper">
-                    <a tabIndex={0} role="button" className="btn-greyscale twitter" aria-label="twitter">
-                        <i className="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                  <div className="icon-wrapper">
-                    <a tabIndex={0} role="button" className="btn-greyscale linkedin" aria-label="linkedin">
-                        <i className="fa fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                  <div className="icon-wrapper">
-                    <a tabIndex={0} role="button" className="share-button btn-greyscale email" aria-label="email">
+                    <a tabIndex={0} role="button" className="share-button btn-greyscale email">
                         <i className="fa fa-envelope-o" aria-hidden="true"></i>
                     </a>
                   </div>
