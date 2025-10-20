@@ -1689,13 +1689,30 @@ button:hover, button:active, button:focus, input[type="submit"]:hover, input[typ
 	top: 330px;
 	left: 0px;
 	background: rgba(0, 0, 0, 0.6);
-	padding: 10px;
 	height: 90px
 }
+
+#job-search {
+	box-sizing: border-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-pack: center;
+    justify-content: center;
+	height: 100%;
+}
+
+@media only screen and (min-width: 1200px) {
+	#frmSearchJob {
+		display: flex;
+		display: -ms-flexbox;
+	}
+}
 .search-jobs-main {
-	width: 994px;
+	width: 100%;
+	max-width: 1200px;
 	margin: 0 auto;
-	padding-top: 10px
 }
 .search-jobs-main input.width_545, .search-jobs-main .chosen-container-single .chosen-single {
 	border-color: #fff;
@@ -1707,12 +1724,12 @@ button:hover, button:active, button:focus, input[type="submit"]:hover, input[typ
 }
 .search-jobs-main input.width_545 {
 	float: left;
-	width: 268px;
+	width: 320px;
 	color: #fff;
 	margin-right: 20px
 }
 .search-jobs-main .chosen-container {
-	width: 250px!important;
+	width: 320px!important;
 	margin-right: 20px
 }
 .search-jobs-main .chosen-container-single .chosen-single {

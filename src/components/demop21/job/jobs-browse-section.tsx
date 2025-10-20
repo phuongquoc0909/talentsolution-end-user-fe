@@ -26,7 +26,7 @@ const BoxJobType = () => {
     
     return (
         <>
-            <div className="row" style={{ margin: '0 -15px' }}>
+            <div className="row" style={{ margin: '0 -15px', width: '100%' }}>
                 {jobItems}
             </div>
             <LoginDialog isOpen={isOpenLogin} onClose={handleCloseLogin} />
