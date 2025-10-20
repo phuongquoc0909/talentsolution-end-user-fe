@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState, useCallback } from 'react';
-import ResultSurvey from '@/components/UI/dialog/ResultSurvey';
 import { surveyData } from '@/contants/survey';
+import ResultSurvey from '@/components/UI/dialog/ResultSurvey';
 
 const SURVEY_STYLES = {
     label: {
@@ -14,7 +14,7 @@ interface SurveyState {
     isOpenResultSurvey: boolean;
 }
 
-const BoxSurveyP11 = () => {
+const BoxSurveyP21 = () => {
     const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
     const [state, setState] = useState<SurveyState>({
         isOpenResultSurvey: false
@@ -52,10 +52,11 @@ const BoxSurveyP11 = () => {
 
     return (
         <>
-            <div role="region" aria-labelledby="survey-title">
-                <h2 id="survey-title">Survey</h2>
-                <p>{surveyData.QUESTION_CONTENT}</p>
-                <ul className="col-xs-12" role="radiogroup" aria-labelledby="survey-title">
+            <div className="widget insight grid_1 widget-col-2">
+                <div className="insight-image survey-box">
+                    <h2>Survey</h2>
+                    <p>{surveyData.QUESTION_CONTENT}</p>
+                    <ul role="radiogroup" aria-labelledby="survey-title">
                     {surveyData.answers.map((answer) => (
                         <li key={answer.ANSWER_ID} className="col-xs-12">
                             <label style={SURVEY_STYLES.label}>
@@ -76,29 +77,28 @@ const BoxSurveyP11 = () => {
                             </label>
                         </li>
                     ))}
-                </ul>
-                <div className="col-xs-12 col-sm-6 btn-vote">
-                    <a 
-                        className="btn" 
-                        id="btnVoteSurvey" 
-                        onClick={handleVote}
-                        role="button"
-                        tabIndex={0}
-                        aria-label="Submit your vote"
-                    >
-                        Vote
-                    </a>
-                </div>
-                <div className="col-xs-12 col-sm-6 btn-result">
-                    <a 
-                        className="showDialog btn" 
-                        tabIndex={0}
-                        onClick={handleShowResult}
-                        role="button"
-                        aria-label="View survey results"
-                    >
-                        Result
-                    </a>
+                    </ul>
+                    <div className="full-width center">
+                        <a
+                            className="tm-bright-blue-round-button view-jobs"
+                            id="btnVoteSurvey"
+                            tabIndex={0}
+                            role="button"
+                            aria-label="Submit your vote"
+                            onClick={handleVote}
+                        >
+                            Vote
+                        </a>
+                        <a
+                            className="showDialogD result-jobs"
+                            tabIndex={0}
+                            role="button"
+                            aria-label="View survey results"
+                            onClick={handleShowResult}
+                        >
+                            Result
+                        </a>
+                    </div>
                 </div>
             </div>
             <ResultSurvey
@@ -106,8 +106,7 @@ const BoxSurveyP11 = () => {
                 onClose={handleCloseResultSurvey}
             />
         </>
-
     );
-};
+}
 
-export default BoxSurveyP11;
+export default BoxSurveyP21;
