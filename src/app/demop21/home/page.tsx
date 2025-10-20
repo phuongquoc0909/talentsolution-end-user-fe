@@ -3,7 +3,7 @@ import React from 'react';
 import BoxCareer from '@/components/demop21/job/box_career';
 import Share from '@/components/demop21/share';
 import ButtonJoin from '@/components/demop21/button_join';
-import BoxSurvey from '@/components/demop21/box_survey_p21';
+import BoxSurvey from '@/components/common/box_survey_p21';
 import { testimonialData } from '@/contants/testimonial';
 
 import imgQuoteGreenBottom from '@/styles/owner/geet/images/quote_green_bottom.png';
