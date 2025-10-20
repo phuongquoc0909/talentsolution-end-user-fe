@@ -1616,9 +1616,9 @@ hr.break { background: #D0D3D4; clear: both; margin-bottom: 10px; border: 0; hei
 
 /* result survey */
 .box_width_common { float: left; width: 100% }
-.title_danhgia_core { border-bottom: 1px dotted #DDDFE0; color: #9A1F44; font-weight: bold; font-size: 12px; margin: 2px 0 0; padding: 0 0 15px }
+.title_danhgia_core { width: calc(100% - 50px); border-bottom: 1px dotted #DDDFE0; color: #9A1F44; font-weight: bold; font-size: 12px; margin: 2px 0 0; padding: 0 0 15px }
 .scroll_thongke { float: left; margin: 15px 0 0; width: 100% }
-.scroll_thongke li { border-bottom: 1px dotted #CCCCCC; margin-bottom: 8px; overflow: hidden; padding-bottom: 15px }
+.scroll_thongke li { border-bottom: 1px dotted #CCCCCC; margin-bottom: 8px; overflow: hidden; padding: 0 0 15px; }
 .scroll_thongke li .scroll_color { background: url("images/cols.gif") no-repeat left top; float: left; height: 7px; margin: 3px 0 0; width: 200px }
 .scroll_thongke li .scroll_color .bg_center_scroll { float: left; height: 7px; position: relative }
 .scroll_thongke .vote_result { float: right; font-size: 11px }

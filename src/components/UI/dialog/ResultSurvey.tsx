@@ -68,30 +68,30 @@ const ResultSurvey = ({ isOpen, onClose }: Props) => {
         aria-labelledby="confirm-title"
         aria-describedby="confirm-content"
       >
-        <div className="content showConfirm" style={{padding: '20px'}}>   
-        <div id="ResultSurvey" className="wrapDialog msgbox ResultSurvey">
-                    <div className="title_msgbox">Result</div>
-                    <div className="container">
-                        <div className="box_width_common"><p className="title_danhgia_core col_theme">{surveyData.QUESTION_CONTENT}</p></div>
-                        <div className="fl_left box_width_common">
-                            <ul className="scroll_thongke">
-                            {surveyData.answers.map((answer) => (
-                                <li key={answer.ANSWER_ID} className="col-xs-12">
-                                    <div className="info_result">
-                                        <div className="label_result">{answer.ANSWER_CONTENT}</div>
-                                        <div className="fl_right scroll_color">
-                                            <span className="bg_center_scroll bgcolor_theme" style={{width: `${answer.ANSWER_PERCENT}%`}}>&nbsp;
-                                                <label className="txt_number_ketqua">{answer.ANSWER_VOTE}%</label>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </li>
-                            ))}
-                            </ul>
-                            <div className="clear"></div>
-                        </div>
-                    </div>
-                </div>
+        <div className="content ResultSurvey" style={{padding: '20px'}}>   
+          <div id="ResultSurvey">
+              <div className="title_msgbox">Result</div>
+              <div className="container" style={{padding: '0', width: '100%'}}>
+                  <div className="title_danhgia_core col_theme">{surveyData.QUESTION_CONTENT}</div>
+                  <div className="box_width_common">
+                      <ul className="scroll_thongke">
+                      {surveyData.answers.map((answer) => (
+                          <li key={answer.ANSWER_ID} className="col-xs-12">
+                              <div className="info_result">
+                                  <div className="label_result">{answer.ANSWER_CONTENT}</div>
+                                  <div className="fl_right scroll_color">
+                                      <span className="bg_center_scroll bgcolor_theme" style={{width: `${answer.ANSWER_PERCENT}%`}}>&nbsp;
+                                          <label className="txt_number_ketqua">{answer.ANSWER_PERCENT}%</label>
+                                      </span>
+                                  </div>
+                              </div>
+                          </li>
+                      ))}
+                      </ul>
+                      <div className="clear"></div>
+                  </div>
+              </div>
+          </div>
         </div>
         <div
           id="fancybox-close" 

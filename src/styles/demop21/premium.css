@@ -782,10 +782,6 @@ button:hover, button:active, button:focus, input[type="submit"]:hover, input[typ
 	background-color: #f5f5f5
 }
 
-.insight .survey-box ul li span {
-	float: left;
-	width: calc(100% - 30px);
-}
 .career-box h2, .survey-box h2 {
 	font-size: 20px;
 	padding-bottom: 15px
@@ -825,13 +821,20 @@ button:hover, button:active, button:focus, input[type="submit"]:hover, input[typ
 	float: left;
 	width: 100%
 }
-.survey-box .input_margin {
+.survey-box ul li .input_margin {
 	margin-top: 0;
 	margin-right: 5px
+}
+.survey-box ul li span {
+	float: left;
+	width: calc(100% - 30px);
 }
 .survey-box .result-jobs {
 	margin-left: 10px;
 	font-size: 14px
+}
+.scroll_thongke li {
+	padding: 0 0 15px;
 }
 .join-talent-top {
 	float: right;
